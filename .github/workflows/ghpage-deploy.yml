@@ -21,6 +21,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          run_install: true
+          version: 8
+
       - name: Setup Node.js
         run: |-
           pnpm install
