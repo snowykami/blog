@@ -23,7 +23,6 @@ jobs:
 
       - name: Setup Node.js
         run: |-
-          cd docs
           pnpm install
 
       - name: Build with VitePress
