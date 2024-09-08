@@ -1,0 +1,12 @@
+# node
+node_modules/
+
+# vitepress
+.vitepress/cache/
+.vitepress/build/
+.vitepress/dist/
+.vitepress/.temp/
+
+# idea
+.idea/
+vscode/
