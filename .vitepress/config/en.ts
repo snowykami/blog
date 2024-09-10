@@ -19,7 +19,7 @@ export const en = defineConfig({
             'Edit this page on GitHub',
         ),
         footer: {
-            message: 'Document built by <a href="https://vitepress.dev/">VitePress</a> | Service provided by <a href="https://liteyuki.icu">Liteyuki Cloud</a>',
+            message: 'Built by <a href="https://vitepress.dev/">VitePress</a> | Service provided by <a href="https://liteyuki.icu">Liteyuki Cloud</a>',
             copyright: ThemeConfig.copyright
         },
         outline: ThemeConfig.getOutLine("页面内容"),

@@ -19,7 +19,7 @@ export const zh = defineConfig({
             '在 GitHub 上编辑这页',
         ),
         footer: {
-            message: '文档由 <a href="https://vitepress.dev/">VitePress</a> 构建 | 服务由 <a href="https://liteyuki.icu">Liteyuki Cloud</a> 提供',
+            message: '由 <a href="https://vitepress.dev/">VitePress</a> 构建 | 服务由 <a href="https://liteyuki.icu">Liteyuki Cloud</a> 提供',
             copyright: ThemeConfig.copyright
         },
         outline: ThemeConfig.getOutLine("页面内容"),
