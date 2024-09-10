@@ -36,5 +36,5 @@ export const ThemeConfig = {
         };
     },
 
-    copyright: 'Copyright (C) 2020-2024 LiteyukiStudio. All Rights Reserved'
+    copyright: `Copyright (C) ${new Date().getFullYear()} Snowykami. All Rights Reserved`
 }
