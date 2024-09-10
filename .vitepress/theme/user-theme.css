@@ -3,29 +3,29 @@
 
 /* 浅色模式使用的变量 */
 html[theme] {
-  --vp-c-user-1:red;
-  --vp-c-user-2:blue;
-  --vp-c-user-3:green;
-  --vp-c-user-soft:rgba(255,0,0,.5);
+    --vp-c-user-1: #a2d8f4;
+    --vp-c-user-2: blue;
+    --vp-c-user-3: #a2d8f4;
+    --vp-c-user-soft: rgba(255, 0, 0, .5);
 }
 
 /* 深色模式使用的变量 */
 html[theme].dark {
-  --vp-c-user-1:yellow;
-  --vp-c-user-2:purple;
-  --vp-c-user-3:orange;
-  --vp-c-user-soft:rgba(255,255,0,.5);
+    --vp-c-user-1: yellow;
+    --vp-c-user-2: purple;
+    --vp-c-user-3: orange;
+    --vp-c-user-soft: rgba(255, 255, 0, .5);
 }
 
 /* 覆盖默认变量 */
-html[theme],html[theme].dark {
-  --vp-c-brand-1: var(--vp-c-user-1);
-  --vp-c-brand-2: var(--vp-c-user-2);
-  --vp-c-brand-3: var(--vp-c-user-3);
-  --vp-c-brand-soft: var(--vp-c-user-soft);
+html[theme], html[theme].dark {
+    --vp-c-brand-1: var(--vp-c-user-1);
+    --vp-c-brand-2: var(--vp-c-user-2);
+    --vp-c-brand-3: var(--vp-c-user-3);
+    --vp-c-brand-soft: var(--vp-c-user-soft);
 }
 
 
-.VPImage.logo{
- border-radius: 50%;
+.VPImage.logo {
+    border-radius: 50%;
 }
