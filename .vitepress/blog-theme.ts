@@ -76,11 +76,11 @@ const blogTheme = getThemeConfig({
             //   content: '文章首/文尾有群二维码',
             //   style: 'padding-top:0'
             // },
-            // {
-            //   type: 'button',
-            //   content: '作者博客',
-            //   link: 'https://sugarat.top'
-            // },
+            {
+              type: 'button',
+              content: '轻雪机器人开发...',
+              link: 'https://bot.lieyuki.icu'
+            },
             // {
             //   type: 'button',
             //   content: '加群交流',
