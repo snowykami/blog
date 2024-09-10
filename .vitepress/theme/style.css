@@ -86,6 +86,9 @@
   --vp-button-brand-active-bg: var(--vp-c-brand-1);
 }
 
+.VPImage.logo{
+    border-radius: 50px;
+}
 /**
  * Component: Home
  * -------------------------------------------------------------------------- */
