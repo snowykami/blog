@@ -1,17 +1,9 @@
-// https://vitepress.dev/guide/custom-theme
-import { h } from 'vue'
-import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
-import './style.css'
+import BlogTheme from '@sugarat/theme'
 
-export default {
-  extends: DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
-  },
-  enhanceApp({ app, router, siteData }) {
-    // ...
-  }
-} satisfies Theme
+// 自定义样式重载
+// import './style.scss'
+
+// 自定义主题色
+// import './user-theme.css'
+
+export default BlogTheme

@@ -1,2 +1,0 @@
-# blog
-snowykami's blog
