@@ -3,7 +3,7 @@ import { createRequire } from 'module'
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 import type { UserConfig } from 'vitepress'
 import timeline from 'vitepress-markdown-timeline'
-import type { Theme } from '../../composables/config/index'
+import type { Theme } from '../../composables/config'
 import { aliasObjectToArray } from './index'
 
 export function _require(module: any) {

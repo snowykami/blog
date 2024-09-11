@@ -13,13 +13,13 @@ export default defineConfig({
     extends: blogTheme,
     // base,
     rewrites: {
-        [`${defaultLocaleRouter}/:rest*`]: ":rest*",
+        'zh/:rest*': ':rest*',
     },
     head: [
         ['link', {rel: 'icon', href: '/favicon.ico'}]
     ],
     themeConfig: {
-        socialLinks: socialLinks
+        socialLinks: socialLinks,
     },
     lastUpdated: true,
     locales: {

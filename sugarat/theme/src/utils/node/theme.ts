@@ -5,7 +5,7 @@ import process from 'node:process'
 import glob from 'fast-glob'
 import { getDefaultTitle, getFileLastModifyTime, getTextSummary, grayMatter, normalizePath } from '@sugarat/theme-shared'
 import type { SiteConfig } from 'vitepress'
-import type { Theme } from '../../composables/config/index'
+import type { Theme } from '../../composables/config'
 import { formatDate } from '../client'
 import { getFirstImagURLFromMD } from './index'
 

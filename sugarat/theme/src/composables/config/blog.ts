@@ -1,25 +1,10 @@
-import { useData, useRoute, withBase } from 'vitepress'
-import type {
-  Component,
-  ComputedRef,
-  InjectionKey,
-  Ref
-} from 'vue'
-import {
-  computed,
-  defineComponent,
-  h,
-  inject,
-  onMounted,
-  onUnmounted,
-  provide,
-  reactive,
-  ref
-} from 'vue'
-import { useColorMode } from '@vueuse/core'
+import {useData, useRoute, withBase} from 'vitepress'
+import type {Component, ComputedRef, InjectionKey, Ref} from 'vue'
+import {computed, defineComponent, h, inject, onMounted, onUnmounted, provide, reactive, ref} from 'vue'
+import {useColorMode} from '@vueuse/core'
 
-import { formatDate, replaceValue } from '../../utils/client'
-import type { Theme } from './index'
+import {formatDate, replaceValue} from '../../utils/client'
+import type {Theme} from './index'
 
 const configSymbol: InjectionKey<Ref<Theme.Config>> = Symbol('theme-config')
 
@@ -116,8 +101,7 @@ export function useBlogThemeMode() {
 
 export function useArticles() {
   const blogConfig = useConfig()
-  const articles = computed(() => blogConfig.config?.blog?.pagesData || [])
-  return articles
+  return computed(() => blogConfig.config?.blog?.pagesData || [])
 }
 
 export function useActiveTag() {
@@ -132,20 +116,18 @@ export function useCurrentArticle() {
   const route = useRoute()
 
   const docs = computed(() => blogConfig.config?.blog?.pagesData)
-  const currentArticle = computed(() => {
+  return computed(() => {
     const currentPath = route.path.replace(/.html$/, '')
     // 兼容中文路径
     const okPaths = [currentPath, decodeURIComponent(currentPath)]
     // 兼容 /(index.md)
     if (currentPath.endsWith('/')) {
       okPaths.push(
-        ...[`${currentPath}index`, `${decodeURIComponent(currentPath)}index`]
+          ...[`${currentPath}index`, `${decodeURIComponent(currentPath)}index`]
       )
     }
     return docs.value?.find(v => okPaths.includes(withBase(v.route)))
   })
-
-  return currentArticle
 }
 
 export function useUserWorks() {

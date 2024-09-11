@@ -23,7 +23,7 @@ const showTime = computed(() => {
   return formatShowDate(props.date)
 })
 const cleanUrls = useCleanUrls()
-const link = computed(() => withBase(wrapperCleanUrls(!!cleanUrls, props.route)))
+const link = computed(() => wrapperCleanUrls(!!cleanUrls, props.route))
 
 const router = useRouter()
 function handleSkipDoc() {

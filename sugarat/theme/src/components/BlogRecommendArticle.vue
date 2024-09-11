@@ -5,7 +5,7 @@ import { ElButton } from 'element-plus'
 import { wrapperCleanUrls } from '../utils/client'
 import { useArticles, useBlogConfig, useCleanUrls, useFormatShowDate } from '../composables/config/blog'
 import { recommendSVG } from '../constants/svg'
-import type { Theme } from '../composables/config/index'
+import type { Theme } from '../composables/config'
 
 const formatShowDate = useFormatShowDate()
 

@@ -28,7 +28,6 @@ export function useDarkTransition() {
         )}px at ${x}px ${y}px)`
     ]
 
-    // @ts-expect-error
     await document.startViewTransition(async () => {
       isDark.value = !isDark.value
       await nextTick()

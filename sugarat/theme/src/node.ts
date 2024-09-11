@@ -1,5 +1,5 @@
 import type { UserConfig } from 'vitepress'
-import type { Theme } from './composables/config/index'
+import type { Theme } from './composables/config'
 import {
   getMarkdownPlugins,
   patchMermaidPluginCfg,
