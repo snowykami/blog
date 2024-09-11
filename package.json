@@ -5,7 +5,7 @@
   "author": "Snowykami",
   "license": "MIT",
   "scripts": {
-    "dev": "vitepress dev",
+    "dev": "vitepress dev & pnpm watch",
     "build": "vitepress build",
     "serve": "vitepress serve",
     "watch": "nodemon -e js,json,vue,ts,tsx -w ./sugarat/theme -x \"pnpm install\""
