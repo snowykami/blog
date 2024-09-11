@@ -9,11 +9,14 @@ dependencies:
     specifier: ^2.3.1
     version: 2.3.1(vue@3.4.26)
   '@sugarat/theme':
-    specifier: ^0.4.11
-    version: 0.4.11(@element-plus/icons-vue@2.3.1)(element-plus@2.8.2)(pagefind@1.1.1)(typescript@5.6.2)(vitepress@1.3.4)(vue@3.4.26)
+    specifier: file:sugarat/theme
+    version: file:sugarat/theme(@element-plus/icons-vue@2.3.1)(element-plus@2.8.2)(pagefind@1.1.1)(typescript@5.6.2)(vitepress@1.3.4)(vue@3.4.26)
   element-plus:
     specifier: ^2.7.2
     version: 2.8.2(vue@3.4.26)
+  nodemon:
+    specifier: ^3.1.4
+    version: 3.1.4
   vue:
     specifier: 3.4.26
     version: 3.4.26(typescript@5.6.2)
@@ -697,39 +700,6 @@ packages:
       gray-matter: 4.0.3
     dev: false
 
-  /@sugarat/theme@0.4.11(@element-plus/icons-vue@2.3.1)(element-plus@2.8.2)(pagefind@1.1.1)(typescript@5.6.2)(vitepress@1.3.4)(vue@3.4.26):
-    resolution: {integrity: sha512-4lBCWlaGiZ0DJkPFWI5riotP/LhCUc1E0NRz1eOy8swjb58B261L4d/xBI7IoI5ttgqLIATIOLmJeT9PKS+UTA==}
-    peerDependencies:
-      '@element-plus/icons-vue': ^2.3.1
-      element-plus: ^2.7
-    dependencies:
-      '@element-plus/icons-vue': 2.3.1(vue@3.4.26)
-      '@giscus/vue': 2.4.0(vue@3.4.26)
-      '@mdit-vue/shared': 0.12.1
-      '@mermaid-js/mermaid-mindmap': 9.3.0
-      '@sugarat/theme-shared': 0.0.2
-      '@vue/shared': 3.5.4
-      '@vueuse/core': 9.13.0(vue@3.4.26)
-      element-plus: 2.8.2(vue@3.4.26)
-      fast-glob: 3.3.2
-      markdown-it-task-checkbox: 1.0.6
-      mermaid: 10.9.1
-      oh-my-live2d: 0.19.3
-      swiper: 11.1.12
-      vitepress-markdown-timeline: 1.2.1
-      vitepress-plugin-mermaid: 2.0.13(mermaid@10.9.1)(vitepress@1.3.4)
-      vitepress-plugin-pagefind: 0.4.10(pagefind@1.1.1)(typescript@5.6.2)
-      vitepress-plugin-rss: 0.2.10(vitepress@1.3.4)
-      vitepress-plugin-tabs: 0.2.0(vitepress@1.3.4)(vue@3.4.26)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - pagefind
-      - supports-color
-      - typescript
-      - vitepress
-      - vue
-    dev: false
-
   /@sxzz/popperjs-es@2.11.7:
     resolution: {integrity: sha512-Ccy0NlLkzr0Ex2FKvh2X+OyERHXJ88XJ1MXtsI9y9fGexlaXaVTPzBCRBwIxFkORuOb+uBqeu+RqnpgYTEZRUQ==}
     dev: false
@@ -1132,12 +1102,23 @@ packages:
     resolution: {integrity: sha512-7HhHjtERjqlNbZtqNqy2rckN/SpOOlmDliet+lP7k+eKZEjPk3DgyeU9lIXLdeLz0uBbbVp+9Qdow9wJWgwwfg==}
     dev: false
 
+  /balanced-match@1.0.2:
+    resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
+    dev: false
+
   /binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
 
   /birpc@0.2.17:
     resolution: {integrity: sha512-+hkTxhot+dWsLpp3gia5AkVHIsKlZybNT5gIYiDlNzJrmYPcTM9k5/w2uaj3IPpd7LlEYpmCj4Jj1nC41VhDFg==}
+
+  /brace-expansion@1.1.11:
+    resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
+    dependencies:
+      balanced-match: 1.0.2
+      concat-map: 0.0.1
+    dev: false
 
   /braces@3.0.3:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
@@ -1171,6 +1152,10 @@ packages:
   /commander@8.3.0:
     resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
     engines: {node: '>= 12'}
+    dev: false
+
+  /concat-map@0.0.1:
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: false
 
   /copy-anything@3.0.5:
@@ -1508,7 +1493,7 @@ packages:
     resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==}
     dev: false
 
-  /debug@4.3.7:
+  /debug@4.3.7(supports-color@5.5.0):
     resolution: {integrity: sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==}
     engines: {node: '>=6.0'}
     peerDependencies:
@@ -1518,6 +1503,7 @@ packages:
         optional: true
     dependencies:
       ms: 2.1.3
+      supports-color: 5.5.0
     dev: false
 
   /decode-named-character-reference@1.0.2:
@@ -1703,6 +1689,11 @@ packages:
       strip-bom-string: 1.0.0
     dev: false
 
+  /has-flag@3.0.0:
+    resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
+    engines: {node: '>=4'}
+    dev: false
+
   /hookable@5.5.3:
     resolution: {integrity: sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==}
 
@@ -1711,6 +1702,10 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       safer-buffer: 2.1.2
+    dev: false
+
+  /ignore-by-default@1.0.1:
+    resolution: {integrity: sha512-Ius2VYcGNk7T90CppJqcIkS5ooHUZyIQK+ClZfMfMNFEF9VSE73Fq+906u/CWu92x4gzZMWOwfFYckPObzdEbA==}
     dev: false
 
   /immutable@4.3.7:
@@ -2090,7 +2085,7 @@ packages:
     resolution: {integrity: sha512-uD66tJj54JLYq0De10AhWycZWGQNUvDI55xPgk2sQM5kn1JYlhbCMTtEeT27+vAhW2FBQxLlOmS3pmA7/2z4aA==}
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.3.7
+      debug: 4.3.7(supports-color@5.5.0)
       decode-named-character-reference: 1.0.2
       micromark-core-commonmark: 1.1.0
       micromark-factory-space: 1.1.0
@@ -2118,6 +2113,12 @@ packages:
       picomatch: 2.3.1
     dev: false
 
+  /minimatch@3.1.2:
+    resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
+    dependencies:
+      brace-expansion: 1.1.11
+    dev: false
+
   /minisearch@7.1.0:
     resolution: {integrity: sha512-tv7c/uefWdEhcu6hvrfTihflgeEi2tN6VV7HJnCjK6VxM75QQJh4t9FwJCsA2EsRS8LCnu3W87CuGPWMocOLCA==}
 
@@ -2142,6 +2143,23 @@ packages:
     resolution: {integrity: sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw==}
     engines: {node: ^14 || ^16 || >=18}
     hasBin: true
+    dev: false
+
+  /nodemon@3.1.4:
+    resolution: {integrity: sha512-wjPBbFhtpJwmIeY2yP7QF+UKzPfltVGtfce1g/bB15/8vCGZj8uxD62b/b9M9/WVgme0NZudpownKN+c0plXlQ==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.6.0
+      debug: 4.3.7(supports-color@5.5.0)
+      ignore-by-default: 1.0.1
+      minimatch: 3.1.2
+      pstree.remy: 1.1.8
+      semver: 7.6.3
+      simple-update-notifier: 2.0.0
+      supports-color: 5.5.0
+      touch: 3.1.1
+      undefsafe: 2.0.5
     dev: false
 
   /non-layered-tidy-tree-layout@2.0.2:
@@ -2198,6 +2216,10 @@ packages:
 
   /preact@10.23.2:
     resolution: {integrity: sha512-kKYfePf9rzKnxOAKDpsWhg/ysrHPqT+yQ7UW4JjdnqjFIeNUnNcEJvhuA8fDenxAGWzUqtd51DfVg7xp/8T9NA==}
+
+  /pstree.remy@1.1.8:
+    resolution: {integrity: sha512-77DZwxQmxKnu3aR542U+X8FypNzbfJ+C5XQDk3uWjWxn6151aIMGthWYRXTqT1E5oJvg+ljaa2OJi+VfvCOQ8w==}
+    dev: false
 
   /queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
@@ -2291,6 +2313,12 @@ packages:
       kind-of: 6.0.3
     dev: false
 
+  /semver@7.6.3:
+    resolution: {integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dev: false
+
   /shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
     engines: {node: '>=8'}
@@ -2309,6 +2337,13 @@ packages:
       '@shikijs/core': 1.16.3
       '@shikijs/vscode-textmate': 9.2.2
       '@types/hast': 3.0.4
+
+  /simple-update-notifier@2.0.0:
+    resolution: {integrity: sha512-a2B9Y0KlNXl9u/vsW6sTIu9vGEpfKu2wRV6l1H3XEas/0gUIzGzBoP/IouTcUQbm9JWZLH3COxyn03TYlFax6w==}
+    engines: {node: '>=10'}
+    dependencies:
+      semver: 7.6.3
+    dev: false
 
   /source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -2337,6 +2372,13 @@ packages:
     dependencies:
       copy-anything: 3.0.5
 
+  /supports-color@5.5.0:
+    resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
+    engines: {node: '>=4'}
+    dependencies:
+      has-flag: 3.0.0
+    dev: false
+
   /swiper@11.1.12:
     resolution: {integrity: sha512-PUkCToYAZMB4kP7z+YfPnkMHOMwMO71g8vUhz2o5INGIgIMb6Sb0XiP6cEJFsiFTd7FRDn5XCbg+KVKPDZqXLw==}
     engines: {node: '>= 4.7.0'}
@@ -2355,6 +2397,11 @@ packages:
     dependencies:
       is-number: 7.0.0
 
+  /touch@3.1.1:
+    resolution: {integrity: sha512-r0eojU4bI8MnHr8c5bNo7lJDdI2qXlWWJk6a9EAFG7vbhTjElYhBVS3/miuE0uOuoLdb8Mc/rVfsmm6eo5o9GA==}
+    hasBin: true
+    dev: false
+
   /ts-dedent@2.2.0:
     resolution: {integrity: sha512-q5W7tVM71e2xjHZTlgfTDoPF/SmqKG5hddq9SzR49CH2hayqRKJtQ4mtRlSxKaJlR/+9rEM+mnBHf7I2/BQcpQ==}
     engines: {node: '>=6.10'}
@@ -2367,6 +2414,10 @@ packages:
 
   /uc.micro@1.0.6:
     resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
+    dev: false
+
+  /undefsafe@2.0.5:
+    resolution: {integrity: sha512-WxONCrssBM8TSPRqN5EmsjVrsv4A8X12J4ArBiiayv3DyyG3ZlIg6yysuuSYdZsVz3TKcTg2fd//Ujd4CHV1iA==}
     dev: false
 
   /unist-util-stringify-position@3.0.3:
@@ -2625,4 +2676,39 @@ packages:
     hasBin: true
     dependencies:
       sax: 1.4.1
+    dev: false
+
+  file:sugarat/theme(@element-plus/icons-vue@2.3.1)(element-plus@2.8.2)(pagefind@1.1.1)(typescript@5.6.2)(vitepress@1.3.4)(vue@3.4.26):
+    resolution: {directory: sugarat/theme, type: directory}
+    id: file:sugarat/theme
+    name: '@sugarat/theme'
+    peerDependencies:
+      '@element-plus/icons-vue': ^2.3.1
+      element-plus: ^2.7
+    dependencies:
+      '@element-plus/icons-vue': 2.3.1(vue@3.4.26)
+      '@giscus/vue': 2.4.0(vue@3.4.26)
+      '@mdit-vue/shared': 0.12.1
+      '@mermaid-js/mermaid-mindmap': 9.3.0
+      '@sugarat/theme-shared': 0.0.2
+      '@vue/shared': 3.5.4
+      '@vueuse/core': 9.13.0(vue@3.4.26)
+      element-plus: 2.8.2(vue@3.4.26)
+      fast-glob: 3.3.2
+      markdown-it-task-checkbox: 1.0.6
+      mermaid: 10.9.1
+      oh-my-live2d: 0.19.3
+      swiper: 11.1.12
+      vitepress-markdown-timeline: 1.2.1
+      vitepress-plugin-mermaid: 2.0.13(mermaid@10.9.1)(vitepress@1.3.4)
+      vitepress-plugin-pagefind: 0.4.10(pagefind@1.1.1)(typescript@5.6.2)
+      vitepress-plugin-rss: 0.2.10(vitepress@1.3.4)
+      vitepress-plugin-tabs: 0.2.0(vitepress@1.3.4)(vue@3.4.26)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - pagefind
+      - supports-color
+      - typescript
+      - vitepress
+      - vue
     dev: false

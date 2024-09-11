@@ -1,3 +1,5 @@
+const defaultLang = 'zh';
+
 const i18nData = {
     en: {
         about: 'About',
@@ -22,7 +24,6 @@ const i18nData = {
 }
 
 
-
 export function getText(lang: string, key: string): string {
     lang = formatLang(lang);
     return i18nData[lang][key];
@@ -35,3 +36,16 @@ export function formatLang(lang: string): string {
     return lang;
 }
 
+export function getNav(lang: string): { text: string, link: string }[] {
+    if (lang == defaultLang) {
+        return [
+            {text: getText(lang, 'homepage'), link: '/'},
+            {text: getText(lang, 'about'), link: '/about'}
+        ]
+    } else {
+        return [
+            {text: getText(lang, 'homepage'), link: `/${lang}/`},
+            {text: getText(lang, 'about'), link: `/${lang}/about`}
+        ]
+    }
+}

@@ -12,9 +12,9 @@ const defaultLocaleRouter = 'zh'
 export default defineConfig({
     extends: blogTheme,
     // base,
-    // rewrites: {
-    //     [`${defaultLocaleRouter}/:rest*`]: ":rest*",
-    // },
+    rewrites: {
+        [`${defaultLocaleRouter}/:rest*`]: ":rest*",
+    },
     head: [
         ['link', {rel: 'icon', href: '/favicon.ico'}]
     ],

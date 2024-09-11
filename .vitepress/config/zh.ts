@@ -1,5 +1,5 @@
 import {defineConfig} from 'vitepress'
-import {getText} from "../utils/i18n";
+import {getNav, getText} from "../utils/i18n";
 import {ThemeConfig} from "../utils/themeConfig";
 
 const lang = 'zh'
@@ -16,9 +16,6 @@ export const zh  = defineConfig({
         sidebarMenuLabel: getText(lang, 'relatedArticles'),
         logo: 'https://q.qlogo.cn/g?b=qq&nk=2751454815&s=640',
         editLink: ThemeConfig.getEditLink(getText(lang, 'editPage')),
-        nav: [
-            {text: getText(lang, 'homepage'), link: '/'},
-            {text: getText(lang, 'about'), link: './about'}
-        ],
+        nav: getNav(lang),
     }
 })
