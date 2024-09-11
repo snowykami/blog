@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Snowykami's Blog RSS</title>
+        <link>https://sfkm.me</link>
+        <description>Snowykami的个人博客RSS订阅</description>
+        <lastBuildDate>Wed, 11 Sep 2024 09:31:09 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>zh-cn</language>
+        <copyright>Copyright (c) 2024 Snowykami</copyright>
+        <item>
+            <title><![CDATA[LiteyukiBot]]></title>
+            <link>https://sfkm.me/en/posts/liteyukibot.html</link>
+            <guid>https://sfkm.me/en/posts/liteyukibot.html</guid>
+            <pubDate>Wed, 11 Sep 2024 09:29:43 GMT</pubDate>
+            <description><![CDATA[一个高性能，轻量级的聊天机器人应用程序基于liteyukibot框架]]></description>
+            <content:encoded><![CDATA[<h1 id="liteyukibot" tabindex="-1">LiteyukiBot <a class="header-anchor" href="#liteyukibot" aria-label="Permalink to &quot;LiteyukiBot&quot;"></a></h1>
+<ul>
+<li>项目是从2021年10月开始做的，最初是为了拿来弄一些自助业务，加上那时候感觉QQ机器人特别新奇，于是就想做这个东西</li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[轻雪机器人 LiteyukiBot]]></title>
+            <link>https://sfkm.me/zh/posts/liteyukibot.html</link>
+            <guid>https://sfkm.me/zh/posts/liteyukibot.html</guid>
+            <pubDate>Wed, 11 Sep 2024 09:29:43 GMT</pubDate>
+            <description><![CDATA[一个高性能，轻量级的聊天机器人应用程序基于liteyukibot框架]]></description>
+            <content:encoded><![CDATA[<h1 id="轻雪机器人" tabindex="-1">轻雪机器人 <a class="header-anchor" href="#轻雪机器人" aria-label="Permalink to &quot;轻雪机器人&quot;"></a></h1>
+<ul>
+<li>项目是从2021年10月开始做的</li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[关于主题]]></title>
+            <link>https://sfkm.me/zh/about.html</link>
+            <guid>https://sfkm.me/zh/about.html</guid>
+            <pubDate>Tue, 10 Sep 2024 18:35:04 GMT</pubDate>
+            <description><![CDATA[简约风的 Vitepress 博客主题，基于 vitepress 的自定义主题实现
+更多细节见 https://theme.sugarat.top
+ 已支持功能
+介绍一下主要的，非所有
+* 博客首页
+]]></description>
+            <content:encoded><![CDATA[<h1 id="关于主题" tabindex="-1">关于主题 <a class="header-anchor" href="#关于主题" aria-label="Permalink to &quot;关于主题&quot;"></a></h1>
+<p>简约风的 Vitepress 博客主题，基于 <a href="https://vitepress.dev/" target="_blank" rel="noreferrer">vitepress</a> 的自定义主题实现</p>
+<p><img src="https://img.cdn.sugarat.top/mdImg/MTY3MzE3MDUxOTMwMw==673170519303" alt="图片"></p>
+<p>更多细节见 <a href="https://theme.sugarat.top" target="_blank" rel="noreferrer">https://theme.sugarat.top</a></p>
+<h2 id="已支持功能" tabindex="-1">已支持功能 <a class="header-anchor" href="#已支持功能" aria-label="Permalink to &quot;已支持功能&quot;"></a></h2>
+<p>介绍一下主要的，非所有</p>
+<ul>
+<li>博客首页</li>
+<li>文章列表</li>
+<li>精选文章</li>
+<li>友链</li>
+<li>标签分类</li>
+<li>图片预览</li>
+<li>搜索（基于<a href="https://github.com/cloudcannon/pagefind" target="_blank" rel="noreferrer">pagefind</a>支持离线全文搜索）</li>
+<li><a href="https://giscus.app/zh-CN" target="_blank" rel="noreferrer">giscus</a>驱动的评论系统</li>
+<li>推荐文章（类似文章目录）</li>
+<li>阅读时间计算</li>
+<li>全局的提示弹窗 (由 el-alert 驱动)</li>
+<li>全局的公告弹窗，支持设置图片，文字，按钮</li>
+<li>作品聚合页（为个人作品提供一个展示）</li>
+<li>tabs（<a href="https://vitepress-plugins.sapphi.red/tabs/" target="_blank" rel="noreferrer">vitepress-plugin-tabs</a>）</li>
+<li>流程图（<a href="https://github.com/emersonbottero/vitepress-plugin-mermaid#readme" target="_blank" rel="noreferrer">vitepress-plugin-mermaid</a>）</li>
+<li>RSS</li>
+<li>主题色统一</li>
+<li>更多可定制的主题样式</li>
+</ul>
+<h2 id="规划中功能" tabindex="-1">规划中功能 <a class="header-anchor" href="#规划中功能" aria-label="Permalink to &quot;规划中功能&quot;"></a></h2>
+<ul>
+<li>Valine 评论系统</li>
+<li>文章合集（类似于聚合一个内容专题）</li>
+<li>文章时间线页面支持</li>
+<li>背景图自动更换</li>
+<li>首屏铺满slogan，参考reco</li>
+</ul>
+<h2 id="参考项目" tabindex="-1">参考项目 <a class="header-anchor" href="#参考项目" aria-label="Permalink to &quot;参考项目&quot;"></a></h2>
+<p>或多或少借鉴&amp;使用了如下的一下开源项目，博客，网站的能力或者UI样式</p>
+<ul>
+<li><a href="https://vuepress-theme-reco.recoluan.com/" target="_blank" rel="noreferrer">reco</a></li>
+<li><a href="https://juejin.cn/" target="_blank" rel="noreferrer">掘金</a></li>
+<li><a href="https://surmon.me/" target="_blank" rel="noreferrer">surmon</a></li>
+<li><a href="https://github.com/vuejs/theme" target="_blank" rel="noreferrer">@vue/theme</a></li>
+<li><a href="https://vitest.dev/" target="_blank" rel="noreferrer">vitest</a></li>
+<li><a href="https://element-plus.gitee.io/zh-CN/" target="_blank" rel="noreferrer">element-plus</a></li>
+<li><a href="https://github.com/Charles7c/charles7c.github.io" target="_blank" rel="noreferrer">charles7c.github.io</a></li>
+<li><a href="https://github.com/clark-cui/vitepress-blog-zaun" target="_blank" rel="noreferrer">vitepress-blog-zaun</a></li>
+<li><a href="https://github.com/vuejs/blog/tree/main" target="_blank" rel="noreferrer">vuejs/blog</a></li>
+<li><a href="https://code.juejin.cn/pen/7145007064350195748" target="_blank" rel="noreferrer">列表无限滚动轮播效果</a></li>
+</ul>
+<h2 id="主题相关资源" tabindex="-1">主题相关资源 <a class="header-anchor" href="#主题相关资源" aria-label="Permalink to &quot;主题相关资源&quot;"></a></h2>
+<ul>
+<li>主题地址：<a href="https://theme.sugarat.top/" target="_blank" rel="noreferrer">https://theme.sugarat.top/</a></li>
+<li>主题包：<a href="https://www.npmjs.com/package/@sugarat/theme" target="_blank" rel="noreferrer">@sugarat/theme</a></li>
+<li>项目地址：<a href="https://github.com/ATQQ/sugar-blog/tree/master/packages/theme" target="_blank" rel="noreferrer">https://github.com/ATQQ/sugar-blog/tree/master/packages/theme</a></li>
+<li>作者博客地址：<a href="https://sugarat.top" target="_blank" rel="noreferrer">https://sugarat.top</a></li>
+</ul>
+<h2 id="最后" tabindex="-1">最后 <a class="header-anchor" href="#最后" aria-label="Permalink to &quot;最后&quot;"></a></h2>
+<p>如果你有建议的 功能&amp;想法 欢迎 私信&amp;评论区 交流</p>
+<p>如果你觉得主题不错，欢迎分享与使用，可以在评论区留下你的网站地址</p>
+<p>笔者后续会单独开个板块展示大家优秀的博客，感谢大家的支持</p>
+]]></content:encoded>
+            <enclosure url="https://img.cdn.sugarat.top/mdImg/MTY3MzE3MDUxOTMwMw==673170519303" length="0" type="image//mdImg/MTY3MzE3MDUxOTMwMw==673170519303"/>
+        </item>
+        <item>
+            <title><![CDATA[内置第三方插件能力]]></title>
+            <link>https://sfkm.me/zh/sop/component.html</link>
+            <guid>https://sfkm.me/zh/sop/component.html</guid>
+            <pubDate>Tue, 10 Sep 2024 18:35:04 GMT</pubDate>
+            <description><![CDATA[默认支持流程图，tabs面板，待办列表，作品页面]]></description>
+            <content:encoded><![CDATA[<h1 id="内置第三方插件能力" tabindex="-1">内置第三方插件能力 <a class="header-anchor" href="#内置第三方插件能力" aria-label="Permalink to &quot;内置第三方插件能力&quot;"></a></h1>
+<p>部分内置组件（插件），来源 <a href="https://vitepress.yiov.top/plugin.html" target="_blank" rel="noreferrer">vitepress.yiov.top</a> 推荐</p>
+<h2 id="oml2d-看板娘集成" tabindex="-1">oml2d - 看板娘集成 <a class="header-anchor" href="#oml2d-看板娘集成" aria-label="Permalink to &quot;oml2d - 看板娘集成&quot;"></a></h2>
+<ul>
+<li>Type：<a href="https://oml2d.com/options/Options.html" target="_blank" rel="noreferrer">oml2dOptions</a></li>
+</ul>
+<p>为网站提供一个 Live2D 看板组件。</p>
+<div class="tip custom-block"><p class="custom-block-title">一点说明</p>
+<p>通过内置 <a href="https://oml2d.com" target="_blank" rel="noreferrer">oh-my-live2d</a> 实现, 可以通过 <code>oml2d</code> 选项配置。</p>
+<p>通过这个能力可以快速加入并定制属于自己的看板娘, 开启只需要为其传递一个 <a href="https://oml2d.com/options/Options.html" target="_blank" rel="noreferrer">配置选项</a> 即可</p>
+</div>
+<p>以下是一个简单的使用示例，当模型加载成功时它将出现在您网站的左下角。</p>
+<div class="language-ts vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> blogTheme</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> getThemeConfig</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  oml2d: {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    mobileDisplay: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    models: [</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        path: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'https://registry.npmmirror.com/oml2d-models/latest/files/models/Senko_Normals/senko.model3.json'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    ]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span></code></pre>
+</div><p>效果图如下</p>
+<p><img src="https://loclink-1259720482.cos.ap-beijing.myqcloud.com/image/%E5%BD%95%E5%B1%8F2024-03-11%2023.51.51.gif" alt=""></p>
+<p>之后您还可以前往<a href="https://oml2d.com/options/Options.html" target="_blank" rel="noreferrer">配置选项</a>查阅更多自定义内容</p>
+<div class="tip custom-block"><p class="custom-block-title">版本说明</p>
+<p>由于时间原因，主题内置的版本不一定都是最新的，可以通过 <code>resolutions</code> 配置指定要使用的版本。</p>
+<p>下面是使用示例，配置在 <code>package.json</code> 中，其它依赖覆盖版本也是这样操作。</p>
+<div class="language-json vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">json</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "resolutions"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    "oh-my-live2d"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"^0.17.0"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div></div>
+<h2 id="task-checkbox" tabindex="-1">task-checkbox <a class="header-anchor" href="#task-checkbox" aria-label="Permalink to &quot;task-checkbox&quot;"></a></h2>
+<ul>
+<li>Type: <code>boolean | TaskCheckbox</code></li>
+</ul>
+<p>支持渲染 markdown 任务列表，内置 <a href="https://github.com/linsir/markdown-it-task-checkbox" target="_blank" rel="noreferrer">markdown-it-task-checkbox</a> 插件提供支持</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> 🥔 TODO</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" disabled="true"><label for="cbx_1"> 真不戳</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_2" checked="true" disabled="true"><label for="cbx_2"> 内置任务列表</label></li>
+</ul>
+<p>语法如下</p>
+<div class="language-md vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [ ] 🥔 TODO</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [ ] 真不戳</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#DBEDFF;--shiki-light-text-decoration:underline;--shiki-dark-text-decoration:underline">x</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">] 内置任务列表</span></span></code></pre>
+</div><p>默认开启，你可以进一步配置</p>
+<div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-QrLku" id="tab-rCeDbHd" checked><label for="tab-rCeDbHd">① 关闭</label><input type="radio" name="group-QrLku" id="tab-uPgTc38" ><label for="tab-uPgTc38">② 进一步配置</label><input type="radio" name="group-QrLku" id="tab-FsqtgHv" ><label for="tab-FsqtgHv">③ type</label></div><div class="blocks">
+<div class="language-ts vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> blogTheme</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> getThemeConfig</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  taskCheckbox: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">false</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span></code></pre>
+</div><div class="language-ts vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> blogTheme</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> getThemeConfig</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  taskCheckbox: {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    // refer https://github.com/linsir/markdown-it-task-checkbox for options</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span></code></pre>
+</div><div class="language-ts vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">interface</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> TaskCheckbox</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  disabled</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> boolean</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  divWrap</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> boolean</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  divClass</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  idPrefix</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  ulClass</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  liClass</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div></div></div>
+<h2 id="timeline" tabindex="-1">timeline <a class="header-anchor" href="#timeline" aria-label="Permalink to &quot;timeline&quot;"></a></h2>
+<ul>
+<li>Type: <code>boolean</code></li>
+<li>default: <code>true</code></li>
+</ul>
+<p>提供 markdown 时间线语法，在 vitepress 中使用 markdown 渲染时间线（时间轴）样式。</p>
+<div class="tip custom-block"><p class="custom-block-title">一点说明</p>
+<p>内置 <a href="https://github.com/HanochMa/vitepress-markdown-timeline" target="_blank" rel="noreferrer">vitepress-markdown-timeline</a> 实现</p>
+</div>
+<p>效果如下</p>
+<div class='timeline-dot'><span class='timeline-dot-title'>2023-05-24</span>
+<ul>
+<li><strong>do some thing1</strong></li>
+<li>do some thing2</li>
+</ul>
+</div>
+<div class='timeline-dot'><span class='timeline-dot-title'>2023-05-23</span>
+<p>do some thing3
+do some thing4</p>
+</div>
+<p>语法如下</p>
+<div class="language-md vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">::: timeline 2023-05-24</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;--shiki-light-font-weight:bold;--shiki-dark-font-weight:bold"> **do some thing1**</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> do some thing2</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:::</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">::: timeline 2023-05-23</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">do some thing3</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">do some thing4</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:::</span></span></code></pre>
+</div><div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-z-jVk" id="tab-VlaTMm7" checked><label for="tab-VlaTMm7">关闭</label></div><div class="blocks">
+<div class="language-ts vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> blogTheme</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> getThemeConfig</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  timeline: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">false</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span></code></pre>
+</div></div></div>
+<h2 id="tabs" tabindex="-1">tabs <a class="header-anchor" href="#tabs" aria-label="Permalink to &quot;tabs&quot;"></a></h2>
+<ul>
+<li>Type: <code>boolean</code></li>
+</ul>
+<p>支持局部的<code>tabs</code>面板，<strong>默认开启</strong></p>
+<details class="details custom-block"><summary>我之前手动安装配置了怎么办？</summary>
+<p>① package.json 中移除 vitepress-plugin-tabs 依赖</p>
+<p>② .vitepress/theme/index.mts 中移除注册的组件<code>enhanceAppWithTabs</code></p>
+<p>③ （可选）<code>getThemeConfig</code> 中移除配置项<code>tabs</code></p>
+</details>
+<div class="tip custom-block"><p class="custom-block-title">一点说明</p>
+<p>基于 <a href="https://www.npmjs.com/package/vitepress-plugin-tabs" target="_blank" rel="noreferrer">vitepress-plugin-tabs@0.2.0</a> 内置实现</p>
+</div>
+<p>效果如下</p>
+<PluginTabs :tabLabels="[&quot;tab1&quot;,&quot;tab2&quot;]" ><template #tab1><p>一些内容</p>
+<p>一些内容</p>
+<p>一些内容</p>
+</template><template #tab2><p>一些内容 。。。</p>
+</template></PluginTabs><p>简单的使用方式如下（效果如上面的示例）</p>
+<div class="language-md vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:::=tabs</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">::tab1</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">一些内容</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">一些内容</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">一些内容</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">::tab2</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">一些内容 。。。</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:::</span></span></code></pre>
+</div><p>共享状态的使用方式如下</p>
+<div class="language-md vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:::=tabs=ab</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">::a</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">a content</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">::b</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">b content</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:::</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:::=tabs=ab</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">::a</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">a content 2</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">::b</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">b content 2</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:::</span></span></code></pre>
+</div><PluginTabs :tabLabels="[&quot;a&quot;,&quot;b&quot;]" sharedStateKey="ab"><template #a><p>a content</p>
+</template><template #b><p>b content</p>
+</template></PluginTabs><PluginTabs :tabLabels="[&quot;a&quot;,&quot;b&quot;]" sharedStateKey="ab"><template #a><p>a content 2</p>
+</template><template #b><p>b content 2</p>
+</template></PluginTabs><p>不需要也可以关闭</p>
+<div class="language-ts vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// .vitepress/blog-theme.ts</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> blogTheme</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> getThemeConfig</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  tabs: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">false</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span></code></pre>
+</div><h2 id="mermaid-图表" tabindex="-1">Mermaid - 图表 <a class="header-anchor" href="#mermaid-图表" aria-label="Permalink to &quot;Mermaid - 图表&quot;"></a></h2>
+<ul>
+<li>Type: <code>boolean</code>|<code>object</code></li>
+</ul>
+<blockquote>
+<p>通过解析类 Markdown 的文本语法来实现图表的创建和动态修改。</p>
+</blockquote>
+<div class="tip custom-block"><p class="custom-block-title">一点说明</p>
+<p>基于 <a href="https://github.com/emersonbottero/vitepress-plugin-mermaid" target="_blank" rel="noreferrer">vitepress-plugin-mermaid</a> 实现</p>
+</div>
+<p>简单语法如下，详细流程图语法见 <a href="https://github.com/mermaid-js/mermaid/blob/develop/README.zh-CN.md" target="_blank" rel="noreferrer">Mermaid 中文文档</a></p>
+<pre>
+```mermaid
+flowchart TD
+  Start --> Stop
+```
+</pre>
+<p>效果如下</p>
+<div class="language-mermaid vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">mermaid</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">flowchart TD</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  Start --> Stop</span></span></code></pre>
+</div><p><strong>默认关闭</strong>，可以通过设置 <code>mermaid: true</code> 开启，或进行进一步配置。</p>
+<div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-Z4cQD" id="tab-SshcWwg" checked><label for="tab-SshcWwg">① 开启</label><input type="radio" name="group-Z4cQD" id="tab-oH_HSXz" ><label for="tab-oH_HSXz">② 进一步配置</label></div><div class="blocks">
+<div class="language-ts vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> blogTheme</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> getThemeConfig</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  mermaid: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span></code></pre>
+</div><div class="language-ts vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> blogTheme</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> getThemeConfig</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  mermaid: {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span></code></pre>
+</div></div></div>
+<p>下面看一下官方其它案例</p>
+<p><strong>时序图</strong></p>
+<div class="language-mermaid vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">mermaid</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">sequenceDiagram</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Alice->>John: Hello John, how are you?</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">loop Healthcheck</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    John->>John: Fight against hypochondria</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">end</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Note right of John: Rational thoughts!</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">John-->>Alice: Great!</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">John->>Bob: How about you?</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Bob-->>John: Jolly good!</span></span></code></pre>
+</div><p><strong>甘特图</strong></p>
+<div class="language-mermaid vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">mermaid</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">gantt</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    section Section</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    Completed :done,    des1, 2014-01-06,2014-01-08</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    Active        :active,  des2, 2014-01-07, 3d</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    Parallel 1   :         des3, after des1, 1d</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    Parallel 2   :         des4, after des1, 1d</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    Parallel 3   :         des5, after des3, 1d</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    Parallel 4   :         des6, after des4, 1d</span></span></code></pre>
+</div><h2 id="userworkspage" tabindex="-1">UserWorksPage <a class="header-anchor" href="#userworkspage" aria-label="Permalink to &quot;UserWorksPage&quot;"></a></h2>
+<ul>
+<li>Type: <code>UserWorks</code></li>
+</ul>
+<p>用于作品列表展示</p>
+<p>效果如下，详见 <a href="https://theme.sugarat.top/work.html" target="_blank" rel="noreferrer">个人作品展示</a></p>
+<p><img src="https://img.cdn.sugarat.top/mdImg/MTY4NzA4ODczMzkwNg==687088733906" alt=""></p>
+<p>新建一个<code>works.md</code>文件，放入以下内容</p>
+<div class="language-md vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">---</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">layout</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">page</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">title</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">个人作品展示</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">sidebar</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">false</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">outline</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: [</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">sticky</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">---</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">UserWorksPage</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /></span></span></code></pre>
+</div><p>内容配置方式如下</p>
+<div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-i4EYV" id="tab-2c3V2T6" checked><label for="tab-2c3V2T6">default</label><input type="radio" name="group-i4EYV" id="tab-A8ZVCsb" ><label for="tab-A8ZVCsb">type</label></div><div class="blocks">
+<div class="language-ts vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> blogTheme</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> getThemeConfig</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  works: {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    title: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'个人项目/线上作品'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    description: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'记录开发的点点滴滴'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    topTitle: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'举些🌰'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    list: [</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        title: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'博客主题 @sugarat/theme'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        description: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'基于 vitepress 实现的博客主题'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        time: {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          start: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'2023/01/29'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        github: {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          owner: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'ATQQ'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          repo: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'sugar-blog'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          branch: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'master'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          path: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'packages/theme'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        status: {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          text: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'自定义badge'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        },</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        url: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'https://theme.sugarat.top'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        cover:</span></span>
+<span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">          'https://img.cdn.sugarat.top/mdImg/MTY3MzE3MDUxOTMwMw==673170519303'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        tags: [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Vitepress'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Vue'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">],</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        links: [</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            title: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'一个简约风的VitePress博客主题'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            url: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'https://juejin.cn/post/7196517835380293693'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        ]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    ]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span></code></pre>
+</div><div class="language-ts vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">interface</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> UserWorks</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  title</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  description</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  topTitle</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  list</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> UserWork</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">interface</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> UserWork</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  title</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  description</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  time</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  |</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  |</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">    start</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">    end</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">    lastupdate</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  status</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">    text</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">    type</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'tip'</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'warning'</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'danger'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  url</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  github</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  |</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  |</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">    owner</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">    repo</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">    branch</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">    path</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  cover</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  |</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  |</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[]</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  |</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">    urls</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[]</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">    layout</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'swiper'</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'list'</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  links</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">    title</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">    url</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }[]</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  tags</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> string</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[]</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  top</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">?:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> number</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div></div></div>
+]]></content:encoded>
+            <enclosure url="https://loclink-1259720482.cos.ap-beijing.myqcloud.com/image/%E5%BD%95%E5%B1%8F2024-03-11%2023.51.51.gif" length="0" type="image/gif"/>
+        </item>
+        <item>
+            <title><![CDATA[更多能力]]></title>
+            <link>https://sfkm.me/zh/sop/more.html</link>
+            <guid>https://sfkm.me/zh/sop/more.html</guid>
+            <pubDate>Tue, 10 Sep 2024 18:35:04 GMT</pubDate>
+            <description><![CDATA[主题还提供了许多开箱即用的能力，详见文档 https://theme.sugarat.top
+* 主题配置：首页&文章 - 主题提供的一些 `frontmatter`
+* 主题配置：全局 - 主题提供]]></description>
+            <content:encoded><![CDATA[<h1 id="更多能力" tabindex="-1">更多能力 <a class="header-anchor" href="#更多能力" aria-label="Permalink to &quot;更多能力&quot;"></a></h1>
+<p>主题还提供了许多开箱即用的能力，详见文档 <a href="https://theme.sugarat.top" target="_blank" rel="noreferrer">https://theme.sugarat.top</a></p>
+<ul>
+<li><a href="https://theme.sugarat.top/config/frontmatter.html" target="_blank" rel="noreferrer">主题配置：首页&amp;文章</a> - 主题提供的一些 <code>frontmatter</code></li>
+<li><a href="https://theme.sugarat.top/config/global.html" target="_blank" rel="noreferrer">主题配置：全局</a> - 主题提供的额外能力</li>
+<li><a href="https://theme.sugarat.top/config/style.html" target="_blank" rel="noreferrer">主题配置：样式</a> - 自定义博客样式介绍</li>
+<li><a href="https://theme.sugarat.top/config/component.html" target="_blank" rel="noreferrer">主题配置：组件能力</a> - 自定义博客样式介绍</li>
+</ul>
+]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[快速上手]]></title>
+            <link>https://sfkm.me/zh/sop/quickStart.html</link>
+            <guid>https://sfkm.me/zh/sop/quickStart.html</guid>
+            <pubDate>Tue, 10 Sep 2024 18:35:04 GMT</pubDate>
+            <description><![CDATA[1分钟内完成自己的博客创建]]></description>
+            <content:encoded><![CDATA[<h1 id="快速上手" tabindex="-1">快速上手 <a class="header-anchor" href="#快速上手" aria-label="Permalink to &quot;快速上手&quot;"></a></h1>
+<p>1分钟内完成自己的博客创建</p>
+<div class="warning custom-block"><p class="custom-block-title">注意事项</p>
+<p>使用 <a href="https://pnpm.io" target="_blank" rel="noreferrer">pnpm</a>，<a href="https://www.npmjs.com/package/yarn" target="_blank" rel="noreferrer">yarn</a>，<a href="https://bun.sh/" target="_blank" rel="noreferrer">bun</a> ，需要单独安装</p>
+<p><strong>如果喜欢尝鲜，想体验更快的启动和构建速度，推荐使用 bun</strong>（<i style="color:red">windows 用户不建议使用 bun</i>）</p>
+<p>其它情况推荐使用 pnpm，<em>不推荐使用 yarn</em></p>
+<div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-sw7Pr" id="tab-dVbiUaU" checked><label for="tab-dVbiUaU">安装 PNPM</label><input type="radio" name="group-sw7Pr" id="tab-OJsWsf8" ><label for="tab-OJsWsf8">安装 bun</label></div><div class="blocks">
+<div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -g</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> pnpm</span></span></code></pre>
+</div><div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -g</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> bun</span></span></code></pre>
+</div></div></div>
+</div>
+<h2 id="快速创建项目" tabindex="-1">快速创建项目 <a class="header-anchor" href="#快速创建项目" aria-label="Permalink to &quot;快速创建项目&quot;"></a></h2>
+<p>使用 <a href="https://github.com/ATQQ/sugar-blog/tree/master/packages/create-theme" target="_blank" rel="noreferrer">@sugarat/create-theme</a> 快速创建模板项目</p>
+<div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-gWAKZ" id="tab-q5qxyb-" checked><label for="tab-q5qxyb-">npm</label><input type="radio" name="group-gWAKZ" id="tab-W-1wp8L" ><label for="tab-W-1wp8L">yarn</label><input type="radio" name="group-gWAKZ" id="tab-DuW9zXs" ><label for="tab-DuW9zXs">pnpm</label><input type="radio" name="group-gWAKZ" id="tab-s3TG3Kx" ><label for="tab-s3TG3Kx">bun</label></div><div class="blocks">
+<div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @sugarat/theme@latest</span></span></code></pre>
+</div><div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">yarn</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @sugarat/theme</span></span></code></pre>
+</div><div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pnpm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @sugarat/theme</span></span></code></pre>
+</div><div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bun</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @sugarat/theme</span></span></code></pre>
+</div></div></div>
+<details class="details custom-block"><summary>bun创建的项目不一样之处</summary>
+<p>① 会多出一个配置文件 <code>bunfig.toml</code>，默认配置了淘宝镜像源</p>
+<p>② 安装依赖后对应lock文件 <code>bun.lockb</code></p>
+<p>③ 运行命令需添加一个 <code>--bun</code> 参数，不加就是Node运行，体验不到快速(未来官方会做优化)</p>
+</details>
+<p>当然你也可以自定义项目名创建</p>
+<div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-4i2ve" id="tab-wbzaJzs" checked><label for="tab-wbzaJzs">npm</label><input type="radio" name="group-4i2ve" id="tab-2w5Y2jU" ><label for="tab-2w5Y2jU">yarn</label><input type="radio" name="group-4i2ve" id="tab-7OuQHE8" ><label for="tab-7OuQHE8">pnpm</label><input type="radio" name="group-4i2ve" id="tab-sVuSDP1" ><label for="tab-sVuSDP1">bun</label></div><div class="blocks">
+<div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @sugarat/theme@latest</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-first-blog</span></span></code></pre>
+</div><div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">yarn</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @sugarat/theme</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-first-blog</span></span></code></pre>
+</div><div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pnpm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @sugarat/theme</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-first-blog</span></span></code></pre>
+</div><div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bun</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @sugarat/theme</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-first-blog</span></span></code></pre>
+</div></div></div>
+<p>接下来按照 <a href="https://app.warp.dev/block/lZAFeRnRFgOcsRSUOU5ApV" target="_blank" rel="noreferrer">操作指引</a> 进行操作即可</p>
+<table tabindex="0">
+<thead>
+<tr>
+<th style="text-align:center">npm/yarn/pnpm</th>
+<th style="text-align:center">bun</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="https://img.cdn.sugarat.top/mdImg/MTY4OTQyMDE1NTcxMA==689420155710" alt=""></td>
+<td style="text-align:center"><img src="https://img.cdn.sugarat.top/mdImg/MTY5NjE0NzY1NDEwMA==696147654100" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>① 切换到项目的目录</p>
+<div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">cd</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-blog</span></span></code></pre>
+</div><p>② 安装依赖</p>
+<div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-hYCKo" id="tab-57hSAjG" checked><label for="tab-57hSAjG">pnpm</label><input type="radio" name="group-hYCKo" id="tab-vpHzdjO" ><label for="tab-vpHzdjO">bun</label></div><div class="blocks">
+<div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pnpm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span></span></code></pre>
+</div><div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bun</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span></span></code></pre>
+</div></div></div>
+<p>③ 开发启动</p>
+<div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-DtZev" id="tab-3Rvux-o" checked><label for="tab-3Rvux-o">pnpm</label><input type="radio" name="group-DtZev" id="tab-w3ROFgw" ><label for="tab-w3ROFgw">bun</label></div><div class="blocks">
+<div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pnpm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dev</span></span></code></pre>
+</div><div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bun</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --bun</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dev</span></span></code></pre>
+</div></div></div>
+<p><img src="https://img.cdn.sugarat.top/mdImg/MTY5NTIxODUyMDU4MQ==695218520581" alt=""></p>
+<p>你就会得到一个这样的页面</p>
+<p><img src="https://img.cdn.sugarat.top/mdImg/MTY3Njk4OTk2Mjc0Nw==676989962747" alt=""></p>
+<p>④ 构建产物</p>
+<div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-Xw7oK" id="tab-96lMFQf" checked><label for="tab-96lMFQf">pnpm</label><input type="radio" name="group-Xw7oK" id="tab-st5V8Rg" ><label for="tab-st5V8Rg">bun</label></div><div class="blocks">
+<div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pnpm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> build</span></span></code></pre>
+</div><div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bun</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --bun</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> build</span></span></code></pre>
+</div></div></div>
+<p><img src="https://img.cdn.sugarat.top/mdImg/MTY5NTIxODYwNzA3Nw==695218607077" alt=""></p>
+<p>默认会开启内置的离线全文搜索（基于 <code>pagefind</code> 实现）</p>
+<p>如果不需要可以在 <code>docs/.vitepress/blog-theme.ts</code> 中关闭</p>
+<ul>
+<li>如果<code>npx pagefind</code> 时间过长，可以手动将其安装为项目依赖 <code>pnpm add pagefind</code></li>
+</ul>
+<div class="language-ts vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> blogTheme</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> getThemeConfig</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // 默认开启pagefind离线的全文搜索支持（如使用其它的可以设置为false）</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // 如果npx pagefind 时间过长，可以手动将其安装为项目依赖 pnpm add pagefind</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  search: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">false</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">})</span></span></code></pre>
+</div><p>⑤ 预览构建产物</p>
+<div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-mTown" id="tab-q56QBw7" checked><label for="tab-q56QBw7">pnpm</label><input type="radio" name="group-mTown" id="tab-GStqev1" ><label for="tab-GStqev1">bun</label></div><div class="blocks">
+<div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pnpm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> serve</span></span></code></pre>
+</div><div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bun</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --bun</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> serve</span></span></code></pre>
+</div></div></div>
+<p><img src="https://img.cdn.sugarat.top/mdImg/MTY5NTIxODY1NzAzNg==695218657036" alt=""></p>
+<h2 id="升级" tabindex="-1">升级 <a class="header-anchor" href="#升级" aria-label="Permalink to &quot;升级&quot;"></a></h2>
+<p>如果主题更新了，升级主题，原项目只需执行如下指令即可</p>
+<div class="vp-code-group vp-adaptive-theme"><div class="tabs"><input type="radio" name="group-NfnHe" id="tab-yYFAXEE" checked><label for="tab-yYFAXEE">pnpm</label><input type="radio" name="group-NfnHe" id="tab-4XlDP48" ><label for="tab-4XlDP48">bun</label></div><div class="blocks">
+<div class="language-sh vp-adaptive-theme active"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pnpm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @sugarat/theme@latest</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 更新 vitepress 版本（通常安装最新的即可，主题包每次更新不出意外都会使用最新的VitePress）</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pnpm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> vitepress@latest</span></span></code></pre>
+</div><div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bun</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> update</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @sugarat/theme</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 更新 vitepress 版本（通常安装最新的即可，主题包每次更新不出意外都会使用最新的VitePress）</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bun</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> vitepress@latest</span></span></code></pre>
+</div></div></div>
+<h2 id="更多" tabindex="-1">更多 <a class="header-anchor" href="#更多" aria-label="Permalink to &quot;更多&quot;"></a></h2>
+<ul>
+<li><a href="https://theme.sugarat.top/config/frontmatter.html" target="_blank" rel="noreferrer">主题配置：首页&amp;文章</a> - 主题提供的一些 <code>frontmatter</code></li>
+<li><a href="https://theme.sugarat.top/config/global.html" target="_blank" rel="noreferrer">主题配置：全局</a> - 主题提供的额外能力</li>
+<li><a href="https://theme.sugarat.top/config/style.html" target="_blank" rel="noreferrer">主题配置：样式</a> - 自定义博客样式介绍</li>
+<li><a href="https://theme.sugarat.top/config/component.html" target="_blank" rel="noreferrer">主题配置：组件能力</a> - 自定义博客样式介绍</li>
+</ul>
+]]></content:encoded>
+            <enclosure url="https://img.cdn.sugarat.top/mdImg/MTY4OTQyMDE1NTcxMA==689420155710" length="0" type="image//mdImg/MTY4OTQyMDE1NTcxMA==689420155710"/>
+        </item>
+        <item>
+            <title><![CDATA[🔧 主题样式定制]]></title>
+            <link>https://sfkm.me/zh/sop/style.html</link>
+            <guid>https://sfkm.me/zh/sop/style.html</guid>
+            <pubDate>Tue, 10 Sep 2024 18:35:04 GMT</pubDate>
+            <description><![CDATA[介绍一下自定义主题的部分样式]]></description>
+            <content:encoded><![CDATA[<h1 id="样式配置" tabindex="-1">样式配置 <a class="header-anchor" href="#样式配置" aria-label="Permalink to &quot;样式配置&quot;"></a></h1>
+<p>样式自定义，参考<a href="https://vitepress.dev/guide/extending-default-theme#customizing-css" target="_blank" rel="noreferrer">官方文档思路</a></p>
+<p>在 <code>.vitepress/theme/index.mts</code> 中引入自定义的样式文件，覆盖默认主题样式即可</p>
+<p>例如:</p>
+<p>博客模板里，提供了一个如下例子</p>
+<div class="language-ts vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark has-focused-lines vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// .vitepress/theme/index.mts</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> BlogTheme </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '@sugarat/theme'</span></span>
+<span class="line"></span>
+<span class="line has-focus"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// 自定义样式重载</span></span>
+<span class="line has-focus"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> './style.scss'</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> BlogTheme</span></span></code></pre>
+</div><p>里面有如下内容</p>
+<div class="language-scss vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">scss</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.VPHome</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // 自定义首页背景图</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  &#x26;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">::before</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    // 图片来源：https://zhuanlan.zhihu.com/p/54060187</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    background-image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">url</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">./assets/bg.webp</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    background-size</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">cover</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // 定义遮罩样式</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  background</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">radial-gradient</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    ellipse</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    rgba</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">var</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">--bg-gradient-home</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">), </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    rgba</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">var</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">--bg-gradient-home</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">), </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">150</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">%</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  );</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><p>解除文件<code>index.mts</code> 中<code>import './style.scss'</code> 注释后，就能看到模板首页背景图发生了变化</p>
+<p><img src="https://img.cdn.sugarat.top/mdImg/MTY3Njk5MTAzODkzOQ==676991038939" alt=""></p>
+<h2 id="首页背景" tabindex="-1">首页背景 <a class="header-anchor" href="#首页背景" aria-label="Permalink to &quot;首页背景&quot;"></a></h2>
+<div class="language-scss vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">scss</span><pre class="shiki shiki-themes github-light github-dark has-focused-lines vp-code" tabindex="0" v-pre=""><code><span class="line has-focus"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.VPHome</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line has-focus"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  &#x26;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">::before</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line has-focus"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    background-image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">url</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">./assets/bg.webp</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">); </span></span>
+<span class="line has-focus"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    background-size</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">cover</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">; </span></span>
+<span class="line has-focus"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  } </span></span>
+<span class="line has-focus"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">} </span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.VPHome</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // 定义遮罩样式，控制图片展示的程度</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  background</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">radial-gradient</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    ellipse</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    rgba</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">var</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">--bg-gradient-home</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">), </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    rgba</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">var</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">--bg-gradient-home</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">), </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">150</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">%</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  );</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><h2 id="置顶样式" tabindex="-1">置顶样式 <a class="header-anchor" href="#置顶样式" aria-label="Permalink to &quot;置顶样式&quot;"></a></h2>
+<p>可以自行修改置顶icon的样式</p>
+<div class="language-scss vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">scss</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.blog-item</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> .pin.pin::before</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // 修改颜色</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  background-image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">linear-gradient</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">red</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">red</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><p><img src="https://img.cdn.sugarat.top/mdImg/MTY3NzA3OTExMjgxMA==677079112810" alt=""></p>
+<div class="language-scss vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">scss</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// 隐藏置顶的icon</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.blog-item</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> .pin.pin::before</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  display</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">none</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><p><img src="https://img.cdn.sugarat.top/mdImg/MTY3NzA3OTIwODAzNg==677079208036" alt=""></p>
+<h2 id="主题色" tabindex="-1">主题色 <a class="header-anchor" href="#主题色" aria-label="Permalink to &quot;主题色&quot;"></a></h2>
+<p>vitepress 最新的默认主题色偏紫色，看着感觉有点不习惯</p>
+<p><img src="https://img.cdn.sugarat.top/mdImg/MTY5MTkyODQ0ODUzOQ==691928448539" alt=""></p>
+<p>主题包内置了一些主题色，可以自行选择，详见<a href="https://theme.sugarat.top/config/global.html#themecolor" target="_blank" rel="noreferrer">全局配置:themeColor</a></p>
+<p>如果内置的不满足要求，也可以进行自定义，自定义的方式是通过覆盖变量的方式</p>
+<p>例如可以创建<code>user-theme.css</code>文件，内容如下</p>
+<div class="language-css vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">css</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">/* 所有变量：https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css */</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">/* 自定义主题色示例，如下 */</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">/* 浅色模式使用的变量 */</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">html</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">theme</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">] {</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  --vp-c-user-1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">red</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  --vp-c-user-2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">blue</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  --vp-c-user-3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">green</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  --vp-c-user-soft</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">rgba</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">255</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">.5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">/* 深色模式使用的变量 */</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">html</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">theme</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.dark</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  --vp-c-user-1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">yellow</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  --vp-c-user-2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">purple</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  --vp-c-user-3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">orange</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  --vp-c-user-soft</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">rgba</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">255</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">255</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">.5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">/* 覆盖默认变量 */</span></span>
+<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">html</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">theme</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">],</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">html</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">theme</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.dark</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  --vp-c-brand-1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">var</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">--vp-c-user-1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  --vp-c-brand-2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">var</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">--vp-c-user-2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  --vp-c-brand-3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">var</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">--vp-c-user-3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">  --vp-c-brand-soft</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">var</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">--vp-c-user-soft</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+</div><p>将其引入到<code>.vitepress/theme/index.mts</code>中即可</p>
+<div class="language-ts vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">ts</span><pre class="shiki shiki-themes github-light github-dark has-focused-lines vp-code" tabindex="0" v-pre=""><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> BlogTheme </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '@sugarat/theme'</span></span>
+<span class="line"></span>
+<span class="line has-focus"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// 导入自定义主题色</span></span>
+<span class="line has-focus"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> './user-theme.css'</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> BlogTheme</span></span></code></pre>
+</div><h2 id="more" tabindex="-1">More <a class="header-anchor" href="#more" aria-label="Permalink to &quot;More&quot;"></a></h2>
+<p>... wait a moment</p>
+]]></content:encoded>
+            <enclosure url="https://img.cdn.sugarat.top/mdImg/MTY3Njk5MTAzODkzOQ==676991038939" length="0" type="image//mdImg/MTY3Njk5MTAzODkzOQ==676991038939"/>
+        </item>
+        <item>
+            <title><![CDATA[Snowykami's Blog]]></title>
+            <link>https://sfkm.me/README.html</link>
+            <guid>https://sfkm.me/README.html</guid>
+            <pubDate>Tue, 10 Sep 2024 17:34:22 GMT</pubDate>
+            <content:encoded><![CDATA[<h1 id="snowykami-s-blog" tabindex="-1">Snowykami's Blog <a class="header-anchor" href="#snowykami-s-blog" aria-label="Permalink to &quot;Snowykami's Blog&quot;"></a></h1>
+]]></content:encoded>
+        </item>
+    </channel>
+</rss>
