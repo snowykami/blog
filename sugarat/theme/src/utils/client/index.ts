@@ -178,7 +178,7 @@ const defaultLangRouter = 'zh'
 // 因为这里有些稀奇古怪的问题，路由无法正确重写，所以手动操作一下，貌似是主题的bug？还是vitepress的bug？
 export function wrapperCleanUrls(cleanUrls: boolean, route: string) {
     const tempUrl = route.replace(/\.html$/, '')
-        .replace(`/${defaultLangRouter}`, "/")
+        .replace(`/${defaultLangRouter}/`, "/")
     return cleanUrls ? tempUrl : `${tempUrl}.html`
 }
 
