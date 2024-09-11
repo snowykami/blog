@@ -3,17 +3,17 @@
 
 /* 浅色模式使用的变量 */
 html[theme] {
-    --vp-c-user-1: #a2d8f4;
-    --vp-c-user-2: blue;
-    --vp-c-user-3: #a2d8f4;
+    --vp-c-user-1: #149ef8;
+    --vp-c-user-2: #047ed9;
+    --vp-c-user-3: #149ef8;
     --vp-c-user-soft: rgba(255, 0, 0, .5);
 }
 
 /* 深色模式使用的变量 */
 html[theme].dark {
-    --vp-c-user-1: yellow;
-    --vp-c-user-2: purple;
-    --vp-c-user-3: orange;
+    --vp-c-user-1: #149ef8;
+    --vp-c-user-2: #036db6;
+    --vp-c-user-3: #1a5d86;
     --vp-c-user-soft: rgba(255, 255, 0, .5);
 }
 

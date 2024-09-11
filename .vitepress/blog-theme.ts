@@ -2,23 +2,22 @@
 import {getThemeConfig} from '@sugarat/theme/node'
 
 // 开启RSS支持（RSS配置）
-// import type { Theme } from '@sugarat/theme'
+import type { Theme } from '@sugarat/theme'
 
-// const baseUrl = 'https://sugarat.top'
-// const RSS: Theme.RSSOptions = {
-//   title: '粥里有勺糖',
-//   baseUrl,
-//   copyright: 'Copyright (c) 2018-present, 粥里有勺糖',
-//   description: '你的指尖,拥有改变世界的力量（大前端相关技术分享）',
-//   language: 'zh-cn',
-//   image: 'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
-//   favicon: 'https://sugarat.top/favicon.ico',
-// }
+const baseUrl = 'https://sfkm.me'
+const RSS: Theme.RSSOptions = {
+  title: "Snowykami's Blog RSS",
+  baseUrl,
+  copyright: `Copyright (c) ${new Date().getFullYear()} Snowykami`,
+  description: 'Snowykami的个人博客RSS订阅',
+  language: 'zh-cn',
+  favicon: 'https://sfkm.me/favicon.ico',
+}
 
 // 所有配置项，详见文档: https://theme.sugarat.top/
 const blogTheme = getThemeConfig({
     // 开启RSS支持
-    // RSS,
+    RSS,
 
     // 搜索
     // 默认开启pagefind离线的全文搜索支持（如使用其它的可以设置为false）
@@ -33,7 +32,7 @@ const blogTheme = getThemeConfig({
             version: false,
             copyright: {
                 message: 'Snowykami',
-                link: "https://snowykami.github.io/",
+                link: "https://github.com/snowykami/blog",
             },
             bottomMessage: [
                 "Power by <a href='https://vitepress.dev/'>VitePress</a>",
@@ -57,41 +56,18 @@ const blogTheme = getThemeConfig({
             url: 'https://liteyuki.icu/',
         }
     ],
-
     // 公告
     popover: {
+        mobileMinify: true,
         title: '动态',
         body: [
-            // { type: 'text', content: '👇公众号👇---👇 微信 👇' },
-            // {
-            //   type: 'image',
-            //   src: 'https://img.cdn.sugarat.top/mdImg/MTYxNTAxODc2NTIxMA==615018765210~fmt.webp'
-            // },
-            // {
-            //   type: 'text',
-            //   content: '欢迎大家加群&私信交流'
-            // },
-            // {
-            //   type: 'text',
-            //   content: '文章首/文尾有群二维码',
-            //   style: 'padding-top:0'
-            // },
             {
               type: 'button',
               content: '轻雪机器人开发...',
-              link: 'https://bot.lieyuki.icu'
+              link: 'https://bot.liteyuki.icu'
             },
-            // {
-            //   type: 'button',
-            //   content: '加群交流',
-            //   props: {
-            //     type: 'success'
-            //   },
-            //   link: 'https://theme.sugarat.top/group.html',
-            // }
         ],
         duration: 0
     },
 })
-
 export {blogTheme}
