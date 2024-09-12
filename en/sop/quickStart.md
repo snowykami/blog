@@ -16,7 +16,7 @@ top: 1
 sidebar: false
 ---
 
-# 快速上手
+# Quick Start
 1分钟内完成自己的博客创建
 
 :::warning 注意事项

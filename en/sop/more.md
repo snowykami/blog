@@ -1,7 +1,7 @@
 ---
 top: 3
 ---
-# 更多能力
+# More Abilities
 
 主题还提供了许多开箱即用的能力，详见文档 https://theme.sugarat.top
 
