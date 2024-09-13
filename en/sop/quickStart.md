@@ -17,7 +17,7 @@ sidebar: false
 ---
 
 # Quick Start
-1分钟内完成自己的博客创建
+Build your blog in 1 minute
 
 :::warning 注意事项
 使用 [pnpm](https://pnpm.io)，[yarn](https://www.npmjs.com/package/yarn)，[bun](https://bun.sh/) ，需要单独安装

@@ -1,6 +1,7 @@
 ---
 title: LiteyukiBot
-description: 一个高性能，轻量级的聊天机器人应用程序基于liteyukibot框架
+#description: 一个高性能，轻量级的聊天机器人应用程序基于liteyukibot框架
+description: A high-performance, lightweight chatbot application based on the liteyukibot framework
 ---
 
 # LiteyukiBot

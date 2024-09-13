@@ -1,9 +1,9 @@
 ---
-description: 介绍一下自定义主题的部分样式
-title: 🔧 主题样式定制
+description: Theme Style Customization
+title: 🔧 Style Config
 readingTime: false
 tag:
- - 配置
+ - Config
 recommend: 3
 ---
 
