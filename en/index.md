@@ -17,6 +17,6 @@ blog:
   - When your sky suddenly starts to pour, it's me blasting the dark clouds for you.
   - Even if you don't quite understand me, don't deliberately avoid.
   - Final of all fireworks to rise into the sky, when it fades away.
- inspiringTimeout: 5000 # 切换时间
+ inspiringTimeout: 3500 # 切换时间
  pageSize: 6
 ---
