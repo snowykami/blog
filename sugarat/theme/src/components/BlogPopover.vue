@@ -155,13 +155,13 @@ function PopoverValue(props: { key: number; item: BlogPopover.Value },
     </div>
     <div v-if="bodyContent.length" class="body content">
       <PopoverValue v-for="(v, idx) in bodyContent" :key="idx" :item="v">
-        {{ v.type !== 'image' ? v.content : '' }}
+        {{ v.type !== 'image' ? getTextRef(v.content) : '' }}
       </PopoverValue>
       <hr v-if="footerContent.length">
     </div>
     <div class="footer content">
       <PopoverValue v-for="(v, idx) in footerContent" :key="idx" :item="v">
-        {{ v.type !== 'image' ? v.content : '' }}
+        {{ v.type !== 'image' ? getTextRef(v.content) : '' }}
       </PopoverValue>
     </div>
   </div>

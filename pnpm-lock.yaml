@@ -35,6 +35,9 @@ dependencies:
   oh-my-live2d:
     specifier: ^0.19.3
     version: 0.19.3
+  swiper:
+    specifier: ^11.1.14
+    version: 11.1.14
   vite:
     specifier: ^5.4.4
     version: 5.4.4(@types/node@22.5.4)(sass@1.78.0)

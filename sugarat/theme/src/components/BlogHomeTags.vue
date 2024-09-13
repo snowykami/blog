@@ -10,7 +10,6 @@ import {
   useCurrentPageNum,
 } from '../composables/config/blog'
 import { tagsSvgStr } from '../constants/svg'
-import {getText} from "../../../../.vitepress/utils/i18n";
 import {getTextRef} from "../composables/config/i18n";
 
 const route = useRoute()

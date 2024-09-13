@@ -21,6 +21,7 @@
     "module": "^1.2.5",
     "nodemon": "^3.1.4",
     "oh-my-live2d": "^0.19.3",
+    "swiper": "^11.1.14",
     "vite": "^5.4.4",
     "vitepress-markdown-timeline": "^1.2.1",
     "vitepress-plugin-pagefind": "^0.4.10",

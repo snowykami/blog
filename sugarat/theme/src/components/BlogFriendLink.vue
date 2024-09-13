@@ -112,8 +112,8 @@ onUnmounted(() => {
           <a :href="v.url" target="_blank">
             <ElAvatar :size="50" :src="v.avatar" :alt="v.alt" />
             <div class="info-wrapper">
-              <span class="nickname">{{ v.nickname }}</span>
-              <p class="des">{{ v.des }}</p>
+              <span class="nickname">{{ getTextRef(v.nickname) }}</span>
+              <p class="des">{{ getTextRef(v.des) }}</p>
             </div>
           </a>
         </li>

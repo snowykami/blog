@@ -9,6 +9,7 @@ const i18nData = {
         homepage: 'Home',
         relatedArticles: 'Related articles',
         trends: 'Trends',
+        "temp.notice.liteyukibotdev.content": "Liteyuki Bot Development",
 
     },
     zh: {
@@ -19,7 +20,7 @@ const i18nData = {
         homepage: '首页',
         relatedArticles: '相关文章',
         trends: '趋势',
-
+        "temp.notice.liteyukibotdev.content": "轻雪机器人开发",
     }
 }
 

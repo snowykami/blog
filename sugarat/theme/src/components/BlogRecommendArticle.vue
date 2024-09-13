@@ -6,6 +6,7 @@ import { wrapperCleanUrls } from '../utils/client'
 import { useArticles, useBlogConfig, useCleanUrls, useFormatShowDate } from '../composables/config/blog'
 import { recommendSVG } from '../constants/svg'
 import type { Theme } from '../composables/config'
+import {getTextRef} from "../composables/config/i18n";
 
 const formatShowDate = useFormatShowDate()
 
@@ -25,10 +26,10 @@ const recommend = computed(() =>
 const showDate = computed(() => (_recommend && _recommend?.showDate) ?? true)
 const showNum = computed(() => (_recommend && _recommend?.showNum) ?? true)
 
-const title = computed(() => recommend.value?.title ?? (`<span class="svg-icon">${recommendSVG}</span>` + '相关文章'))
+const title = computed(() => recommend.value?.title ?? (`<span class="svg-icon">${recommendSVG}</span>` + getTextRef('recommendArticle.title')))
 const pageSize = computed(() => recommend.value?.pageSize || 9)
-const nextText = computed(() => recommend.value?.nextText || '换一组')
-const emptyText = computed(() => recommend.value?.empty ?? '暂无相关文章')
+const nextText = computed(() => recommend.value?.nextText || getTextRef('recommendArticle.nextText'))
+const emptyText = computed(() => recommend.value?.empty ?? getTextRef('recommendArticle.empty'))
 
 const docs = useArticles()
 
