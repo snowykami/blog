@@ -12,6 +12,7 @@ blog:
   - Stars shimmer in the night sky, like hopes in the heart.
   - Wisdom is the flower that never fades.
   - Every sunset brings a promise of a new dawn.
+  - Soaring past the night, to trace the bright moonlight.
  inspiringTimeout: 5000 # 切换时间
  pageSize: 6
 ---
