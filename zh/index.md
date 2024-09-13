@@ -17,6 +17,6 @@ blog:
   - 就算不太了解我，也不要刻意躲.
   - 当光影消散之时，所有的烟花都会升起.
  # 设置 inspiringTimeout 可以实现自动切换
- inspiringTimeout: 5000
+ inspiringTimeout: 3500
  pageSize: 6
 ---
