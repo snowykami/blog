@@ -38,7 +38,7 @@ const i18nData: Record<string, Record<string, string>> = {
         "partnerLink.lgc2333.des": "Lgc2333's Blog",
         "partnerLink.edream.nickname": "EDream's mini-site",
         "partnerLink.edream.des": "EDream's Blog",
-        "partnerLink.Executor-Cheng.nickname": "Kawaii just Right!",
+        "partnerLink.Executor-Cheng.nickname": "Just Kawaii!",
         "partnerLink.Executor-Cheng.des": "Executor-Cheng's Site",
         "partnerLink.vikiboss.nickname": "Viki's writing spot",
         "partnerLink.vikiboss.des": "Vikiboss's Site",
