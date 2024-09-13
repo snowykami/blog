@@ -1,5 +1,4 @@
 ---
-#description: 默认支持流程图，tabs面板，待办列表，作品页面
 description: Default support flowchart, tabs, task list, works page
 ---
 

@@ -3,11 +3,11 @@ sticky: 1
 ---
 # About Theme
 
-简约风的 Vitepress 博客主题，基于 [vitepress](https://vitepress.dev/) 的自定义主题实现
+Simple style Vitepress blog theme, based on [vitepress](https://vitepress.dev/) custom theme implementation
 
 ![图片](https://img.cdn.sugarat.top/mdImg/MTY3MzE3MDUxOTMwMw==673170519303)
 
-更多细节见 https://theme.sugarat.top
+More details: https://theme.sugarat.top
 
 ## 已支持功能
 介绍一下主要的，非所有

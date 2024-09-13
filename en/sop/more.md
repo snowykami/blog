@@ -3,7 +3,6 @@ top: 3
 ---
 # More Abilities
 
-[//]: # (主题还提供了许多开箱即用的能力，详见文档 https://theme.sugarat.top)
 Theme also provides many out-of-the-box capabilities, see the documentation [https://theme.sugarat.top](https://theme.sugarat.top)
 
 * [主题配置：首页&文章](https://theme.sugarat.top/config/frontmatter.html) - 主题提供的一些 `frontmatter`
