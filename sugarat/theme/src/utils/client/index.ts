@@ -1,4 +1,5 @@
 import type {ThemeableImage} from '../../composables/config'
+import {getTextRef} from "../../composables/config/i18n";
 
 export function shuffleArray(arr: any[]) {
     const array = [...arr]
@@ -59,16 +60,16 @@ export function formatShowDate(date: Date | string) {
     const oneDay = oneHour * 24
     const oneWeek = oneDay * 7
     if (diff < oneMinute) {
-        return `${Math.floor(diff / oneSeconds)}秒前`
+        return `${Math.floor(diff / oneSeconds)}${getTextRef('time.secondsAgo')}`
     }
     if (diff < oneHour) {
-        return `${Math.floor(diff / oneMinute)}分钟前`
+        return `${Math.floor(diff / oneMinute)}${getTextRef('time.minutesAgo')}`
     }
     if (diff < oneDay) {
-        return `${Math.floor(diff / oneHour)}小时前`
+        return `${Math.floor(diff / oneHour)}${getTextRef('time.hoursAgo')}`
     }
     if (diff < oneWeek) {
-        return `${Math.floor(diff / oneDay)}天前`
+        return `${Math.floor(diff / oneDay)}${getTextRef('time.daysAgo')}`
     }
 
     return formatDate(new Date(date), 'yyyy-MM-dd')

@@ -10,13 +10,15 @@ import {
   useCurrentPageNum,
 } from '../composables/config/blog'
 import { tagsSvgStr } from '../constants/svg'
+import {getText} from "../../../../.vitepress/utils/i18n";
+import {getTextRef} from "../composables/config/i18n";
 
 const route = useRoute()
 const docs = useArticles()
 const homeTagsConfig = useConfig()?.config?.blog?.homeTags
 const showTags = computed(() => !!(homeTagsConfig ?? true))
 const title = computed(() => (typeof homeTagsConfig === 'boolean' || !homeTagsConfig?.title)
-  ? `${tagsSvgStr}标签`
+  ? `${tagsSvgStr}${getTextRef("homeTags.title")}`
   : homeTagsConfig?.title
 )
 const tags = computed(() => {

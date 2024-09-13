@@ -3,6 +3,8 @@ import {getThemeConfig} from '@sugarat/theme/node'
 
 // 开启RSS支持（RSS配置）
 import type { Theme } from '@sugarat/theme'
+import {getTextRef} from "./utils/i18nRef";
+import {getText} from "./utils/i18n";
 
 const baseUrl = 'https://sfkm.me'
 const RSS: Theme.RSSOptions = {
@@ -59,7 +61,7 @@ const blogTheme = getThemeConfig({
     // 公告
     popover: {
         mobileMinify: true,
-        title: '动态',
+        title: 'popover.title',
         body: [
             {
               type: 'button',

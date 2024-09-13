@@ -4,6 +4,7 @@ import { useData } from 'vitepress'
 import { isCurrentWeek } from '../utils/client'
 import { useArticles, useBlogConfig, useHomeAnalysis } from '../composables/config/blog'
 import BlogAuthor from './BlogAuthor.vue'
+import {getTextRef} from "../composables/config/i18n";
 
 const { home } = useBlogConfig()
 const { frontmatter } = useData()
@@ -44,17 +45,17 @@ const titles = computed(() => (frontmatter.value?.blog?.analysis?.articles?.titl
     <div class="overview-data">
       <div class="overview-item">
         <span class="count">{{ notHiddenArticles.length }}</span>
-        <span class="label">{{ titles[0] || '文章' }}</span>
+        <span class="label">{{ titles[0] || getTextRef("overview.articles") }}</span>
       </div>
       <div class="split" />
       <div class="overview-item">
         <span class="count">+{{ currentMonth?.length }}</span>
-        <span class="label">{{ titles[1] || '本月更新' }}</span>
+        <span class="label">{{ titles[1] || getTextRef("overview.monthUpdate") }}</span>
       </div>
       <div class="split" />
       <div class="overview-item">
         <span class="count">+{{ currentWeek?.length }}</span>
-        <span class="label">{{ titles[2] || '本周更新' }}</span>
+        <span class="label">{{ titles[2] || getTextRef("overview.weekUpdate") }}</span>
       </div>
     </div>
   </div>

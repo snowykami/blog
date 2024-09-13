@@ -7,6 +7,7 @@ import { useBlogConfig } from '../composables/config/blog'
 import { getImageUrl, shuffleArray } from '../utils/client'
 import type { Theme } from '../'
 import { friendLinkSvgStr } from '../constants/svg'
+import {getTextRef} from "../composables/config/i18n";
 
 const isDark = useDark({
   storageKey: 'vitepress-theme-appearance'
@@ -17,7 +18,7 @@ const friendConfig = computed<Theme.FriendConfig>(() => ({
   list: [],
   random: false,
   limit: Number.MAX_SAFE_INTEGER,
-  title: `${friendLinkSvgStr}友情链接`,
+  title: `${friendLinkSvgStr}${getTextRef("friendLink.title")}`,
   ...(Array.isArray(friend) ? { list: friend } : friend)
 }))
 
