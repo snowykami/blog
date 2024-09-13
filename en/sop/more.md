@@ -1,5 +1,5 @@
 ---
-top: 3
+title: More Abilities
 ---
 # More Abilities
 
