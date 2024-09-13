@@ -11,6 +11,7 @@ blog:
   - 繁星闪烁于夜空，犹如希望在心中.
   - 智慧是永不凋谢的花朵.
   - 每一次日落都预示着新的黎明.
+  - 穿过深沉的黑夜，去追逐皎洁的月光.
  # 设置 inspiringTimeout 可以实现自动切换
  inspiringTimeout: 5000
  pageSize: 6
