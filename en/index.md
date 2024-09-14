@@ -12,6 +12,11 @@ blog:
   - Stars shimmer in the night sky, like hopes in the heart.
   - Wisdom is the flower that never fades.
   - Every sunset brings a promise of a new dawn.
- inspiringTimeout: 5000 # 切换时间
+  - Soaring past the night, to trace the bright moonlight.
+  - All thoughts are like the starry river, all love is like the moonlight.
+  - When your sky suddenly starts to pour, it's me blasting the dark clouds for you.
+  - Even if you don't quite understand me, don't deliberately avoid.
+  - Final of all fireworks to rise into the sky, when it fades away.
+ inspiringTimeout: 3500 # 切换时间
  pageSize: 6
 ---
