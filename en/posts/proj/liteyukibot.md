@@ -11,7 +11,7 @@ description: A high-performance, lightweight chatbot application based on the Li
 
 ## Origins
 
-The LiteyukiBot project began on **Oct 5th, 2021**. Initially, it was created to meet some basic business needs for Xueying Workshop. At the time, QQ bots were particularly novel, which inspired me to develop a simple bot for Q&A and image retrieval, using **Mirai** as the protocol end. By Nov, I added some custom features and migrated to **NoneBot1**, adding email verification for rate limiting.
+The LiteyukiBot project began on **Oct 5th, 2021**. Initially, it was created to meet some basic business needs for Snowyfirefly Studio. At the time, QQ bots were particularly novel, which inspired me to develop a simple bot for Q&A and image retrieval, using **Mirai** as the protocol end. By Nov, I added some custom features and migrated to **NoneBot1**, adding email verification for rate limiting.
 
 ## Development History
 
@@ -55,7 +55,7 @@ The Liteyuki framework is currently a bot management framework, focusing more on
 
 The LiteyukiBot project has been running for {{Math.floor((new Date() - new Date("2021-10-05")) / (1000 * 60 * 60 * 24))}} days since it started on **Oct 5th, 2021**. Throughout this journey, I've learned a lot, gained technical expertise, made many friends, and received contributions from others. Collaborating with everyone has been an amazing experience.
 
-As Liteyuki expanded, we formed a small studio called [Liteyuki Studio](https://liteyuki.icu), a subsidiary of Xueying Workshop, dedicated to maintaining and developing open-source projects.
+As Liteyuki expanded, we formed a small studio called [Liteyuki Studio](https://liteyuki.icu), a subsidiary of Snowyfirefly Workshop, dedicated to maintaining and developing open-source projects.
 
 ## Other Information
 

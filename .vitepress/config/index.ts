@@ -1,5 +1,4 @@
 import {defineConfig} from 'vitepress'
-
 // 导入主题的配置
 import {blogTheme} from '../blog-theme'
 import {socialLinks} from "./data";
@@ -7,7 +6,7 @@ import {socialLinks} from "./data";
 import {zh} from "./zh";
 import {en} from "./en";
 
-const defaultLocaleRouter = 'zh'
+const defaultLocaleRouter = 'en'    // 修改后记得修改语言路由
 
 export default defineConfig({
     extends: blogTheme,
@@ -23,11 +22,11 @@ export default defineConfig({
     },
     lastUpdated: true,
     locales: {
-        root: {
+        zh: {
             label: '简体中文',
             ...zh,
         },
-        en: {
+        root: {
             label: 'English',
             ...en
         }

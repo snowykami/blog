@@ -21,7 +21,3 @@ export function getTextRef(key: string, extendData: Record<string, Record<string
     refData[key] = getText(lang, key);
     return refData[key] || key;
 }
-
-export function getTextComputed(key: string): any {
-    return computed(() => getTextRef(key).value)
-}

@@ -24,6 +24,7 @@ const tagsLangData = {
         "tag.punk": "朋克",
         "tag.python": "蟒蛇语言",
         "tag.railtransit": "轨道交通",
+        "tag.redrocker": "红岩人",
         "tag.redstonemusic": "红石音乐",
         "tag.selfmedia": "自媒体",
         "tag.socialbutterfly": "社牛",
@@ -53,6 +54,7 @@ const tagsLangData = {
         "tag.punk": "Punk",
         "tag.python": "Python",
         "tag.railtransit": "Rail Transit",
+        "tag.redrocker": "Redrocker",
         "tag.redstonemusic": "Redstone Music",
         "tag.selfmedia": "Self-Media",
         "tag.socialbutterfly": "Social Butterfly",
@@ -65,70 +67,111 @@ const tagsLangData = {
 
 type Tag = {
     text: string;
-    color: string;
+    color?: string;
     icon?: string;
     link?: string;
 }
 
+const colors = [
+    "#ef4444", // Red 500
+    "#f97316", // Orange 500
+    "#f59e0b", // Amber 500
+    "#eab308", // Yellow 500
+    "#84cc16", // Lime 500
+    "#22c55e", // Green 500
+    "#10b981", // Emerald 500
+    "#14b8a6", // Teal 500
+    "#06b6d4", // Cyan 500
+    "#0ea5e9", // Sky 500
+    "#3b82f6", // Blue 500
+    "#6366f1", // Indigo 500
+    "#8b5cf6", // Violet 500
+    "#a855f7", // Purple 500
+    "#d946ef", // Fuchsia 500
+    "#ec4899", // Pink 500
+    "#f43f5e"  // Rose 500
+];
+
 let tags: Tag[] = [
     // 使用一连串渐变色，从红色到蓝色
-    {text: 'tag.backend', color: '#ff0000'},
-    {text: 'tag.chatbot', color: '#ff3300'},
-    {text: 'tag.cloudnative', color: '#ff6600'},
-    {text: 'tag.coder', color: '#ff9900'},
-    {text: 'tag.cs', color: '#ffcc00'},
-    {text: 'tag.gamedev', color: '#ffff00'},
-    {text: 'tag.genshin', color: '#ccff00'},
-    {text: 'tag.golang', color: '#99ff00'},
-    {text: 'tag.homelab', color: '#66ff00'},
-    {text: 'tag.it', color: '#33ff00'},
-    {text: 'tag.jpop', color: '#00ff00'},
-    {text: 'tag.liteyuki', color: '#00ff33'},
-    {text: 'tag.mcpe', color: '#00ff66'},
-    {text: 'tag.minecraft', color: '#00ff99'},
-    {text: 'tag.microservices', color: '#00ffcc'},
-    {text: 'tag.musiccomposition', color: '#00ffff'},
-    {text: 'tag.networkengineering', color: '#00ccff'},
-    {text: 'tag.piano', color: '#0099ff'},
-    {text: 'tag.punk', color: '#0066ff'},
-    {text: 'tag.python', color: '#0033ff'},
-    {text: 'tag.railtransit', color: '#0000ff'},
-    {text: 'tag.redstonemusic', color: '#3300ff'},
-    {text: 'tag.selfmedia', color: '#6600ff'},
-    {text: 'tag.socialbutterfly', color: '#9900ff'},
-    {text: 'tag.socialphobia', color: '#cc00ff'},
-    {text: 'tag.travel', color: '#ff00ff'},
-    {text: 'tag.uploader', color: '#ff00cc'},
+    {text: 'tag.backend'},
+    {text: 'tag.chatbot'},
+    {
+        text: 'tag.cloudnative',
+        link: 'https://www.cncf.io/',
+        icon: "https://www.cncf.io/wp-content/themes/cncf-twenty-two/images/favicon.svg"
+    },
+    {text: 'tag.coder'},
+    {text: 'tag.cs'},
+    {text: 'tag.gamedev'},
+    {text: 'tag.genshin'},
+    {text: 'tag.golang', link: 'https://golang.google.cn/', icon: "https://golang.google.cn/favicon.ico"},
+    {text: 'tag.homelab'},
+    {text: 'tag.it'},
+    {text: 'tag.jpop'},
+    {
+        text: 'tag.liteyuki',
+        link: 'https://liteyuki.icu',
+        icon: "https://cdn.liteyuki.icu/static/img/liteyuki_icon_640.png"
+    },
+    {text: 'tag.mcpe'},
+    {
+        text: 'tag.minecraft',
+        link: 'https://www.minecraft.net/',
+        icon: "https://www.minecraft.net/etc.clientlibs/minecraftnet/clientlibs/clientlib-site/resources/favicon.ico"
+    },
+    {text: 'tag.microservices'},
+    {text: 'tag.musiccomposition'},
+    {text: 'tag.networkengineering'},
+    {text: 'tag.piano'},
+    {text: 'tag.punk'},
+    {text: 'tag.python', link: 'https://www.python.org/', icon: "https://www.python.org/favicon.ico"},
+    {text: 'tag.railtransit', icon: "https://www.cqmetro.cn/imgs/tb.png"},
+    {text: 'tag.redrocker', link: 'https://redrocker.team/', icon: "https://redrock.team/imgs/redRock.png"},
+    {text: 'tag.redstonemusic'},
+    {text: 'tag.selfmedia'},
+    {text: 'tag.socialbutterfly'},
+    {text: 'tag.socialphobia'},
+    {text: 'tag.travel'},
+    {text: 'tag.uploader'},
 ];
 // tags.sort(() => Math.random() - 0.5);   // 随机排序
 
 // 通过背景色计算文字颜色
-const getTagTextColor = (backgroundColor: string) => {
-    // 将颜色值转换为 RGB 格式
-    const rgb = backgroundColor.replace(/^#/, '');
-    const [r, g, b] = rgb.match(/.{2}/g).map(x => parseInt(x, 16));
+console.log(
+    "   _____                           _                   _ \n" +
+    "  / ____|                         | |                 (_)\n" +
+    " | (___  _ __   _____      ___   _| | ____ _ _ __ ___  _ \n" +
+    "  \\___ \\| '_ \\ / _ \\ \\ /\\ / / | | | |/ / _` | '_ ` _ \\| |\n" +
+    "  ____) | | | | (_) \\ V  V /| |_| |   < (_| | | | | | | |\n" +
+    " |_____/|_| |_|\\___/ \\_/\\_/  \\__, |_|\\_\\__,_|_| |_| |_|_|\n" +
+    "                              __/ |                      \n" +
+    "                             |___/                       "
+)
+console.log(getTextRef("aboutme.easterEgg", {
+    "zh": {
+        "aboutme.easterEgg": "恭喜你发现了彩蛋！"
+    },
+    "en": {
+        "aboutme.easterEgg": "Congratulations! You found the easter egg!"
+    }
 
-    // 计算亮度
-    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
-
-    // 根据亮度决定文字颜色
-    return brightness > 128 ? '#111' : '#eee'
-};
+}))
 
 </script>
 
 <template>
     <div class="tags-bar">
-        <span class="tag" v-for="tag in tags"
-               :style="{backgroundColor: tag.color, color: getTagTextColor(tag.color)}">
+        <div class="tag" v-for="(tag, i) in tags" :style="{backgroundColor: colors[i % colors.length]}">
             <img class="tag-icon" v-if="tag.icon" :src="tag.icon" alt="icon"/>
+
             <a v-if="tag.link" :href="tag.link" class="tag-link">
                 {{ getTextRef(tag.text, tagsLangData) }}
             </a>
             <span v-else>
                 {{ getTextRef(tag.text, tagsLangData) }}
             </span>
-        </span>
+        </div>
     </div>
 </template>
 
@@ -141,21 +184,28 @@ const getTagTextColor = (backgroundColor: string) => {
 }
 
 .tag {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     white-space: nowrap;
     padding: 5px 10px;
     margin: 0 5px 10px 5px; // 设置标签间距
     border-radius: 10px;
     color: white;
     font-size: 14px;
+    height: 40px;
+
+    .tag-link {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    .tag-icon {
+        height: 65%;
+        margin-right: 5px;
+        border-radius: 4px;
+    }
 }
 
-.tag-link {
-    color: inherit;
-    text-decoration: underline;
-}
 
-.tag-icon {
-    border-radius: 50%;
-}
 </style>

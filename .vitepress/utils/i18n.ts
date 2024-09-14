@@ -9,6 +9,8 @@ export const i18nData = {
         homepage: 'Home',
         relatedArticles: 'Related articles',
         trends: 'Trends',
+        "lang.simplefiedChinese": "Simplefied Chinese",
+        "lang.english": "English",
         "temp.notice.liteyukibotdev.content": "Liteyuki Bot Development",
 
     },
@@ -20,6 +22,8 @@ export const i18nData = {
         homepage: '首页',
         relatedArticles: '相关文章',
         trends: '趋势',
+        "lang.simplefiedChinese": "简体中文",
+        "lang.english": "英语",
         "temp.notice.liteyukibotdev.content": "轻雪机器人开发",
     }
 }
