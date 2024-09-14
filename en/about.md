@@ -2,11 +2,6 @@
 sticky: 1
 top: 1
 ---
-
-<script setup lang="ts">
-import TagsBar from '../.vitepress/comps/TagsBar.vue'
-</script>
-
 # About me
 
 ## Introduction
@@ -27,3 +22,8 @@ Click the menu in the upper right corner and select my contact information.
 
 ## Tags
 <TagsBar />
+
+
+<script setup lang="ts">
+import TagsBar from '../.vitepress/comps/TagsBar.vue'
+</script>

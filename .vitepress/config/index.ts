@@ -13,7 +13,7 @@ export default defineConfig({
     extends: blogTheme,
     // base,
     rewrites: {
-        'zh/:rest*': ':rest*',
+        [`${defaultLocaleRouter}/:rest*`]: ':rest*',
     },
     head: [
         ['link', {rel: 'icon', href: '/favicon.ico'}]

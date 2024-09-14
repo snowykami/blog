@@ -3,10 +3,6 @@ sticky: 1
 top: 1
 ---
 
-<script setup lang="ts">
-import TagsBar from '../.vitepress/comps/TagsBar.vue'
-</script>
-
 # 关于我
 
 ## 简述
@@ -26,3 +22,7 @@ import TagsBar from '../.vitepress/comps/TagsBar.vue'
 
 ## 标签
 <TagsBar />
+
+<script setup lang="ts">
+import TagsBar from '../.vitepress/comps/TagsBar.vue'
+</script>
