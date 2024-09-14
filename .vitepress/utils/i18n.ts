@@ -1,4 +1,4 @@
-const defaultLang = 'zh';
+const defaultLang = 'en';
 
 export const i18nData = {
     en: {
