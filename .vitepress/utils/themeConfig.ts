@@ -1,17 +1,17 @@
 export const ThemeConfig = {
-    getEditLink: (editPageText: string): { pattern: string; text: string; } => {
+    getEditLink: (editPageText: string): { pattern: (params: { filePath: string; }) => string; text: string; } => {
         return {
-            pattern: "https://github.com/snowykami/blog/tree/main",
+            pattern: ({filePath}: { filePath: string; }): string => {
+                // 匹配 /dev/api或 /{lang}/dev/api
+                return `https://github.com/snowykami/blog/tree/main/${filePath}`
+            },
             text: editPageText
         };
     },
-
     getOutLine: (label: string): { label: string; level: [number, number]; } => {
         return {
             label: label,
             level: [2, 6]
         };
     },
-
-    copyright: 'Copyright (C) 2020-2024 LiteyukiStudio. All Rights Reserved'
 }

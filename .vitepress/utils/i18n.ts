@@ -1,6 +1,6 @@
 const defaultLang = 'zh';
 
-const i18nData = {
+export const i18nData = {
     en: {
         about: 'About',
         backToTop: 'Back to top',
@@ -28,6 +28,22 @@ const i18nData = {
 export function getText(lang: string, key: string): string {
     lang = formatLang(lang);
     return i18nData[lang][key];
+}
+
+export function setText(lang: string, key: string, value: string): void {
+    lang = formatLang(lang);
+    // 判断是否存在该语言
+    if (!i18nData[lang]) {
+        i18nData[lang] = {};
+    }
+    i18nData[lang][key] = value
+}
+
+export function extendLangData(lang: string, data: Record<string, string>): void {
+    lang = formatLang(lang);
+    for (let key in data) {
+        setText(lang, key, data[key]);
+    }
 }
 
 export function formatLang(lang: string): string {
