@@ -10,8 +10,9 @@ import {
 } from '../composables/config/blog'
 import type {Theme} from '../composables/config'
 import BlogItem from './BlogItem.vue'
-import {formatLangRouter} from "../composables/config/i18n";
-const lang  = useData().lang
+import {defaultLang, formatLangRouter, supportedLangs} from "../composables/config/i18n";
+
+const lang = useData().lang
 const {theme, frontmatter} = useData<Theme.Config>()
 const globalAuthor = computed(() => theme.value.blog?.author || '')
 const docs = useArticles()
@@ -35,9 +36,13 @@ const wikiList = computed(() => {
 // 在filterData中进行条件筛选
 const filterData = computed(() => {
     if (!activeTagLabel.value)
-        return wikiList.value.filter(v => v.route.startsWith(`/${formatLangRouter(lang.value)}/`))
+        return wikiList.value.filter(v => defaultLang == formatLangRouter(lang.value) ?
+            !supportedLangs.filter(l => l !== defaultLang).some(l => v.route.startsWith(`/${l}/`)) :
+            v.route.startsWith(`/${formatLangRouter(lang.value)}/`));
     return wikiList.value.filter(v => {
-            return v.meta?.tag?.includes(activeTagLabel.value) && v.route.startsWith(`/${formatLangRouter(lang.value)}/`)
+            return v.meta?.tag?.includes(activeTagLabel.value) && defaultLang == formatLangRouter(lang.value) ?
+                !supportedLangs.filter(l => l !== defaultLang).some(l => v.route.startsWith(`/${l}/`)) :
+                v.route.startsWith(`/${formatLangRouter(lang.value)}/`)
         }
     )
 })

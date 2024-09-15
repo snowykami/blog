@@ -1,4 +1,5 @@
 export const defaultLang = 'zh'
+export const supportedLangs = ["zh", "en"]
 
 const i18nData: Record<string, Record<string, string>> = {
     en: {
@@ -112,4 +113,5 @@ export function extendData(data: Record<string, Record<string, string>>): void {
 }
 
 import friendLinksJson from '../../../data/i18n/friend-links-i18n.json'
+
 extendData(friendLinksJson)

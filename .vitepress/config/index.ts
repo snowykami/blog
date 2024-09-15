@@ -16,6 +16,7 @@ export default defineConfig({
     themeConfig: {
         socialLinks: socialLinks,
     },
+    srcExclude: ["README.md"],
     lastUpdated: true,
     locales: {
         root: {
