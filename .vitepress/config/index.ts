@@ -1,12 +1,12 @@
 import {loadLangData} from "./i18nConf";
-loadLangData()  // 加载语言们
 import {defineConfig} from 'vitepress'
-// 导入主题的配置
 import {blogTheme} from '../blog-theme'
 import {socialLinks} from "./data";
+
 import {zh} from "./zh";
 import {en} from "./en";
 import {defaultLang} from "../sugarat/theme/src/composables/config/i18n";
+loadLangData()
 
 export default defineConfig({
     extends: blogTheme,
