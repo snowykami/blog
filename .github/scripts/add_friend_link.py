@@ -3,11 +3,12 @@ Module docs
 """
 import os
 import json
+os.system("pip install PyGithub")
 from github import Github
 
 import os
 
-os.system("pip install github")
+
 
 def run():
     # 使用 GitHub token 初始化 Github 对象
