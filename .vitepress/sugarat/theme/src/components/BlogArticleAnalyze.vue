@@ -15,6 +15,7 @@ import { useAnalyzeTitles, useBlogConfig, useCurrentArticle, useDocMetaInsertPos
 import countWord, { formatDate } from '../utils/client'
 import type { Theme } from '../composables/config'
 import BlogDocCover from './BlogDocCover.vue'
+import {getTextRef} from "../composables/config/i18nRef";
 
 const formatShowDate = useFormatShowDate()
 const { article, authorList } = useBlogConfig()
@@ -133,11 +134,11 @@ const timeTitle = computed(() =>
   <div v-if="showAnalyze && readingTimePosition === 'top'" class="doc-analyze" data-pagefind-ignore="all">
     <span>
       <ElIcon><EditPen /></ElIcon>
-      {{ topWordCount }}
+      {{getTextRef("article.charCountBefore")}} {{ topWordCount }} {{getTextRef("article.charCountAfter")}}
     </span>
     <span>
       <ElIcon><AlarmClock /></ElIcon>
-      {{ topReadTime }}
+      {{getTextRef("article.readTimeBefore")}}: {{ topReadTime }} {{getTextRef("article.readTimeAfter")}}
     </span>
   </div>
   <div id="hack-article-des" ref="$des" class="meta-des">
@@ -168,11 +169,11 @@ const timeTitle = computed(() =>
     <template v-if="readingTimePosition === 'inline' && showAnalyze">
       <span :title="wordCountTitle">
         <ElIcon><EditPen /></ElIcon>
-        {{ inlineWordCount }}
+        {{ inlineWordCount }} {{getTextRef("article.charCountAfter")}}
       </span>
       <span :title="readTimeTitle">
         <ElIcon><AlarmClock /></ElIcon>
-        {{ inlineReadTime }}
+        {{ inlineReadTime }} {{getTextRef("article.readTimeAfter")}}
       </span>
     </template>
     <template v-if="readingTimePosition === 'newLine' && showAnalyze">

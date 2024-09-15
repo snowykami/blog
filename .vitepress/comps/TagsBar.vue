@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import {getTextRef} from "../sugarat/theme/src/composables/config/i18nRef";
+import {computed} from "vue";
+import {useData} from "vitepress";
+
+const isDark = useData().isDark
 
 const tagsLangData = {
     "zh": {
@@ -92,6 +96,26 @@ const colors = [
     "#f43f5e"  // Rose 500
 ];
 
+const colorsDark = [
+    "#991b1b", // Red 800
+    "#9a3412", // Orange 800
+    "#92400e", // Amber 800
+    "#854d0e", // Yellow 800
+    "#3f6212", // Lime 800
+    "#166534", // Green 800
+    "#065f46", // Emerald 800
+    "#115e59", // Teal 800
+    "#155e75", // Cyan 800
+    "#075985", // Sky 800
+    "#1e40af", // Blue 800
+    "#3730a3", // Indigo 800
+    "#5b21b6", // Violet 800
+    "#6b21a8", // Purple 800
+    "#86198f", // Fuchsia 800
+    "#9d174d", // Pink 800
+    "#9f1239"  // Rose 800
+];
+
 let tags: Tag[] = [
     // 使用一连串渐变色，从红色到蓝色
     {text: 'tag.backend'},
@@ -135,7 +159,12 @@ let tags: Tag[] = [
     {text: 'tag.travel'},
     {text: 'tag.uploader'},
 ];
+
 // tags.sort(() => Math.random() - 0.5);   // 随机排序
+
+function getColor(i: number) {
+    return isDark.value ? colorsDark[i % colorsDark.length] : colors[i % colors.length]
+}
 
 // 通过背景色计算文字颜色
 console.log(
@@ -162,9 +191,8 @@ console.log(getTextRef("aboutme.easterEgg", {
 
 <template>
     <div class="tags-bar">
-        <div class="tag" v-for="(tag, i) in tags" :style="{backgroundColor: colors[i % colors.length]}">
+        <div class="tag" v-for="(tag, i) in tags" :style="{backgroundColor: getColor(i)}">
             <img class="tag-icon" v-if="tag.icon" :src="tag.icon" alt="icon"/>
-
             <a v-if="tag.link" :href="tag.link" class="tag-link">
                 {{ getTextRef(tag.text, tagsLangData) }}
             </a>

@@ -1,5 +1,3 @@
-import {loadLangData} from "./i18nConf";
-loadLangData()
 import {defineConfig} from 'vitepress'
 import {blogTheme} from '../blog-theme'
 import {socialLinks} from "./data";
@@ -12,9 +10,6 @@ import {defaultLang} from "../sugarat/theme/src/composables/config/i18n";
 export default defineConfig({
     extends: blogTheme,
     // base,
-    rewrites: {
-        [`${defaultLang}/:rest*`]: ':rest*',
-    },
     head: [
         ['link', {rel: 'icon', href: '/favicon.ico'}]
     ],
@@ -23,11 +18,11 @@ export default defineConfig({
     },
     lastUpdated: true,
     locales: {
-        zh: {
+        root: {
             label: '简体中文',
             ...zh,
         },
-        root: {
+        en: {
             label: 'English',
             ...en
         }

@@ -9,7 +9,7 @@
 - 部分后端服务由[轻雪云 Liteyuki Cloud](https://liteyuki.icu)提供
 
 ## 注意
-- 该博客的路由中文重写有稀奇古怪的问题，所以我在[sugarat/theme/src/utils/client/index.ts](./sugarat/theme/src/utils/client/index.ts#L179)生成路由链接时进行了手动重写
+- 该博客的路由中文重写有稀奇古怪的问题，所以我在[sugarat/theme/src/utils/client/index.ts](./.vitepress/sugarat/theme/src/utils/client/index.ts#L179)生成路由链接时进行了手动重写
 
 ## 友链申请
 - 添加友链请准备以下内容

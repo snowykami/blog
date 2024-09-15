@@ -5,8 +5,8 @@ import {useColorMode} from '@vueuse/core'
 
 import {formatDate, replaceValue} from '../../utils/client'
 import type {Theme} from './index'
-import {string} from "fast-glob/out/utils";
 import {getTextRef} from "./i18nRef";
+import {defaultLang} from "./i18n";
 
 const configSymbol: InjectionKey<Ref<Theme.Config>> = Symbol('theme-config')
 
@@ -129,7 +129,7 @@ export function useArticlesWithLang() {
     ) || []
 }
 
-export function filterArticlesWithLang(lang: string): Theme.PageData[]{
+export function filterArticlesWithLang(lang: string): Theme.PageData[] {
     lang = formatLangRouter(lang)
     const blogConfig = useConfig()
     return blogConfig.config?.blog?.pagesData.filter(
@@ -311,7 +311,7 @@ export function useAnalyzeTitles(wordCount: Ref<number>, readTime: ComputedRef<n
 }
 
 export function useFormatShowDate() {
-    const blog = useBlogConfig()
+    let blog = useBlogConfig()
     if (typeof blog.formatShowDate === 'function') {
         return blog.formatShowDate
     }
@@ -326,7 +326,7 @@ export function useFormatShowDate() {
         const oneDay = oneHour * 24
         const oneWeek = oneDay * 7
 
-        const langMap = {
+        const mapValue = {
             justNow: getTextRef('time.justNow'),
             secondsAgo: getTextRef('time.secondsAgo'),
             minutesAgo: getTextRef('time.minutesAgo'),
@@ -335,7 +335,6 @@ export function useFormatShowDate() {
             weeksAgo: getTextRef('time.weeksAgo'),
             ...blog.formatShowDate
         }
-        const mapValue = langMap
 
         if (diff < 10) {
             return mapValue.justNow

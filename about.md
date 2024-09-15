@@ -36,5 +36,5 @@ top: 1
 - 网站图标：https URL
 
 <script setup lang="ts">
-import TagsBar from '../.vitepress/comps/TagsBar.vue'
+import TagsBar from './.vitepress/comps/TagsBar.vue'
 </script>

@@ -1,12 +1,15 @@
-export const defaultLang = 'en'
+export const defaultLang = 'zh'
 
 const i18nData: Record<string, Record<string, string>> = {
     en: {
         // UITextArea
-        "article.countOfChar": "Count of char(s)",
-        "article.charCount": " char(s)",
-        "article.needTime": "Need",
-        "article.takeTime": " minute(s) to read",
+        "about": "About",
+        "homepage": "Home",
+        // Article
+        "article.charCountBefore": "Count of word(s)",
+        "article.charCountAfter": " word(s)",
+        "article.readTimeBefore": "Need",
+        "article.readTimeAfter": " minute(s) to read",
         "article.charsOfArticle": " char(s) of article",
         "article.expectedTime": "Expected time",
         "article.author": "Author",
@@ -35,11 +38,13 @@ const i18nData: Record<string, Record<string, string>> = {
 
     },
     zh: {
+        "about": "关于",
+        "homepage": "首页",
         // UITextArea
-        "article.countOfChar": "字数",
-        "article.charCount": " 个字",
-        "article.needTime": " 预计",
-        "article.takeTime": " 分钟",
+        "article.charCountBefore": "字数",
+        "article.charCountAfter": " 个字",
+        "article.readTimeBefore": "阅读时长",
+        "article.readTimeAfter": " 分",
         "article.charsOfArticle": " 文章字数",
         "article.expectedTime": "预计阅读时间",
         "article.author": "作者",
@@ -59,9 +64,9 @@ const i18nData: Record<string, Record<string, string>> = {
         "recommendArticle.nextText": "换一组",
         "recommendArticle.title": "推荐",
         "time.secondsAgo": "秒前",
-        "time.minutesAgo": "分钟前",
-        "time.hoursAgo": "小时前",
-        "time.daysAgo": "天前",
+        "time.minutesAgo": "分前",
+        "time.hoursAgo": "时前",
+        "time.daysAgo": "日前",
         "time.justNow": "刚刚",
         // ValueTextArea
         "popover.content.liteyukibotdev": "轻雪机器人开发",

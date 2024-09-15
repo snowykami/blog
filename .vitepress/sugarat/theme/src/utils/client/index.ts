@@ -1,5 +1,6 @@
 import type {ThemeableImage} from '../../composables/config'
 import {getTextRef} from "../../composables/config/i18nRef";
+import {defaultLang} from "../../composables/config/i18n";
 
 export function shuffleArray(arr: any[]) {
     const array = [...arr]
@@ -174,13 +175,11 @@ export function getImageUrl(
     return ''
 }
 
-export const defaultLangRouter = 'en'
-
 
 // 因为这里有些稀奇古怪的问题，路由无法正确重写，所以手动操作一下，貌似是主题的bug？还是vitepress的bug？
 export function wrapperCleanUrls(cleanUrls: boolean, route: string) {
     const tempUrl = route.replace(/\.html$/, '')
-        .replace(`/${defaultLangRouter}/`, "/")
+        .replace(`/${defaultLang}/`, "/")
     return cleanUrls ? tempUrl : `${tempUrl}.html`
 }
 
