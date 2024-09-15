@@ -19,7 +19,7 @@ def run():
 #     issue = repo.get_issues(state='open')[0]
     # 通过GITHUB_ISSUE_NUMBER获取issue
     # 通过环境变量获取 issue 编号
-    issue_number = int(os.getenv('ISSUE_NUMBER'))
+    issue_number = int(os.getenv('GITHUB_ISSUE_NUMBER'))
 
 
     # 使用 issue 编号获取 issue
