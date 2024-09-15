@@ -8,8 +8,9 @@ import {getImageUrl, shuffleArray} from '../utils/client'
 import type {Theme} from '../'
 import {friendLinkSvgStr} from '../constants/svg'
 import {getTextRef} from "../composables/config/i18nRef";
-import {extendData} from "../composables/config/i18n";
+import {extendData, formatLangRouter} from "../composables/config/i18n";
 import {string} from "fast-glob/out/utils";
+import {useData} from "vitepress";
 
 const isDark = useDark({
     storageKey: 'vitepress-theme-appearance'
@@ -138,7 +139,8 @@ let options = ref({
     name: "",
     des: "",
     url: "",
-    icon: ""
+    icon: "",
+    lang: formatLangRouter(useData().lang.value)
 })
 
 const isWindowOpen = ref(false)
