@@ -1,4 +1,5 @@
 import {loadLangData} from "./i18nConf";
+loadLangData()
 import {defineConfig} from 'vitepress'
 import {blogTheme} from '../blog-theme'
 import {socialLinks} from "./data";
@@ -6,7 +7,7 @@ import {socialLinks} from "./data";
 import {zh} from "./zh";
 import {en} from "./en";
 import {defaultLang} from "../sugarat/theme/src/composables/config/i18n";
-loadLangData()
+
 
 export default defineConfig({
     extends: blogTheme,

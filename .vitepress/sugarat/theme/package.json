@@ -30,7 +30,8 @@
     "node.d.ts",
     "node.js",
     "src",
-    "types"
+    "types",
+    "data/i18n/friend-links-i18n.json"
   ],
   "peerDependencies": {
     "@element-plus/icons-vue": "^2.3.1",

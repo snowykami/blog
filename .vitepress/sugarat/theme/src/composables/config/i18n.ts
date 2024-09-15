@@ -68,9 +68,7 @@ const i18nData: Record<string, Record<string, string>> = {
 
     }
 }
-// import friendLinksJson from '../../../../../data/i18n/friend-links-i18n.json'
-// import friendLinksJson from '../../../../../data/i18n/friend-links-i18n.json'
-// extendData(friendLinksJson)
+
 export function formatLangRouter(lang: string) {
     if (lang.includes('zh')) {
         return 'zh'
@@ -107,3 +105,6 @@ export function extendData(data: Record<string, Record<string, string>>): void {
         extendLangData(lang, data[lang]);
     }
 }
+
+import friendLinksJson from '../../../data/i18n/friend-links-i18n.json'
+extendData(friendLinksJson)
