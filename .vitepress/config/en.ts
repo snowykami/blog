@@ -1,6 +1,6 @@
 import {defineConfig} from 'vitepress'
-import {getNav, getText} from "../utils/i18n";
-import {ThemeConfig} from "../utils/themeConfig";
+import {getText} from "../sugarat/theme/src/composables/config/i18n";
+import {ThemeConfig, getNav} from "../utils/themeConfig";
 
 const lang = 'en'
 export const en  = defineConfig({

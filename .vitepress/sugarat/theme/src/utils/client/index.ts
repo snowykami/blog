@@ -1,5 +1,5 @@
 import type {ThemeableImage} from '../../composables/config'
-import {getTextRef} from "../../composables/config/i18n";
+import {getTextRef} from "../../composables/config/i18nRef";
 
 export function shuffleArray(arr: any[]) {
     const array = [...arr]

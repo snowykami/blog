@@ -7,7 +7,7 @@ import { useBlogConfig } from '../composables/config/blog'
 import { getImageUrl, shuffleArray } from '../utils/client'
 import type { Theme } from '../'
 import { friendLinkSvgStr } from '../constants/svg'
-import {getTextRef} from "../composables/config/i18n";
+import {getTextRef} from "../composables/config/i18nRef";
 
 const isDark = useDark({
   storageKey: 'vitepress-theme-appearance'

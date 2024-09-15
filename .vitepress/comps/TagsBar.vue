@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {getTextRef} from "../utils/i18nRef";
+import {getTextRef} from "../sugarat/theme/src/composables/config/i18nRef";
 
 const tagsLangData = {
     "zh": {

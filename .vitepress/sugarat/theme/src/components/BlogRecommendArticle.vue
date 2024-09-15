@@ -6,7 +6,7 @@ import { wrapperCleanUrls } from '../utils/client'
 import { useArticles, useBlogConfig, useCleanUrls, useFormatShowDate } from '../composables/config/blog'
 import { recommendSVG } from '../constants/svg'
 import type { Theme } from '../composables/config'
-import {getTextRef} from "../composables/config/i18n";
+import {getTextRef} from "../composables/config/i18nRef";
 
 const formatShowDate = useFormatShowDate()
 

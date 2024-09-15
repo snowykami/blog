@@ -5,7 +5,8 @@ import {useData, useRouter, withBase} from 'vitepress'
 import {useArticles, useBlogConfig, useCleanUrls, useFormatShowDate} from '../composables/config/blog'
 import {wrapperCleanUrls} from '../utils/client'
 import {fireSVG} from '../constants/svg'
-import {formatLangRouter, getTextRef} from "../composables/config/i18n";
+import {formatLangRouter} from "../composables/config/i18n";
+import {getTextRef} from "../composables/config/i18nRef";
 
 const formatShowDate = useFormatShowDate()
 

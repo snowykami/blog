@@ -1,3 +1,5 @@
+import {defaultLang, getText} from "../sugarat/theme/src/composables/config/i18n";
+
 export const ThemeConfig = {
     getEditLink: (editPageText: string): { pattern: (params: { filePath: string; }) => string; text: string; } => {
         return {
@@ -14,4 +16,18 @@ export const ThemeConfig = {
             level: [2, 6]
         };
     },
+}
+
+export function getNav(lang: string): { text: string, link: string }[] {
+    if (lang == defaultLang) {
+        return [
+            {text: getText(lang, 'homepage'), link: '/'},
+            {text: getText(lang, 'about'), link: '/about'}
+        ]
+    } else {
+        return [
+            {text: getText(lang, 'homepage'), link: `/${lang}/`},
+            {text: getText(lang, 'about'), link: `/${lang}/about`}
+        ]
+    }
 }

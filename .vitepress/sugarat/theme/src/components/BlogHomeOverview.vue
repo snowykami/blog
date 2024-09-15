@@ -4,7 +4,7 @@ import { useData } from 'vitepress'
 import { isCurrentWeek } from '../utils/client'
 import { useArticles, useBlogConfig, useHomeAnalysis } from '../composables/config/blog'
 import BlogAuthor from './BlogAuthor.vue'
-import {getTextRef} from "../composables/config/i18n";
+import {getTextRef} from "../composables/config/i18nRef";
 
 const { home } = useBlogConfig()
 const { frontmatter } = useData()

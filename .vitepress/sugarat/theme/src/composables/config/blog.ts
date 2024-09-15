@@ -6,7 +6,7 @@ import {useColorMode} from '@vueuse/core'
 import {formatDate, replaceValue} from '../../utils/client'
 import type {Theme} from './index'
 import {string} from "fast-glob/out/utils";
-import {getTextRef} from "./i18n";
+import {getTextRef} from "./i18nRef";
 
 const configSymbol: InjectionKey<Ref<Theme.Config>> = Symbol('theme-config')
 
@@ -261,39 +261,39 @@ export function useAnalyzeTitles(wordCount: Ref<number>, readTime: ComputedRef<n
     const {article} = useBlogConfig()
 
     const topWordCount = computed(() =>
-        replaceValue(article?.analyzeTitles?.topWordCount || '字数：{{value}} 个字', wordCount.value)
+        replaceValue(article?.analyzeTitles?.topWordCount || `${getTextRef('article.countOfChar')}: {{value}} ${getTextRef('article.charCount')}`, wordCount.value)
     )
     const topReadTime = computed(() =>
-        replaceValue(article?.analyzeTitles?.topReadTime || '预计：{{value}} 分钟', readTime.value)
+        replaceValue(article?.analyzeTitles?.topReadTime || `${getTextRef('article.needTime')} {{value}} ${getTextRef('article.takeTime')}`, readTime.value)
     )
     const inlineWordCount = computed(() =>
-        replaceValue(article?.analyzeTitles?.inlineWordCount || '{{value}} 个字', wordCount.value)
+        replaceValue(article?.analyzeTitles?.inlineWordCount || `{{value}} ${getTextRef('article.charCount')}`, wordCount.value)
     )
     const inlineReadTime = computed(() =>
-        replaceValue(article?.analyzeTitles?.inlineReadTime || '{{value}} 分钟', readTime.value)
+        replaceValue(article?.analyzeTitles?.inlineReadTime || `{{value}} ${getTextRef('article.takeTime')}`, readTime.value)
     )
 
     const wordCountTitle = computed(() =>
-        article?.analyzeTitles?.wordCount || '文章字数'
+        article?.analyzeTitles?.wordCount || getTextRef('article.charsOfArticle')
     )
     const readTimeTitle = computed(() =>
-        article?.analyzeTitles?.readTime || '预计阅读时间'
+        article?.analyzeTitles?.readTime || getTextRef('article.expectedTime')
     )
 
     const authorTitle = computed(() =>
-        article?.analyzeTitles?.author || '本文作者'
+        article?.analyzeTitles?.author || getTextRef('article.author')
     )
 
     const publishDateTitle = computed(() =>
-        article?.analyzeTitles?.publishDate || '发布时间'
+        article?.analyzeTitles?.publishDate || getTextRef('article.publishTime')
     )
 
     const lastUpdatedTitle = computed(() =>
-        article?.analyzeTitles?.lastUpdated || '最近修改时间'
+        article?.analyzeTitles?.lastUpdated || getTextRef('article.editTime')
     )
 
     const tagTitle = computed(() =>
-        article?.analyzeTitles?.tag || '标签'
+        article?.analyzeTitles?.tag || getTextRef('article.tags')
     )
 
     return {

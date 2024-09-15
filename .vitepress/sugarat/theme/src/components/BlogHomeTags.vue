@@ -10,7 +10,7 @@ import {
   useCurrentPageNum,
 } from '../composables/config/blog'
 import { tagsSvgStr } from '../constants/svg'
-import {getTextRef} from "../composables/config/i18n";
+import {getTextRef} from "../composables/config/i18nRef";
 
 const route = useRoute()
 const docs = useArticles()

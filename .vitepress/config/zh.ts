@@ -1,9 +1,9 @@
 import {defineConfig} from 'vitepress'
-import {getNav, getText} from "../utils/i18n";
-import {ThemeConfig} from "../utils/themeConfig";
+import {getText} from "../sugarat/theme/src/composables/config/i18n";
+import {ThemeConfig, getNav} from "../utils/themeConfig";
 
 const lang = 'zh'
-export const zh  = defineConfig({
+export const zh = defineConfig({
     lang: 'zh-cn',
     title: "Snowykami",
     description: "Snowykami的博客",

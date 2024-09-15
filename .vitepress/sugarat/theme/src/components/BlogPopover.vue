@@ -8,7 +8,7 @@ import { useDebounceFn, useWindowSize } from '@vueuse/core'
 import { useRoute, useRouter } from 'vitepress'
 import { useBlogConfig } from '../composables/config/blog'
 import { vOuterHtml } from '../directives'
-import {getTextRef} from "../composables/config/i18n";
+import {getTextRef} from "../composables/config/i18nRef";
 
 const { popover: popoverProps } = useBlogConfig()
 
