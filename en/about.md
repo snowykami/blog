@@ -10,6 +10,9 @@ doing microservices and cloud-native related work.
 Also, I am a member of the management team of [Liteyuki Studio](https://liteyuki.icu) and Snowyfirefly Studio, 
 responsible for the planning of technical direction and the promotion of projects.
 
+## Tags
+<TagsBar />
+
 ## Commonly used languages
 - Python - Data Science, Backend Development
 - Go - Backend Development, Cloud Native, Microservices
@@ -25,9 +28,6 @@ If you want to know about the projects of Liteyuki Studio, you can visit [Liteyu
 
 ## Contacts
 Click the menu in the upper right corner and select my contact information.
-
-## Tags
-<TagsBar />
 
 ## Friend Links
 If you want to exchange friend links with me, please provide the following information
