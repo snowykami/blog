@@ -17,6 +17,12 @@ responsible for the planning of technical direction and the promotion of project
 - TypeScript - Frontend Development, Backend Development, a little bit of frontend requirements
 - Java - Development of Minecraft-related content
 
+Some of my personal projects are on [GitHub](https://github.com/snowykami/).
+
+Some organization projects and personal projects are on [Liteyuki Gitea](https://git.liteyuki.icu/snowykami).
+
+If you want to know about the projects of Liteyuki Studio, you can visit [Liteyuki Studio](https://liteyuki.icu).
+
 ## Contacts
 Click the menu in the upper right corner and select my contact information.
 

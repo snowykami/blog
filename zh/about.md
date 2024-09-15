@@ -17,6 +17,12 @@ top: 1
 - TypeScript - 前端开发，后端开发，平时一点点前端需求
 - Java - Minecraft相关内容开发
 
+我的部分个人项目在 [GitHub](https://github.com/snowykami/) 上。
+
+一部分组织项目和个人项目在[Liteyuki Gitea](https://git.liteyuki.icu/snowykami)上。
+
+如果你想了解轻雪工作室的项目，可以访问 [Liteyuki Studio](https://liteyuki.icu)。
+
 ## 联络方式
 点击右上角的菜单，选择我的联系方式。
 
