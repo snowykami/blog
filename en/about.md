@@ -5,7 +5,7 @@ top: 1
 # About me
 
 ## Introduction
-Hi, I'm Snowykami, a backend developer from Chongqing. I'm currently working in the backend development department of [RedrockTeam](https://redrock.team), 
+Hi, I'm Snowykami, come from Chongqing, China. I'm currently working in the **backend development department of [RedrockTeam](https://redrock.team)**, 
 doing microservices and cloud-native related work. 
 Also, I am a member of the management team of [Liteyuki Studio](https://liteyuki.icu) and Snowyfirefly Studio, 
 responsible for the planning of technical direction and the promotion of projects.
