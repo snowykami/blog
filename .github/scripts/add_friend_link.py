@@ -5,7 +5,7 @@ import os
 import json
 os.system("pip install PyGithub")
 from github import Github
-
+import sys
 import os
 
 
@@ -52,10 +52,10 @@ def run():
     # 添加翻译文件
     with open('.vitepress/sugarat/theme/data/i18n/friend-links-i18n.json', 'r') as f:
         friend_i18n_data = json.load(f)
-    friend_i18n_data['zh'][f'partnerLink.{friend_link_data[name]}.nickname'] = friend_link_data[name]
-    friend_i18n_data['zh'][f'partnerLink.{friend_link_data[name]}.des'] = friend_link_data[des]
-    friend_i18n_data['en'][f'partnerLink.{friend_link_data[name]}.nickname'] = friend_link_data[name]
-    friend_i18n_data['en'][f'partnerLink.{friend_link_data[name]}.des'] = friend_link_data[des]
+    friend_i18n_data['zh'][f'partnerLink.{friend_link_data["name"]}.nickname'] = friend_link_data["name"]
+    friend_i18n_data['zh'][f'partnerLink.{friend_link_data["name"]}.des'] = friend_link_data["des"]
+    friend_i18n_data['en'][f'partnerLink.{friend_link_data["name"]}.nickname'] = friend_link_data["name"]
+    friend_i18n_data['en'][f'partnerLink.{friend_link_data["name"]}.des'] = friend_link_data["des"]
     with open('.vitepress/sugarat/theme/data/i18n/friend-links-i18n.json', 'w') as f:
         json.dump(friend_i18n_data, f, indent=4, ensure_ascii=False)
 
