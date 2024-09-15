@@ -261,16 +261,16 @@ export function useAnalyzeTitles(wordCount: Ref<number>, readTime: ComputedRef<n
     const {article} = useBlogConfig()
 
     const topWordCount = computed(() =>
-        replaceValue(article?.analyzeTitles?.topWordCount || `${getTextRef('article.countOfChar')}: {{value}} ${getTextRef('article.charCount')}`, wordCount.value)
+        replaceValue(article?.analyzeTitles?.topWordCount || "{{value}}", wordCount.value)
     )
     const topReadTime = computed(() =>
-        replaceValue(article?.analyzeTitles?.topReadTime || `${getTextRef('article.needTime')} {{value}} ${getTextRef('article.takeTime')}`, readTime.value)
+        replaceValue(article?.analyzeTitles?.topReadTime || "{{value}}", readTime.value)
     )
     const inlineWordCount = computed(() =>
-        replaceValue(article?.analyzeTitles?.inlineWordCount || `{{value}} ${getTextRef('article.charCount')}`, wordCount.value)
+        replaceValue(article?.analyzeTitles?.inlineWordCount || "{{value}}", wordCount.value)
     )
     const inlineReadTime = computed(() =>
-        replaceValue(article?.analyzeTitles?.inlineReadTime || `{{value}} ${getTextRef('article.takeTime')}`, readTime.value)
+        replaceValue(article?.analyzeTitles?.inlineReadTime || "{{value}}", readTime.value)
     )
 
     const wordCountTitle = computed(() =>
