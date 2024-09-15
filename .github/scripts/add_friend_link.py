@@ -5,6 +5,10 @@ import os
 import json
 from github import Github
 
+import os
+
+os.system("pip install github")
+
 def run():
     # 使用 GitHub token 初始化 Github 对象
     g = Github(os.getenv('GH_TOKEN'))
