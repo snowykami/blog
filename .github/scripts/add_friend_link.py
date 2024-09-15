@@ -5,10 +5,7 @@ import os
 import json
 os.system("pip install PyGithub")
 from github import Github
-
-import os
-
-
+import sys
 
 def run():
     # 使用 GitHub token 初始化 Github 对象
@@ -20,26 +17,19 @@ def run():
     # 通过GITHUB_ISSUE_NUMBER获取issue
     # 通过环境变量获取 issue 编号
     issue_number = int(os.getenv('GITHUB_ISSUE_NUMBER'))
-
-
     # 使用 issue 编号获取 issue
     issue = repo.get_issue(number=issue_number)
-
-
     # 获取关闭 issue 的用户
     closer = issue.closed_by
-
+    print(issue, issue.body)
     # 检查关闭 issue 的用户是否是仓库的所有者
     if closer.login != repo.owner.login:
         # 如果不是仓库的所有者关闭的 issue，返回一个非零的退出码
         sys.exit(1)
-
     # 获取 issue 的内容
     issue_body = issue.body
-
     # 解析 issue 的内容，获取友链信息
     friend_link = parse_issue_body(issue_body)
-
     # 读取友链 JSON 文件
     with open('.vitepress/data/friend-links.json', 'r') as f:
         friend_link_data = json.load(f)
@@ -52,10 +42,10 @@ def run():
     # 添加翻译文件
     with open('.vitepress/sugarat/theme/data/i18n/friend-links-i18n.json', 'r') as f:
         friend_i18n_data = json.load(f)
-    friend_i18n_data['zh'][f'partnerLink.{friend_link_data[name]}.nickname'] = friend_link_data[name]
-    friend_i18n_data['zh'][f'partnerLink.{friend_link_data[name]}.des'] = friend_link_data[des]
-    friend_i18n_data['en'][f'partnerLink.{friend_link_data[name]}.nickname'] = friend_link_data[name]
-    friend_i18n_data['en'][f'partnerLink.{friend_link_data[name]}.des'] = friend_link_data[des]
+    friend_i18n_data['zh'][f'partnerLink.{friend_link_data["name"]}.nickname'] = friend_link_data["name"]
+    friend_i18n_data['zh'][f'partnerLink.{friend_link_data["name"]}.des'] = friend_link_data["des"]
+    friend_i18n_data['en'][f'partnerLink.{friend_link_data["name"]}.nickname'] = friend_link_data["name"]
+    friend_i18n_data['en'][f'partnerLink.{friend_link_data["name"]}.des'] = friend_link_data["des"]
     with open('.vitepress/sugarat/theme/data/i18n/friend-links-i18n.json', 'w') as f:
         json.dump(friend_i18n_data, f, indent=4, ensure_ascii=False)
 
