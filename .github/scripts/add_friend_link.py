@@ -1,8 +1,10 @@
+"""
+Module docs
+"""
 import os
 import json
 import requests
 from github import Github
-from
 
 def run():
     # 使用 GitHub token 初始化 Github 对象
