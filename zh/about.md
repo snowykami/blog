@@ -7,7 +7,7 @@ top: 1
 
 ## 简述
 
-你好呀，我是Snowykami，来自重庆，是一名后端开发者，目前在 **[RedrockTeam](https://redrock.team)后端研发部** 工作，做微服务，云原生相关。
+你好呀，我是Snowykami，来自中国重庆，是一名后端开发者，目前在 **[RedrockTeam](https://redrock.team)后端研发部** 工作，做微服务，云原生相关。
 也是轻雪工作室和雪萤工坊的管理层，负责技术方向的规划和项目的推进。
 
 ## 常用语言
