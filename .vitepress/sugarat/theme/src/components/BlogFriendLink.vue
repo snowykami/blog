@@ -230,6 +230,7 @@ function getSkipUrl(): string {
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
+    font-size: 16px;
 }
 
 .card {

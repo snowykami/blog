@@ -11,7 +11,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+
       - name: Run script
-        run: node ./scripts/handle-issue.js
+        run: python .github/scripts/add_friend_link.py ${{ github.event.issue.number }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_ISSUE_NUMBER: ${{ github.event.issue.number }}
