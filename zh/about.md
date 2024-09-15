@@ -29,6 +29,13 @@ top: 1
 ## 标签
 <TagsBar />
 
+## 友链
+如果你想和我交换友链，请提供以下信息
+- 网站名称：中/英文
+- 网站描述：中/英文
+- 网站链接：https URL
+- 网站图标：https URL
+
 <script setup lang="ts">
 import TagsBar from '../.vitepress/comps/TagsBar.vue'
 </script>

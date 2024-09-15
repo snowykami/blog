@@ -29,6 +29,13 @@ Click the menu in the upper right corner and select my contact information.
 ## Tags
 <TagsBar />
 
+## Friend Links
+If you want to exchange friend links with me, please provide the following information
+- Website Name: Chinese/English
+- Website Description: Chinese/English
+- Website Link: https URL
+- Website Icon: https URL
+
 
 <script setup lang="ts">
 import TagsBar from '../.vitepress/comps/TagsBar.vue'
