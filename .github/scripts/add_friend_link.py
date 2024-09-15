@@ -3,7 +3,6 @@ Module docs
 """
 import os
 import json
-import requests
 from github import Github
 
 def run():
