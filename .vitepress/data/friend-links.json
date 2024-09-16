@@ -54,12 +54,6 @@
         "url": "https://viki.moe/"
     },
     {
-        "nickname": "partnerLink.「氯离子实验室」门户网站.nickname",
-        "des": "partnerLink.「氯离子实验室」门户网站.des",
-        "avatar": "https://chloridep.github.io/assets/images/avatar.webp",
-        "url": "https://chloridep.github.io"
-    },
-    {
         "nickname": "partnerLink.我的世界中国版.nickname",
         "des": "partnerLink.我的世界中国版.des",
         "avatar": "https://mc.163.com/favicon.ico",
@@ -100,5 +94,11 @@
         "des": "partnerLink.粥里有勺糖.des",
         "avatar": "https://cdn.upyun.sugarat.top/avatar/blog/zlyst-avatar.jpeg-wh100",
         "url": "https://sugarat.top/"
+    },
+    {
+        "nickname": "partnerLink.「氯离子实验室」门户网站.nickname",
+        "des": "partnerLink.「氯离子实验室」门户网站.des",
+        "avatar": "https://chloridep.github.io/assets/images/avatar.webp",
+        "url": "https://chloridep.github.io"
     }
 ]
