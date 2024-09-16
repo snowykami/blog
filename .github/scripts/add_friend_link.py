@@ -44,7 +44,7 @@ i18n_text = {
                 "check_passed"          : "✅ 审核通过，已添加友链，页面稍后就会构建好",
                 "if_add_i18n_data"      : "🌐 是否添加国际化数据？如需添加请修改issue添加`name_en`、`des_en`字段。",
                 "about_edit"            : "📑 如需修改信息，请直接编辑issue，不要新建issue。",
-                "link_already_exists"   : "该友链已存在",
+                "link_already_exists"   : "该友链已存在或存在同名友链",
                 "delete_success"        : "✅ 友链已删除",
                 "site_title"            : "标题",
                 "site_description"      : "描述",
@@ -96,10 +96,10 @@ def run_add():
     # 修改友链国际化信息
     with open(FRIEND_LINKS_I18N_JSON, 'r') as f:
         friend_i18n_data = json.load(f)
-    friend_i18n_data['zh'][f'partnerLink.{creator_name}.nickname'] = friend_link_name
-    friend_i18n_data['zh'][f'partnerLink.{creator_name}.des'] = friend_link_des
-    friend_i18n_data['en'][f'partnerLink.{creator_name}.nickname'] = friend_link_name_en or f"{creator_name}'s site"
-    friend_i18n_data['en'][f'partnerLink.{creator_name}.des'] = friend_link_des_en or f"{creator_name}'s site"
+    friend_i18n_data['zh'][f'partnerLink.{friend_link_name}.nickname'] = friend_link_name
+    friend_i18n_data['zh'][f'partnerLink.{friend_link_name}.des'] = friend_link_des
+    friend_i18n_data['en'][f'partnerLink.{friend_link_name}.nickname'] = friend_link_name_en or f"{creator_name}'s site"
+    friend_i18n_data['en'][f'partnerLink.{friend_link_name}.des'] = friend_link_des_en or f"{creator_name}'s site"
 
     tree = repo.create_git_tree(
         base_tree=repo.get_git_tree("main"),
@@ -160,7 +160,7 @@ def run_pre_check(typ: str):
         # 若是opened则检查是否存在友链
         if typ == "opened":
             for friend in json.load(open(FRIEND_LINKS_JSON)):
-                if friend["url"] == friend_link_url:
+                if friend["url"] == friend_link_url or friend["name"] == friend_link_name:
                     issue.create_comment(get_text("pre_check_failed").format(COMMENT=get_text("link_already_exists")))
                     return
         print("checking site metadata...")
