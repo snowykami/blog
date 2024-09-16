@@ -86,8 +86,8 @@ def run_add():
         friend_link_data = json.load(f)
         friend_link_data.append(
             {
-                    "nickname": f'partnerLink.{creator_name}.nickname',
-                    "des"     : f'partnerLink.{creator_name}.des',
+                    "nickname": f'partnerLink.{friend_link_name}.nickname',
+                    "des"     : f'partnerLink.{friend_link_name}.des',
                     "avatar"  : friend_link_icon,
                     "url"     : friend_link_url,
             }
