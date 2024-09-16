@@ -40,11 +40,11 @@ i18n_text = {
         "zh": {
                 "pre_check_finished"    : "✅ 预检查完成，等待仓库所有者审核",
                 "pre_check_failed"      : "❌ 预检查未通过：{COMMENT}，请修改issue",
-                "failed_not_a_https_url": "❌ URL不是HTTPS链接",
+                "failed_not_a_https_url": "URL不是HTTPS链接",
                 "check_passed"          : "✅ 审核通过，已添加友链，页面稍后就会构建好",
                 "if_add_i18n_data"      : "🌐 是否添加国际化数据？如需添加请修改issue添加`name_en`、`des_en`字段。",
                 "about_edit"            : "📑 如需修改信息，请直接编辑issue，不要新建issue。",
-                "link_already_exists"   : "❌ 该友链已存在",
+                "link_already_exists"   : "该友链已存在",
                 "delete_success"        : "✅ 友链已删除",
                 "site_title"            : "标题",
                 "site_description"      : "描述",
@@ -54,12 +54,12 @@ i18n_text = {
         "en": {
                 "pre_check_finished"    : "✅ Pre-check finished, waiting for repository owner to review",
                 "pre_check_failed"      : "❌ Pre-check failed: {COMMENT}，please modify the issue",
-                "failed_not_a_https_url": "❌ URL is not a HTTPS link",
+                "failed_not_a_https_url": "URL is not a HTTPS link",
                 "check_passed"          : "✅ Check passed, the friend link has been added, and the page will be built soon.",
                 "if_add_i18n_data"      : "🌐 Do you want to add internationalization data? If you want, please modify the issue to add `name_en` and `des_en` "
                                           "fields.",
                 "about_edit"            : "📑 If you need to modify the information, please edit the issue directly instead of creating a new issue.",
-                "link_already_exists"   : "❌ The friend link already exists",
+                "link_already_exists"   : "The friend link already exists",
                 "delete_success"        : "✅ The friend link has been deleted",
                 "site_title"            : "Title",
                 "site_description"      : "Description",
@@ -129,7 +129,7 @@ def run_add():
 
 
 # opened触发
-def run_pre_check():
+def run_pre_check(typ: str):
     import re
     os.system("pip install requests beautifulsoup4")
     import requests
@@ -156,11 +156,12 @@ def run_pre_check():
         issue.create_comment(get_text("pre_check_failed").format(COMMENT=get_text("failed_not_a_https_url")))
         return
     else:
-        # 检查是否存在友链
-        for friend in json.load(open(FRIEND_LINKS_JSON)):
-            if friend["url"] == friend_link_url:
-                issue.create_comment(get_text("pre_check_failed").format(COMMENT=get_text("link_already_exists")))
-                return
+        # 若是opened则检查是否存在友链
+        if typ == "opened":
+            for friend in json.load(open(FRIEND_LINKS_JSON)):
+                if friend["url"] == friend_link_url:
+                    issue.create_comment(get_text("pre_check_failed").format(COMMENT=get_text("link_already_exists")))
+                    return
 
         title, description, ping_ms = get_site_metadata(friend_link_url)
         site_meta = f"""\n\n**{get_text("site_url")}**: [{friend_link_url}]({friend_link_url})\n\n
@@ -214,7 +215,7 @@ def run_delete():
 if __name__ == "__main__":
     if issue_title.startswith(COMMAND_HEAD):
         if act_type in ["opened", "edited"]:
-            run_pre_check()
+            run_pre_check(act_type)
         elif act_type == "closed":
             run_add()
         elif act_type == "deleted":
