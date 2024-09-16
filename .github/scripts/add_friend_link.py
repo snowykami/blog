@@ -38,9 +38,9 @@ ref = repo.get_git_ref("heads/main")
 
 i18n_text = {
         "zh": {
-                "pre_check_finished"    : "✅ 预检查完成，等待仓库所有者审核",
+                "pre_check_finished"    : "✅ 预检查通过，一切工作已就绪，等待仓库所有者审核",
                 "pre_check_failed"      : "❌ 预检查未通过：{COMMENT}，请修改issue",
-                "failed_not_a_https_url": "URL不是HTTPS链接",
+                "failed_not_a_https_url": "URL不是HTTPS链接，请以https://开头",
                 "check_passed"          : "✅ 审核通过，已添加友链，页面稍后就会构建好",
                 "if_add_i18n_data"      : "🌐 是否添加国际化数据？如需添加请修改issue添加`name_en`、`des_en`字段。",
                 "about_edit"            : "📑 如需修改信息，请直接编辑issue，不要新建issue。",
@@ -55,9 +55,9 @@ i18n_text = {
                 "site_name"             : "站点名称",
         },
         "en": {
-                "pre_check_finished"    : "✅ Pre-check finished, waiting for repository owner to review",
+                "pre_check_finished"    : "✅ Pre-check passed, ready to go, waiting for the repository owner to review",
                 "pre_check_failed"      : "❌ Pre-check failed: {COMMENT}，please modify the issue",
-                "failed_not_a_https_url": "URL is not a HTTPS link",
+                "failed_not_a_https_url": "URL is not a HTTPS link, please start with https://",
                 "check_passed"          : "✅ Check passed, the friend link has been added, and the page will be built soon.",
                 "if_add_i18n_data"      : "🌐 Do you want to add internationalization data? If you want, please modify the issue to add `name_en` and `des_en` "
                                           "fields.",
