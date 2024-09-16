@@ -170,7 +170,7 @@ def run_pre_check(typ: str):
 **{get_text("site_title")}**: {title}\n\n
 **{get_text("site_description")}**: {description}\n\n
 **{get_text("site_ping")}**: {ping_ms:.2f}ms\n\n"""
-        issue.create_comment(get_text("pre_check_finished") + site_meta)
+        issue.create_comment(get_text("pre_check_finished") + site_meta + get_text("if_add_i18n_data"))
 
 
 def run_delete():
