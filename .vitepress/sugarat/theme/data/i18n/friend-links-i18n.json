@@ -35,9 +35,7 @@
         "partnerLink.旧梦流年.nickname": "ElapsingDreams's site",
         "partnerLink.旧梦流年.des": "ElapsingDreams's site",
         "partnerLink.粥里有勺糖.nickname": "sugarat's blog",
-        "partnerLink.粥里有勺糖.des": "sugarat's blog",
-        "partnerLink.梅洛机器人.nickname": "MeloBot",
-        "partnerLink.梅洛机器人.des": "A bot development framework that supports multiple protocols, multi-channel IO, and other advanced features."
+        "partnerLink.粥里有勺糖.des": "sugarat's front-end blog"
     },
     "zh": {
         "partnerLink.liteyukiIndexSite.nickname": "轻雪索引站",
@@ -75,8 +73,6 @@
         "partnerLink.旧梦流年.nickname": "旧梦流年",
         "partnerLink.旧梦流年.des": "喵~",
         "partnerLink.粥里有勺糖.nickname": "粥里有勺糖",
-        "partnerLink.粥里有勺糖.des": "粥里有勺糖的博客",
-        "partnerLink.梅洛机器人.nickname": "梅洛机器人",
-        "partnerLink.梅洛机器人.des": "支持多协议、多路输入输出与其他高级特性的机器人开发框架"
+        "partnerLink.粥里有勺糖.des": "粥里有勺糖的博客"
     }
 }

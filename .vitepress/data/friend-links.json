@@ -72,6 +72,12 @@
         "url": "https://x.none.bot"
     },
     {
+        "nickname": "partnerLink.MeloBot.nickname",
+        "des": "partnerLink.MeloBot.des",
+        "avatar": "https://docs.melobot.org/_static/favicon-32x32.png",
+        "url": "https://docs.melobot.org/"
+    },
+    {
         "nickname": "partnerLink.NoneBot.nickname",
         "des": "partnerLink.NoneBot.des",
         "avatar": "https://nonebot.dev/logo.png",
@@ -94,11 +100,5 @@
         "des": "partnerLink.粥里有勺糖.des",
         "avatar": "https://cdn.upyun.sugarat.top/avatar/blog/zlyst-avatar.jpeg-wh100",
         "url": "https://sugarat.top/"
-    },
-    {
-        "nickname": "partnerLink.梅洛机器人.nickname",
-        "des": "partnerLink.梅洛机器人.des",
-        "avatar": "https://docs.melobot.org/_static/favicon-32x32.png",
-        "url": "https://docs.melobot.org/"
     }
 ]
