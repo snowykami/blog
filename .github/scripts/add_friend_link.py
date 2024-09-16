@@ -150,7 +150,7 @@ def run_pre_check(typ: str):
         })
         if description_tag and 'content' in description_tag.attrs:
             description = description_tag['content']
-        return title, description, response.elapsed.microseconds
+        return title, description, int(response.elapsed.microseconds / 1000)
 
     # 检查链接是否合法
     if not re.match(r"^https?://", friend_link_url) and not re.match(r"^https?://", friend_link_icon):
@@ -169,7 +169,7 @@ def run_pre_check(typ: str):
         site_meta = f"""\n\n**{get_text("site_url")}**: [{friend_link_url}]({friend_link_url})\n\n
 **{get_text("site_title")}**: {title}\n\n
 **{get_text("site_description")}**: {description}\n\n
-**{get_text("site_ping")}**: {ping_ms}ms\n\n"""
+**{get_text("site_ping")}**: {ping_ms:.2f}ms\n\n"""
         issue.create_comment(get_text("pre_check_finished") + site_meta)
 
 
