@@ -56,7 +56,6 @@ i18n_text = {
 }
 
 
-
 def get_text(key: str) -> str:
     return i18n_text[creator_lang].get(key, key)
 
@@ -159,15 +158,15 @@ def run_pre_check(typ: str):
 
             title, description, ping_ms = get_site_metadata(friend_link_url)
             site_meta = f"""\n
-# {get_text("apply_info")}\n
-**{get_text("site_url")}**: [{friend_link_url}]({friend_link_url})\n
-**{get_text("site_name")}**: {friend_link_name} / {friend_link_name_en or "No English name"}\n
-**{get_text("site_description")}**: {friend_link_des} / {friend_link_des_en or "No English description"}\n
+    # {get_text("apply_info")}\n
+    **{get_text("site_url")}**: [{friend_link_url}]({friend_link_url})\n
+    **{get_text("site_name")}**: {friend_link_name} / {friend_link_name_en or "No English name"}\n
+    **{get_text("site_description")}**: {friend_link_des} / {friend_link_des_en or "No English description"}\n
 
-# {get_text("query_result")}\n
-**{get_text("site_title")}**: {title}\n
-**{get_text("site_description")}**: {description}\n
-**{get_text("site_ping")}**: {ping_ms:.2f}ms\n"""
+    # {get_text("query_result")}\n
+    **{get_text("site_title")}**: {title}\n
+    **{get_text("site_description")}**: {description}\n
+    **{get_text("site_ping")}**: {ping_ms:.2f}ms\n"""
             issue.create_comment(get_text("pre_check_finished") + site_meta + get_text("if_add_i18n_data"))
     except Exception as e:
         issue.create_comment(f"{get_text('pre_check_failed').format(COMMENT=str(e))}")
@@ -219,6 +218,7 @@ if __name__ == "__main__":
     repo = g.get_repo(os.getenv('REPOSITORY'))
     issue_number = int(os.getenv('ISSUE_NUMBER'))
     act_type = os.getenv('ACT_TYPE')  # opened, edited, closed, deleted   对应事件类型
+    creator_lang = "zh"
     """
     opened: 添加友链
     edited: 修改友链
@@ -226,9 +226,8 @@ if __name__ == "__main__":
     deleted: 删除友链
     """
     issue = repo.get_issue(number=issue_number)
-
+    issue_title = issue.title
     try:
-        issue_title = issue.title
         issue_body = json.loads(issue.body)
         friend_link_name = issue_body["name"]
         friend_link_name_en = issue_body.get("name_en", "")
@@ -241,7 +240,6 @@ if __name__ == "__main__":
         ref = repo.get_git_ref("heads/main")
         if creator_lang not in i18n_text:
             lang = "zh"
-
         # 开始检查
         if issue_title.startswith(COMMAND_HEAD):
             if act_type in ["opened", "edited"]:
