@@ -223,7 +223,7 @@ if __name__ == "__main__":
         elif act_type == "deleted":
             run_delete()
         else:
-            raise ValueError(f"Unsupported act_type: {act_type}")
+            print("nothing to do")
 
     else:
         print("Not a friend link request issue, passed.")

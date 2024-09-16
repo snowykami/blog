@@ -7,6 +7,9 @@ on:
 jobs:
   check_issue:
     runs-on: ubuntu-latest
+    concurrency:
+      group: friend-link
+      cancel-in-progress: false
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
