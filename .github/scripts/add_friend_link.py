@@ -257,5 +257,5 @@ if __name__ == "__main__":
             print("Not a friend link request issue, passed.")
     except Exception as e:
         print(f"Error: {str(e)}")
-        if act_type not in ["closed"]
+        if act_type not in ["closed"]:
             issue.create_comment(get_text("pre_check_failed").format(COMMENT=str(e)))
