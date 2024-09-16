@@ -3,7 +3,7 @@ import {getThemeConfig} from '@sugarat/theme/node'
 
 // 开启RSS支持（RSS配置）
 import type {Theme} from '@sugarat/theme'
-import friendLinkJson from './data/friend-links.json'
+import friendLinkJson from './data/friend-links.json';
 
 const baseUrl = 'https://sfkm.me'
 const RSS: Theme.RSSOptions = {
@@ -37,7 +37,7 @@ const blogTheme = getThemeConfig({
             },
             bottomMessage: [
                 "Power by <a href='https://vitepress.dev/'>VitePress</a>",
-                "Serve by Vercel and Liteyuki Cloud",
+                "Serve by <a href='https://vercel.com'>Vercel</a> and <a href='https://liteyuki.icu'>liteyuki-flow</a>",
             ]
         }
     ],
