@@ -72,8 +72,8 @@ def run_add():
         friend_link_data = json.load(f)
         friend_link_data.append(
             {
-                    "nickname": f'partnerLink.{friend_link_data["name"]}.nickname',
-                    "des"     : f'partnerLink.{friend_link_data["name"]}.des',
+                    "nickname": f'partnerLink.{creator_name}.nickname',
+                    "des"     : f'partnerLink.{creator_name}.des',
                     "avatar"  : friend_link_icon,
                     "url"     : friend_link_url,
             }
@@ -84,10 +84,10 @@ def run_add():
     # 修改友链国际化信息
     with open(FRIEND_LINKS_I18N_JSON, 'r') as f:
         friend_i18n_data = json.load(f)
-    friend_i18n_data['zh'][f'partnerLink.{friend_link_data["name"]}.nickname'] = friend_link_name
-    friend_i18n_data['zh'][f'partnerLink.{friend_link_data["name"]}.des'] = friend_link_des
-    friend_i18n_data['en'][f'partnerLink.{friend_link_data["name"]}.nickname'] = friend_link_name_en or f"{creator_name}'s site"
-    friend_i18n_data['en'][f'partnerLink.{friend_link_data["name"]}.des'] = friend_link_des_en or f"{creator_name}'s site"
+    friend_i18n_data['zh'][f'partnerLink.{creator_name}.nickname'] = friend_link_name
+    friend_i18n_data['zh'][f'partnerLink.{creator_name}.des'] = friend_link_des
+    friend_i18n_data['en'][f'partnerLink.{creator_name}.nickname'] = friend_link_name_en or f"{creator_name}'s site"
+    friend_i18n_data['en'][f'partnerLink.{creator_name}.des'] = friend_link_des_en or f"{creator_name}'s site"
     with open(FRIEND_LINKS_I18N_JSON, 'w') as f:
         json.dump(friend_i18n_data, f, indent=4, ensure_ascii=False)
 
