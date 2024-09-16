@@ -158,15 +158,15 @@ def run_pre_check(typ: str):
 
             title, description, ping_ms = get_site_metadata(friend_link_url)
             site_meta = f"""\n
-    # {get_text("apply_info")}\n
-    **{get_text("site_url")}**: [{friend_link_url}]({friend_link_url})\n
-    **{get_text("site_name")}**: {friend_link_name} / {friend_link_name_en or "No English name"}\n
-    **{get_text("site_description")}**: {friend_link_des} / {friend_link_des_en or "No English description"}\n
+# {get_text("apply_info")}\n
+**{get_text("site_url")}**: [{friend_link_url}]({friend_link_url})\n
+**{get_text("site_name")}**: {friend_link_name} / {friend_link_name_en or "No English name"}\n
+**{get_text("site_description")}**: {friend_link_des} / {friend_link_des_en or "No English description"}\n
 
-    # {get_text("query_result")}\n
-    **{get_text("site_title")}**: {title}\n
-    **{get_text("site_description")}**: {description}\n
-    **{get_text("site_ping")}**: {ping_ms:.2f}ms\n"""
+# {get_text("query_result")}\n
+**{get_text("site_title")}**: {title}\n
+**{get_text("site_description")}**: {description}\n
+**{get_text("site_ping")}**: {ping_ms:.2f}ms\n"""
             issue.create_comment(get_text("pre_check_finished") + site_meta + get_text("if_add_i18n_data"))
     except Exception as e:
         issue.create_comment(f"{get_text('pre_check_failed').format(COMMENT=str(e))}")
