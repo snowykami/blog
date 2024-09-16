@@ -54,6 +54,12 @@
         "url": "https://viki.moe/"
     },
     {
+        "nickname": "partnerLink.「氯离子实验室」门户网站.nickname",
+        "des": "partnerLink.「氯离子实验室」门户网站.des",
+        "avatar": "https://chloridep.github.io/assets/images/avatar.webp",
+        "url": "https://chloridep.github.io"
+    },
+    {
         "nickname": "partnerLink.我的世界中国版.nickname",
         "des": "partnerLink.我的世界中国版.des",
         "avatar": "https://mc.163.com/favicon.ico",
@@ -66,10 +72,10 @@
         "url": "https://x.none.bot"
     },
     {
-        "nickname": "partnerLink.MeloBot.nickname",
-        "des": "partnerLink.MeloBot.des",
-        "avatar": "https://docs.melobot.org/_static/favicon-32x32.png",
-        "url": "https://docs.melobot.org/"
+        "nickname": "partnerLink.NoneBot.nickname",
+        "des": "partnerLink.NoneBot.des",
+        "avatar": "https://nonebot.dev/logo.png",
+        "url": "https://nonebot.dev/"
     },
     {
         "nickname": "partnerLink.三瓶可乐不过岗.nickname",
@@ -90,15 +96,9 @@
         "url": "https://sugarat.top/"
     },
     {
-        "nickname": "partnerLink.「氯离子实验室」门户网站.nickname",
-        "des": "partnerLink.「氯离子实验室」门户网站.des",
-        "avatar": "https://chloridep.github.io/assets/images/avatar.webp",
-        "url": "https://chloridep.github.io"
-    },
-    {
-        "nickname": "partnerLink.无机器人.nickname",
-        "des": "partnerLink.无机器人.des",
-        "avatar": "https://nonebot.dev/logo.png",
-        "url": "https://nonebot.dev/"
+        "nickname": "partnerLink.梅洛机器人.nickname",
+        "des": "partnerLink.梅洛机器人.des",
+        "avatar": "https://docs.melobot.org/_static/favicon-32x32.png",
+        "url": "https://docs.melobot.org/"
     }
 ]

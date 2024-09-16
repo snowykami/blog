@@ -20,8 +20,8 @@
         "partnerLink.Executor-Cheng.des": "Executor-Cheng's Site",
         "partnerLink.vikiboss.nickname": "Viki's writing spot",
         "partnerLink.vikiboss.des": "Vikiboss's Site",
-        "partnerLink.「氯离子实验室」门户网站.nickname": "Chloride Ion Laboratory Portal Website",
-        "partnerLink.「氯离子实验室」门户网站.des": "Chloride meow's notebook",
+        "partnerLink.「氯离子实验室」门户网站.nickname": "ChlorideP's site",
+        "partnerLink.「氯离子实验室」门户网站.des": "ChlorideP's site",
         "partnerLink.我的世界中国版.nickname": "snowykami's site",
         "partnerLink.我的世界中国版.des": "snowykami's site",
         "partnerLink.NoneBotX.nickname": "KomoriDev's site",
@@ -36,8 +36,8 @@
         "partnerLink.旧梦流年.des": "ElapsingDreams's site",
         "partnerLink.粥里有勺糖.nickname": "sugarat's blog",
         "partnerLink.粥里有勺糖.des": "sugarat's blog",
-        "partnerLink.无机器人.nickname": "NoneBot",
-        "partnerLink.无机器人.des": "Cross platform Python asynchronous bot framework"
+        "partnerLink.梅洛机器人.nickname": "MeloBot",
+        "partnerLink.梅洛机器人.des": "A bot development framework that supports multiple protocols, multi-channel IO, and other advanced features."
     },
     "zh": {
         "partnerLink.liteyukiIndexSite.nickname": "轻雪索引站",
@@ -76,7 +76,7 @@
         "partnerLink.旧梦流年.des": "喵~",
         "partnerLink.粥里有勺糖.nickname": "粥里有勺糖",
         "partnerLink.粥里有勺糖.des": "粥里有勺糖的博客",
-        "partnerLink.无机器人.nickname": "无机器人",
-        "partnerLink.无机器人.des": "跨平台蟒蛇异步机器人框架"
+        "partnerLink.梅洛机器人.nickname": "梅洛机器人",
+        "partnerLink.梅洛机器人.des": "支持多协议、多路输入输出与其他高级特性的机器人开发框架"
     }
 }
