@@ -76,5 +76,11 @@
         "des": "partnerLink.我的世界中国版.des",
         "avatar": "https://mc.163.com/favicon.ico",
         "url": "https://mc.163.com/"
+    },
+    {
+        "nickname": "partnerLink.NoneBotX.nickname",
+        "des": "partnerLink.NoneBotX.des",
+        "avatar": "https://x.none.bot/favicon.png",
+        "url": "https://x.none.bot"
     }
 ]
