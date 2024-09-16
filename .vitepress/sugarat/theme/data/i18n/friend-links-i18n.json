@@ -35,7 +35,9 @@
         "partnerLink.旧梦流年.nickname": "ElapsingDreams's site",
         "partnerLink.旧梦流年.des": "ElapsingDreams's site",
         "partnerLink.粥里有勺糖.nickname": "sugarat's blog",
-        "partnerLink.粥里有勺糖.des": "sugarat's blog"
+        "partnerLink.粥里有勺糖.des": "sugarat's blog",
+        "partnerLink.无机器人X.nickname": "NoneBotX",
+        "partnerLink.无机器人X.des": "NoneBot community docs"
     },
     "zh": {
         "partnerLink.liteyukiIndexSite.nickname": "轻雪索引站",
@@ -73,6 +75,8 @@
         "partnerLink.旧梦流年.nickname": "旧梦流年",
         "partnerLink.旧梦流年.des": "喵~",
         "partnerLink.粥里有勺糖.nickname": "粥里有勺糖",
-        "partnerLink.粥里有勺糖.des": "粥里有勺糖的博客"
+        "partnerLink.粥里有勺糖.des": "粥里有勺糖的博客",
+        "partnerLink.无机器人X.nickname": "无机器人X",
+        "partnerLink.无机器人X.des": "无机器人 社区文档"
     }
 }
