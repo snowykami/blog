@@ -58,5 +58,11 @@
         "des": "partnerLink.vikiboss.des",
         "avatar": "https://github.com/vikiboss.png",
         "url": "https://viki.moe/"
+    },
+    {
+        "nickname": "partnerLink.snowykami.nickname",
+        "des": "partnerLink.snowykami.des",
+        "avatar": "https://ys.mihoyo.com/main/favicon.ico",
+        "url": "https://ys.mihoyo.com/"
     }
 ]
