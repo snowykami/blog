@@ -60,16 +60,16 @@
         "url": "https://mc.163.com/"
     },
     {
+        "nickname": "partnerLink.NoneBotX.nickname",
+        "des": "partnerLink.NoneBotX.des",
+        "avatar": "https://x.none.bot/favicon.png",
+        "url": "https://x.none.bot"
+    },
+    {
         "nickname": "partnerLink.MeloBot.nickname",
         "des": "partnerLink.MeloBot.des",
         "avatar": "https://docs.melobot.org/_static/favicon-32x32.png",
         "url": "https://docs.melobot.org/"
-    },
-    {
-        "nickname": "partnerLink.NoneBot.nickname",
-        "des": "partnerLink.NoneBot.des",
-        "avatar": "https://nonebot.dev/logo.png",
-        "url": "https://nonebot.dev/"
     },
     {
         "nickname": "partnerLink.三瓶可乐不过岗.nickname",
@@ -96,9 +96,9 @@
         "url": "https://chloridep.github.io"
     },
     {
-        "nickname": "partnerLink.无机器人X.nickname",
-        "des": "partnerLink.无机器人X.des",
-        "avatar": "https://x.none.bot/favicon.png",
-        "url": "https://x.none.bot"
+        "nickname": "partnerLink.无机器人.nickname",
+        "des": "partnerLink.无机器人.des",
+        "avatar": "https://nonebot.dev/logo.png",
+        "url": "https://nonebot.dev/"
     }
 ]
