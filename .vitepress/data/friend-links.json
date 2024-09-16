@@ -112,5 +112,11 @@
         "des": "partnerLink.小涵のGithub主页.des",
         "avatar": "https://avatars.githubusercontent.com/u/89262123",
         "url": "https://github.com/yuhan2680"
+    },
+    {
+        "nickname": "partnerLink.原神.nickname",
+        "des": "partnerLink.原神.des",
+        "avatar": "https://ys.mihoyo.com/main/favicon.ico",
+        "url": "https://ys.mihoyo.com/"
     }
 ]
