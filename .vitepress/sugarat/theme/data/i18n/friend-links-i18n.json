@@ -19,7 +19,9 @@
         "partnerLink.Executor-Cheng.nickname": "Just Kawaii!",
         "partnerLink.Executor-Cheng.des": "Executor-Cheng's Site",
         "partnerLink.vikiboss.nickname": "Viki's writing spot",
-        "partnerLink.vikiboss.des": "Vikiboss's Site"
+        "partnerLink.vikiboss.des": "Vikiboss's Site",
+        "partnerLink.snowykami.nickname": "snowykami's site",
+        "partnerLink.snowykami.des": "snowykami's site"
     },
     "zh": {
         "partnerLink.liteyukiIndexSite.nickname": "轻雪索引站",
@@ -41,6 +43,8 @@
         "partnerLink.Executor-Cheng.nickname": "可爱就对了",
         "partnerLink.Executor-Cheng.des": "西井姐姐的个人主页",
         "partnerLink.vikiboss.nickname": "Viki写东西的地方",
-        "partnerLink.vikiboss.des": "Viki写东西的地方"
+        "partnerLink.vikiboss.des": "Viki写东西的地方",
+        "partnerLink.snowykami.nickname": "原神",
+        "partnerLink.snowykami.des": "《原神》官方网站-全新5.0版本「荣花与炎日之途」上线！"
     }
 }
