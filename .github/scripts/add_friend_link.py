@@ -50,6 +50,9 @@ i18n_text = {
                 "site_description"      : "描述",
                 "site_ping"             : "延迟",
                 "site_url"              : "链接",
+                "apply_info"            : "申请信息",
+                "query_result"          : "查询结果",
+                "site_name"             : "站点名称",
         },
         "en": {
                 "pre_check_finished"    : "✅ Pre-check finished, waiting for repository owner to review",
@@ -65,6 +68,9 @@ i18n_text = {
                 "site_description"      : "Description",
                 "site_ping"             : "Ping",
                 "site_url"              : "URL",
+                "apply_info"            : "Apply Info",
+                "query_result"          : "Query Result",
+                "site_name"             : "Site Name",
         }
 }
 if creator_lang not in i18n_text:
@@ -171,10 +177,16 @@ def run_pre_check(typ: str):
         print("checking site metadata...")
 
         title, description, ping_ms = get_site_metadata(friend_link_url)
-        site_meta = f"""\n\n**{get_text("site_url")}**: [{friend_link_url}]({friend_link_url})\n\n
-**{get_text("site_title")}**: {title}\n\n
-**{get_text("site_description")}**: {description}\n\n
-**{get_text("site_ping")}**: {ping_ms:.2f}ms\n\n"""
+        site_meta = f"""\n
+# {get_text("apply_info")}\n
+**{get_text("site_url")}**: [{friend_link_url}]({friend_link_url})\n
+**{get_text("site_name")}**: {friend_link_name}/{friend_link_name_en or "No English name"}\n
+**{get_text("site_description")}**: {friend_link_des}/{friend_link_name_en or "No English description"}\n
+
+# {get_text("query_result")}\n
+**{get_text("site_title")}**: {title}\n
+**{get_text("site_description")}**: {description}\n
+**{get_text("site_ping")}**: {ping_ms:.2f}ms\n"""
         issue.create_comment(get_text("pre_check_finished") + site_meta + get_text("if_add_i18n_data"))
 
 
