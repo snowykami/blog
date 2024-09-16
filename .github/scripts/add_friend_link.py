@@ -84,6 +84,11 @@ def run_add():
     # 修改友链信息
     with open(FRIEND_LINKS_JSON, 'r') as f:
         friend_link_data = json.load(f)
+        # 检查url相同并删除
+        for i, friend in enumerate(friend_link_data):
+            if friend["url"] == friend_link_url:
+                friend_link_data.pop(i)
+                break
         friend_link_data.append(
             {
                     "nickname": f'partnerLink.{friend_link_name}.nickname',
@@ -157,7 +162,7 @@ def run_pre_check(typ: str):
         issue.create_comment(get_text("pre_check_failed").format(COMMENT=get_text("failed_not_a_https_url")))
         return
     else:
-        # 若是opened则检查是否存在友链
+        # 若是opened则第一次检查是否存在友链
         if typ == "opened":
             for friend in json.load(open(FRIEND_LINKS_JSON)):
                 if friend["url"] == friend_link_url or friend["nickname"] == friend_link_name:
