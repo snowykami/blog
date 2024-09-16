@@ -84,12 +84,6 @@
         "url": "https://nonebot.dev/"
     },
     {
-        "nickname": "partnerLink.旧梦流年.nickname",
-        "des": "partnerLink.旧梦流年.des",
-        "avatar": "https://avatars.githubusercontent.com/u/159739277/",
-        "url": "https://github.com/ElapsingDreams"
-    },
-    {
         "nickname": "partnerLink.粥里有勺糖.nickname",
         "des": "partnerLink.粥里有勺糖.des",
         "avatar": "https://cdn.upyun.sugarat.top/avatar/blog/zlyst-avatar.jpeg-wh100",
@@ -100,5 +94,11 @@
         "des": "partnerLink.三瓶可乐不过岗.des",
         "avatar": "https://www.threkork.com/img/512.jpg",
         "url": "https://www.threkork.com/"
+    },
+    {
+        "nickname": "partnerLink.旧梦流年.nickname",
+        "des": "partnerLink.旧梦流年.des",
+        "avatar": "https://github.com/ElapsingDreams.png",
+        "url": "https://github.com/ElapsingDreams"
     }
 ]
