@@ -79,8 +79,6 @@ def run_add():
                     "url"     : friend_link_url,
             }
         )
-    with open(FRIEND_LINKS_JSON, 'w') as f:
-        json.dump(friend_link_data, f, indent=4, ensure_ascii=False)
 
     # 修改友链国际化信息
     with open(FRIEND_LINKS_I18N_JSON, 'r') as f:
@@ -89,8 +87,6 @@ def run_add():
     friend_i18n_data['zh'][f'partnerLink.{creator_name}.des'] = friend_link_des
     friend_i18n_data['en'][f'partnerLink.{creator_name}.nickname'] = friend_link_name_en or f"{creator_name}'s site"
     friend_i18n_data['en'][f'partnerLink.{creator_name}.des'] = friend_link_des_en or f"{creator_name}'s site"
-    with open(FRIEND_LINKS_I18N_JSON, 'w') as f:
-        json.dump(friend_i18n_data, f, indent=4, ensure_ascii=False)
 
     tree = repo.create_git_tree(
         base_tree=repo.get_git_tree("main"),
@@ -99,13 +95,13 @@ def run_add():
                 path=FRIEND_LINKS_JSON,
                 mode="100644",
                 type="blob",
-                content=f":busts_in_silhouette: Add friend link: {friend_link_url}({creator_name})",
+                content=json.dumps(friend_link_data, indent=4, ensure_ascii=False)
             ),
             InputGitTreeElement(
                 path=FRIEND_LINKS_I18N_JSON,
                 mode="100644",
                 type="blob",
-                content=f":busts_in_silhouette: Add friend link i18n data: {friend_link_url}({creator_name})",
+                content=json.dumps(friend_i18n_data, indent=4, ensure_ascii=False)
             )
         ]
     )

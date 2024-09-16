@@ -1,1 +1,46 @@
-:busts_in_silhouette: Add friend link i18n data: https://ys.mihoyo.com/(snowykami)
+{
+    "en": {
+        "partnerLink.liteyukiIndexSite.nickname": "Liteyuki Index Site",
+        "partnerLink.liteyukiIndexSite.des": "Liteyuki and Relative Contents Index Site",
+        "partnerLink.redrockteam.nickname": "RedrockTeam",
+        "partnerLink.redrockteam.des": "RedrockTeam's Official Site",
+        "partnerLink.cys2004.nickname": "Cysnies's mini-site",
+        "partnerLink.cys2004.des": "Cys2004's Site",
+        "partnerLink.aicorein.nickname": "MelodyEchoes Realm",
+        "partnerLink.aicorein.des": "MelodyEcho's Site",
+        "partnerLink.dexera.nickname": "Dexera",
+        "partnerLink.dexera.des": "Dexera's Site",
+        "partnerLink.inkarsuki.nickname": "Inkarsuki Bot",
+        "partnerLink.inkarsuki.des": "A jx3 bot",
+        "partnerLink.lgc2333.nickname": "Student_2333's Blog",
+        "partnerLink.lgc2333.des": "Lgc2333's Blog",
+        "partnerLink.edream.nickname": "EDream's mini-site",
+        "partnerLink.edream.des": "EDream's Blog",
+        "partnerLink.Executor-Cheng.nickname": "Just Kawaii!",
+        "partnerLink.Executor-Cheng.des": "Executor-Cheng's Site",
+        "partnerLink.vikiboss.nickname": "Viki's writing spot",
+        "partnerLink.vikiboss.des": "Vikiboss's Site"
+    },
+    "zh": {
+        "partnerLink.liteyukiIndexSite.nickname": "轻雪索引站",
+        "partnerLink.liteyukiIndexSite.des": "轻雪及相关内容索引站",
+        "partnerLink.redrockteam.nickname": "红岩网校",
+        "partnerLink.redrockteam.des": "红岩网校官方主页",
+        "partnerLink.cys2004.nickname": "白鼠的小站",
+        "partnerLink.cys2004.des": "白鼠的小站",
+        "partnerLink.aicorein.nickname": "律回彼境",
+        "partnerLink.aicorein.des": "律回彼境",
+        "partnerLink.dexera.nickname": "Dexera",
+        "partnerLink.dexera.des": "Dexera",
+        "partnerLink.inkarsuki.nickname": "音卡机器人",
+        "partnerLink.inkarsuki.des": "一个主要围绕剑网三相关业务进行开发的多功能聊天机器人项目",
+        "partnerLink.lgc2333.nickname": "饼干的blog",
+        "partnerLink.lgc2333.des": "饼干的blog",
+        "partnerLink.edream.nickname": "EDream的小破站",
+        "partnerLink.edream.des": "EDream的小破站",
+        "partnerLink.Executor-Cheng.nickname": "可爱就对了",
+        "partnerLink.Executor-Cheng.des": "西井姐姐的个人主页",
+        "partnerLink.vikiboss.nickname": "Viki写东西的地方",
+        "partnerLink.vikiboss.des": "Viki写东西的地方"
+    }
+}
