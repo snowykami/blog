@@ -2,6 +2,7 @@
 Module docs
 """
 import os
+
 os.system("pip install PyGithub")
 
 import json
@@ -42,7 +43,13 @@ i18n_text = {
                 "failed_not_a_https_url": "❌ URL不是HTTPS链接",
                 "check_passed"          : "✅ 审核通过，已添加友链，页面稍后就会构建好",
                 "if_add_i18n_data"      : "🌐 是否添加国际化数据？如需添加请修改issue添加`name_en`、`des_en`字段。",
-                "about_edit"            : "📑 如需修改信息，请直接编辑issue，不要新建issue。"
+                "about_edit"            : "📑 如需修改信息，请直接编辑issue，不要新建issue。",
+                "link_already_exists"   : "❌ 该友链已存在",
+                "delete_success"        : "✅ 友链已删除",
+                "site_title"            : "标题",
+                "site_description"      : "描述",
+                "site_ping"             : "延迟",
+                "site_url"              : "链接",
         },
         "en": {
                 "pre_check_finished"    : "✅ Pre-check finished, waiting for repository owner to review",
@@ -51,7 +58,13 @@ i18n_text = {
                 "check_passed"          : "✅ Check passed, the friend link has been added, and the page will be built soon.",
                 "if_add_i18n_data"      : "🌐 Do you want to add internationalization data? If you want, please modify the issue to add `name_en` and `des_en` "
                                           "fields.",
-                "about_edit"            : "📑 If you need to modify the information, please edit the issue directly instead of creating a new issue."
+                "about_edit"            : "📑 If you need to modify the information, please edit the issue directly instead of creating a new issue.",
+                "link_already_exists"   : "❌ The friend link already exists",
+                "delete_success"        : "✅ The friend link has been deleted",
+                "site_title"            : "Title",
+                "site_description"      : "Description",
+                "site_ping"             : "Ping",
+                "site_url"              : "URL",
         }
 }
 if creator_lang not in i18n_text:
@@ -91,18 +104,18 @@ def run_add():
     tree = repo.create_git_tree(
         base_tree=repo.get_git_tree("main"),
         tree=[
-            InputGitTreeElement(
-                path=FRIEND_LINKS_JSON,
-                mode="100644",
-                type="blob",
-                content=json.dumps(friend_link_data, indent=4, ensure_ascii=False)
-            ),
-            InputGitTreeElement(
-                path=FRIEND_LINKS_I18N_JSON,
-                mode="100644",
-                type="blob",
-                content=json.dumps(friend_i18n_data, indent=4, ensure_ascii=False)
-            )
+                InputGitTreeElement(
+                    path=FRIEND_LINKS_JSON,
+                    mode="100644",
+                    type="blob",
+                    content=json.dumps(friend_link_data, indent=4, ensure_ascii=False)
+                ),
+                InputGitTreeElement(
+                    path=FRIEND_LINKS_I18N_JSON,
+                    mode="100644",
+                    type="blob",
+                    content=json.dumps(friend_i18n_data, indent=4, ensure_ascii=False)
+                )
         ]
     )
     # 提交修改
@@ -112,18 +125,90 @@ def run_add():
         parents=[repo.get_git_commit(ref.object.sha)]
     )
     ref.edit(commit.sha)
+    issue.create_comment(get_text("check_passed"))
 
 
 # opened触发
 def run_pre_check():
     import re
-    os.system("pip install requests")
+    os.system("pip install requests beautifulsoup4")
+    import requests
+    from bs4 import BeautifulSoup
+
+    def get_site_metadata(url) -> tuple[str, str, int]:
+        response = requests.get(url)
+        response.raise_for_status()  # Ensure we notice bad responses
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        title = soup.title.string if soup.title else "No title found"
+        description = "No description found"
+
+        # Look for meta description tag
+        description_tag = soup.find('meta', attrs={
+                'name': 'description'
+        })
+        if description_tag and 'content' in description_tag.attrs:
+            description = description_tag['content']
+        return title, description, response.elapsed.microseconds
+
     # 检查链接是否合法
     if not re.match(r"^https?://", friend_link_url) and not re.match(r"^https?://", friend_link_icon):
         issue.create_comment(get_text("pre_check_failed").format(COMMENT=get_text("failed_not_a_https_url")))
         return
     else:
-        issue.create_comment(get_text("pre_check_finished"))
+        # 检查是否存在友链
+        for friend in json.load(open(FRIEND_LINKS_JSON)):
+            if friend["url"] == friend_link_url:
+                issue.create_comment(get_text("pre_check_failed").format(COMMENT=get_text("link_already_exists")))
+                return
+
+        title, description, ping_ms = get_site_metadata(friend_link_url)
+        site_meta = f"""\n\n**{get_text("site_url")}**: [{friend_link_url}]({friend_link_url})\n\n
+        **{get_text("site_title")}**: {title}\n\n
+        **{get_text("site_description")}**: {description}\n\n
+        **{get_text("site_ping")}**: {ping_ms}ms\n\n"""
+        issue.create_comment(get_text("pre_check_finished") + site_meta)
+
+
+def run_delete():
+    """删除友链"""
+    with open(FRIEND_LINKS_JSON, 'r') as f:
+        friend_link_data = json.load(f)
+        for i, friend in enumerate(friend_link_data):
+            if friend["url"] == friend_link_url:
+                friend_link_data.pop(i)
+                break
+    with open(FRIEND_LINKS_I18N_JSON, 'r') as f:
+        friend_i18n_data = json.load(f)
+        for language in friend_i18n_data:
+            for key in list(friend_i18n_data[language]):
+                if key.startswith(f'partnerLink.{creator_name}.'):
+                    friend_i18n_data[language].pop(key)
+    tree = repo.create_git_tree(
+        base_tree=repo.get_git_tree("main"),
+        tree=[
+                InputGitTreeElement(
+                    path=FRIEND_LINKS_JSON,
+                    mode="100644",
+                    type="blob",
+                    content=json.dumps(friend_link_data, indent=4, ensure_ascii=False)
+                ),
+                InputGitTreeElement(
+                    path=FRIEND_LINKS_I18N_JSON,
+                    mode="100644",
+                    type="blob",
+                    content=json.dumps(friend_i18n_data, indent=4, ensure_ascii=False)
+                )
+        ]
+    )
+    # 提交修改
+    commit = repo.create_git_commit(
+        message=f":busts_in_silhouette: Delete friend link: {friend_link_url}({creator_name})",
+        tree=tree,
+        parents=[repo.get_git_commit(ref.object.sha)]
+    )
+    ref.edit(commit.sha)
+    issue.create_comment("✅ 友链已删除")
 
 
 if __name__ == "__main__":
@@ -132,6 +217,8 @@ if __name__ == "__main__":
             run_pre_check()
         elif act_type == "closed":
             run_add()
+        elif act_type == "deleted":
+            run_delete()
         else:
             raise ValueError(f"Unsupported act_type: {act_type}")
 
