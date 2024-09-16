@@ -13,29 +13,6 @@ COMMAND_HEAD = "Friend Link Request"
 FRIEND_LINKS_JSON = ".vitepress/data/friend-links.json"
 FRIEND_LINKS_I18N_JSON = ".vitepress/sugarat/theme/data/i18n/friend-links-i18n.json"
 
-g = Github(os.getenv('TOKEN'))
-repo = g.get_repo(os.getenv('REPOSITORY'))
-issue_number = int(os.getenv('ISSUE_NUMBER'))
-act_type = os.getenv('ACT_TYPE')  # opened, edited, closed, deleted   对应事件类型
-"""
-opened: 添加友链
-edited: 修改友链
-closed: 审核通过
-deleted: 删除友链
-"""
-issue = repo.get_issue(number=issue_number)
-issue_title = issue.title
-issue_body = json.loads(issue.body)
-friend_link_name = issue_body["name"]
-friend_link_name_en = issue_body.get("name_en", "")
-friend_link_des = issue_body["des"]
-friend_link_des_en = issue_body.get("des_en", "")
-friend_link_url = issue_body["url"]
-friend_link_icon = issue_body["icon"]
-creator_lang = issue_body.get("lang", "zh")
-creator_name = issue.user.login
-ref = repo.get_git_ref("heads/main")
-
 i18n_text = {
         "zh": {
                 "pre_check_finished"    : "✅ 预检查通过，一切工作已就绪，等待仓库所有者审核",
@@ -53,6 +30,8 @@ i18n_text = {
                 "apply_info"            : "申请信息",
                 "query_result"          : "查询结果",
                 "site_name"             : "站点名称",
+
+                "json_parse_error"      : "JSON解析错误",
         },
         "en": {
                 "pre_check_finished"    : "✅ Pre-check passed, ready to go, waiting for the repository owner to review",
@@ -71,10 +50,11 @@ i18n_text = {
                 "apply_info"            : "Apply Info",
                 "query_result"          : "Query Result",
                 "site_name"             : "Site Name",
+
+                "json_parse_error"      : "JSON parse error",
         }
 }
-if creator_lang not in i18n_text:
-    lang = "zh"
+
 
 
 def get_text(key: str) -> str:
@@ -235,15 +215,47 @@ def run_delete():
 
 
 if __name__ == "__main__":
-    if issue_title.startswith(COMMAND_HEAD):
-        if act_type in ["opened", "edited"]:
-            run_pre_check(act_type)
-        elif act_type == "closed":
-            run_add()
-        elif act_type == "deleted":
-            run_delete()
-        else:
-            print("nothing to do")
+    g = Github(os.getenv('TOKEN'))
+    repo = g.get_repo(os.getenv('REPOSITORY'))
+    issue_number = int(os.getenv('ISSUE_NUMBER'))
+    act_type = os.getenv('ACT_TYPE')  # opened, edited, closed, deleted   对应事件类型
+    """
+    opened: 添加友链
+    edited: 修改友链
+    closed: 审核通过
+    deleted: 删除友链
+    """
+    issue = repo.get_issue(number=issue_number)
 
-    else:
-        print("Not a friend link request issue, passed.")
+    try:
+        issue_title = issue.title
+        issue_body = json.loads(issue.body)
+        friend_link_name = issue_body["name"]
+        friend_link_name_en = issue_body.get("name_en", "")
+        friend_link_des = issue_body["des"]
+        friend_link_des_en = issue_body.get("des_en", "")
+        friend_link_url = issue_body["url"]
+        friend_link_icon = issue_body["icon"]
+        creator_lang = issue_body.get("lang", "zh")
+        creator_name = issue.user.login
+        ref = repo.get_git_ref("heads/main")
+        if creator_lang not in i18n_text:
+            lang = "zh"
+
+        # 开始检查
+        if issue_title.startswith(COMMAND_HEAD):
+            if act_type in ["opened", "edited"]:
+                run_pre_check(act_type)
+            elif act_type == "closed":
+                run_add()
+            elif act_type == "deleted":
+                run_delete()
+            else:
+                print("nothing to do")
+
+        else:
+            print("Not a friend link request issue, passed.")
+    except Exception as e:
+        print(f"Error: {str(e)}")
+        if act_type not in ["closed"]
+            issue.create_comment(get_text("pre_check_failed").format(COMMENT=str(e)))
