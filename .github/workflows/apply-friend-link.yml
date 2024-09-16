@@ -1,4 +1,4 @@
-name: Add friend link
+name: Friend link workflow
 
 on:
   issues:
