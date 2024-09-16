@@ -110,14 +110,12 @@ def run_add():
         ]
     )
     # 提交修改
-    repo.create_git_commit(
+    commit = repo.create_git_commit(
         message=f":busts_in_silhouette: Add friend link: {friend_link_url}({creator_name})",
         tree=tree,
         parents=[repo.get_git_commit(ref.object.sha)]
     )
-
-    # 完成提交
-    issue.create_comment(get_text("check_passed"))
+    ref.edit(commit.sha)
 
 
 # opened触发
