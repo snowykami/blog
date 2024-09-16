@@ -165,9 +165,9 @@ def run_pre_check(typ: str):
 
         title, description, ping_ms = get_site_metadata(friend_link_url)
         site_meta = f"""\n\n**{get_text("site_url")}**: [{friend_link_url}]({friend_link_url})\n\n
-        **{get_text("site_title")}**: {title}\n\n
-        **{get_text("site_description")}**: {description}\n\n
-        **{get_text("site_ping")}**: {ping_ms}ms\n\n"""
+**{get_text("site_title")}**: {title}\n\n
+**{get_text("site_description")}**: {description}\n\n
+**{get_text("site_ping")}**: {ping_ms}ms\n\n"""
         issue.create_comment(get_text("pre_check_finished") + site_meta)
 
 
