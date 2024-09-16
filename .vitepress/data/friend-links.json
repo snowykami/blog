@@ -82,5 +82,11 @@
         "des": "partnerLink.NoneBot.des",
         "avatar": "https://nonebot.dev/logo.png",
         "url": "https://nonebot.dev/"
+    },
+    {
+        "nickname": "partnerLink.三瓶可乐不过岗.nickname",
+        "des": "partnerLink.三瓶可乐不过岗.des",
+        "avatar": "https://www.threkork.com/img/512.jpg",
+        "url": "https://www.threkork.com/"
     }
 ]

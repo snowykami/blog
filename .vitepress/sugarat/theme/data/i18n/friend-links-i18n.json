@@ -31,7 +31,9 @@
         "partnerLink.MeloBot.nickname": "snowykami's site",
         "partnerLink.MeloBot.des": "A bot development framework that supports multiple protocols, multi-channel IO, and other advanced features.",
         "partnerLink.NoneBot.nickname": "NoneBot",
-        "partnerLink.NoneBot.des": "Cross platform Python asynchronous bot framework"
+        "partnerLink.NoneBot.des": "Cross platform Python asynchronous bot framework",
+        "partnerLink.三瓶可乐不过岗.nickname": "snowykami's site",
+        "partnerLink.三瓶可乐不过岗.des": "snowykami's site"
     },
     "zh": {
         "partnerLink.liteyukiIndexSite.nickname": "轻雪索引站",
@@ -65,6 +67,8 @@
         "partnerLink.MeloBot.nickname": "MeloBot",
         "partnerLink.MeloBot.des": "支持多协议、多路 IO 与其他高级特性的机器人开发框架",
         "partnerLink.NoneBot.nickname": "NoneBot",
-        "partnerLink.NoneBot.des": "跨平台 Python 异步机器人框架"
+        "partnerLink.NoneBot.des": "跨平台 Python 异步机器人框架",
+        "partnerLink.三瓶可乐不过岗.nickname": "三瓶可乐不过岗",
+        "partnerLink.三瓶可乐不过岗.des": "三瓶可乐不过岗的个人名片"
     }
 }
