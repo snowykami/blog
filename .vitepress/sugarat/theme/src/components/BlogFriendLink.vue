@@ -102,16 +102,16 @@ const i18nData = {
     "zh": {
         "friendLink.name": "网站名称",
         "friendLink.des": "网站描述",
-        "friendLink.url": "网站链接",
-        "friendLink.icon": "网站图标",
+        "friendLink.url": "网站链接，请以https://开头",
+        "friendLink.icon": "网站图标，请以https://开头",
         "friendLink.close": "关闭",
         "friendLink.submit": "提交",
     },
     "en": {
-        "friendLink.name": "Website Name",
-        "friendLink.des": "Website Description",
-        "friendLink.url": "Website Link",
-        "friendLink.icon": "Website Icon",
+        "friendLink.name": "Name",
+        "friendLink.des": "Description",
+        "friendLink.url": "Link, start with https://",
+        "friendLink.icon": "Icon url, start with https://",
         "friendLink.close": "Close",
         "friendLink.submit": "Submit",
     }
