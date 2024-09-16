@@ -160,7 +160,7 @@ def run_pre_check(typ: str):
         # 若是opened则检查是否存在友链
         if typ == "opened":
             for friend in json.load(open(FRIEND_LINKS_JSON)):
-                if friend["url"] == friend_link_url or friend["name"] == friend_link_name:
+                if friend["url"] == friend_link_url or friend["nickname"] == friend_link_name:
                     issue.create_comment(get_text("pre_check_failed").format(COMMENT=get_text("link_already_exists")))
                     return
         print("checking site metadata...")
