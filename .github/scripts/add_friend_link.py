@@ -209,7 +209,7 @@ def run_delete():
         parents=[repo.get_git_commit(ref.object.sha)]
     )
     ref.edit(commit.sha)
-    issue.create_comment("✅ 友链已删除")
+    print("✅ 友链已删除")
 
 
 if __name__ == "__main__":
