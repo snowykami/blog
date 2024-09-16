@@ -2,6 +2,7 @@
 import {getTextRef} from "../sugarat/theme/src/composables/config/i18nRef";
 import {computed} from "vue";
 import {useData} from "vitepress";
+import {extendData} from "../sugarat/theme/src/composables/config/i18n";
 
 const isDark = useData().isDark
 
@@ -24,7 +25,9 @@ const tagsLangData = {
         "tag.it": "信息技术",
         "tag.jetbrains": "捷并思",
         "tag.jpop": "日本流行",
-        "tag.liteyuki": "轻雪",
+        "tag.liteyuki": "轻雪工作室",
+        "tag.lmtr": "轻雪铁路",
+        "tag.mbti": "ENFT-J",
         "tag.mcpe": "粒子特效",
         "tag.minecraft": "我的世界",
         "tag.microservices": "微服务",
@@ -39,6 +42,7 @@ const tagsLangData = {
         "tag.redrocker": "Redrocker",
         "tag.redstonemusic": "红石音乐",
         "tag.selfmedia": "自媒体",
+        "tag.snowyfirefly": "雪萤工坊",
         "tag.socialbutterfly": "社牛",
         "tag.socialphobia": "社恐",
         "tag.sre": "运维人",
@@ -58,12 +62,14 @@ const tagsLangData = {
         "tag.gamedev": "Game Development",
         "tag.genshin": "Genshin Impact",
         "tag.github": "GitHub",
-        "tag.golang": "Go Language",
+        "tag.golang": "Go",
         "tag.homelab": "HomeLab",
         "tag.it": "Information Technology",
         "tag.jetbrains": "JetBrains",
         "tag.jpop": "J-Pop",
         "tag.liteyuki": "Liteyuki",
+        "tag.lmtr": "LMTR",
+        "tag.mbti": "ENFT-J",
         "tag.minecraft": "Minecraft",
         "tag.microservices": "Microservices",
         "tag.mcpe": "MCPE Particle Effects",
@@ -78,6 +84,7 @@ const tagsLangData = {
         "tag.redrocker": "Redrocker",
         "tag.redstonemusic": "Redstone Music",
         "tag.selfmedia": "Self-Media",
+        "tag.snowyfirefly": "Snowyfirefly Studio",
         "tag.socialbutterfly": "Social Butterfly",
         "tag.socialphobia": "Social Phobia",
         "tag.sre": "SRE",
@@ -136,6 +143,7 @@ const colorsDark = [
 
 let tags: Tag[] = [
     // 使用一连串渐变色，从红色到蓝色
+
     {
         text: 'tag.liteyuki',
         link: 'https://liteyuki.icu',
@@ -146,6 +154,17 @@ let tags: Tag[] = [
         text: 'tag.github',
         link: 'https://github.com/snowykami/',
         icon: "https://github.githubassets.com/favicons/favicon.svg"
+    },
+    {
+        text: 'tag.mbti',
+        link: 'https://www.16personalities.com/ch/enfj-%E4%BA%BA%E6%A0%BC',
+        icon: "https://www.16personalities.com/static/images/favicons/favicon-32x32.png"
+
+    },
+    {
+        text: 'tag.lmtr',
+        link: 'https://mtr.lite.ac.cn/',
+        icon: "https://mtr.lite.ac.cn/favicon.ico"
     },
     {
         text: 'tag.cloudnative',
@@ -183,6 +202,7 @@ let tags: Tag[] = [
     {text: 'tag.bilibili', link: 'https://www.bilibili.com/', icon: "https://www.bilibili.com/favicon.ico"},
     {text: 'tag.music', link: 'https://music.163.com/', icon: "https://s1.music.126.net/style/favicon.ico?v20180823"},
     // No icon tags
+    {text: 'tag.snowyfirefly'},
     {text: 'tag.backend'},
     {text: 'tag.chatbot'},
     {text: 'tag.coder'},
@@ -207,6 +227,7 @@ let tags: Tag[] = [
     {text: 'tag.travel'},
     {text: 'tag.uploader'},
 ];
+extendData(tagsLangData)
 
 // tags.sort(() => Math.random() - 0.5);   // 随机排序
 
@@ -242,10 +263,10 @@ console.log(getTextRef("aboutme.easterEgg", {
         <div class="tag" v-for="(tag, i) in tags" :style="{backgroundColor: getColor(i)}">
             <img class="tag-icon" v-if="tag.icon" :src="tag.icon" alt="icon"/>
             <a v-if="tag.link" :href="tag.link" class="tag-link">
-                {{ getTextRef(tag.text, tagsLangData) }}
+                {{ getTextRef(tag.text) }}
             </a>
             <span v-else>
-                {{ getTextRef(tag.text, tagsLangData) }}
+                {{ getTextRef(tag.text) }}
             </span>
         </div>
     </div>
