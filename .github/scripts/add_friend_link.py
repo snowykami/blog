@@ -180,8 +180,8 @@ def run_pre_check(typ: str):
         site_meta = f"""\n
 # {get_text("apply_info")}\n
 **{get_text("site_url")}**: [{friend_link_url}]({friend_link_url})\n
-**{get_text("site_name")}**: {friend_link_name}/{friend_link_name_en or "No English name"}\n
-**{get_text("site_description")}**: {friend_link_des}/{friend_link_name_en or "No English description"}\n
+**{get_text("site_name")}**: {friend_link_name} / {friend_link_name_en or "No English name"}\n
+**{get_text("site_description")}**: {friend_link_des} / {friend_link_des_en or "No English description"}\n
 
 # {get_text("query_result")}\n
 **{get_text("site_title")}**: {title}\n
