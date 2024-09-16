@@ -141,53 +141,56 @@ def run_add():
 
 # opened触发
 def run_pre_check(typ: str):
-    import re
-    os.system("pip install requests beautifulsoup4")
-    import requests
-    from bs4 import BeautifulSoup
+    try:
+        import re
+        os.system("pip install requests beautifulsoup4")
+        import requests
+        from bs4 import BeautifulSoup
 
-    def get_site_metadata(url) -> tuple[str, str, int]:
-        response = requests.get(url)
-        response.raise_for_status()  # Ensure we notice bad responses
-        response.encoding = 'utf-8'
-        soup = BeautifulSoup(response.text, 'html.parser')
+        def get_site_metadata(url) -> tuple[str, str, int]:
+            response = requests.get(url)
+            response.raise_for_status()  # Ensure we notice bad responses
+            response.encoding = 'utf-8'
+            soup = BeautifulSoup(response.text, 'html.parser')
 
-        title = soup.title.string if soup.title else "No title found"
-        description = "No description found"
+            title = soup.title.string if soup.title else "No title found"
+            description = "No description found"
 
-        # Look for meta description tag
-        description_tag = soup.find('meta', attrs={
-                'name': 'description'
-        })
-        if description_tag and 'content' in description_tag.attrs:
-            description = description_tag['content']
-        return title, description, int(response.elapsed.microseconds / 1000)
+            # Look for meta description tag
+            description_tag = soup.find('meta', attrs={
+                    'name': 'description'
+            })
+            if description_tag and 'content' in description_tag.attrs:
+                description = description_tag['content']
+            return title, description, int(response.elapsed.microseconds / 1000)
 
-    # 检查链接是否合法
-    if not re.match(r"^https?://", friend_link_url) and not re.match(r"^https?://", friend_link_icon):
-        issue.create_comment(get_text("pre_check_failed").format(COMMENT=get_text("failed_not_a_https_url")))
-        return
-    else:
-        # 若是opened则第一次检查是否存在友链
-        if typ == "opened":
-            for friend in json.load(open(FRIEND_LINKS_JSON)):
-                if friend["url"] == friend_link_url or friend["nickname"] == friend_link_name:
-                    issue.create_comment(get_text("pre_check_failed").format(COMMENT=get_text("link_already_exists")))
-                    return
-        print("checking site metadata...")
+        # 检查链接是否合法
+        if not re.match(r"^https?://", friend_link_url) and not re.match(r"^https?://", friend_link_icon):
+            issue.create_comment(get_text("pre_check_failed").format(COMMENT=get_text("failed_not_a_https_url")))
+            return
+        else:
+            # 若是opened则第一次检查是否存在友链
+            if typ == "opened":
+                for friend in json.load(open(FRIEND_LINKS_JSON)):
+                    if friend["url"] == friend_link_url or friend["nickname"] == friend_link_name:
+                        issue.create_comment(get_text("pre_check_failed").format(COMMENT=get_text("link_already_exists")))
+                        return
+            print("checking site metadata...")
 
-        title, description, ping_ms = get_site_metadata(friend_link_url)
-        site_meta = f"""\n
-# {get_text("apply_info")}\n
-**{get_text("site_url")}**: [{friend_link_url}]({friend_link_url})\n
-**{get_text("site_name")}**: {friend_link_name} / {friend_link_name_en or "No English name"}\n
-**{get_text("site_description")}**: {friend_link_des} / {friend_link_des_en or "No English description"}\n
+            title, description, ping_ms = get_site_metadata(friend_link_url)
+            site_meta = f"""\n
+    # {get_text("apply_info")}\n
+    **{get_text("site_url")}**: [{friend_link_url}]({friend_link_url})\n
+    **{get_text("site_name")}**: {friend_link_name} / {friend_link_name_en or "No English name"}\n
+    **{get_text("site_description")}**: {friend_link_des} / {friend_link_des_en or "No English description"}\n
 
-# {get_text("query_result")}\n
-**{get_text("site_title")}**: {title}\n
-**{get_text("site_description")}**: {description}\n
-**{get_text("site_ping")}**: {ping_ms:.2f}ms\n"""
-        issue.create_comment(get_text("pre_check_finished") + site_meta + get_text("if_add_i18n_data"))
+    # {get_text("query_result")}\n
+    **{get_text("site_title")}**: {title}\n
+    **{get_text("site_description")}**: {description}\n
+    **{get_text("site_ping")}**: {ping_ms:.2f}ms\n"""
+            issue.create_comment(get_text("pre_check_finished") + site_meta + get_text("if_add_i18n_data"))
+    except Exception as e:
+        issue.create_comment(f"{get_text('pre_check_failed').format(COMMENT=str(e))}")
 
 
 def run_delete():
