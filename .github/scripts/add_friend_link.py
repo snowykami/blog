@@ -2,12 +2,10 @@
 Module docs
 """
 import os
-
-from github.GitTree import GitTree
-
 os.system("pip install PyGithub")
 
 import json
+from github.GitTree import GitTree
 from github import Github, InputGitTreeElement
 
 COMMAND_HEAD = "Friend Link Request"
