@@ -88,5 +88,11 @@
         "des": "partnerLink.三瓶可乐不过岗.des",
         "avatar": "https://www.threkork.com/img/512.jpg",
         "url": "https://www.threkork.com/"
+    },
+    {
+        "nickname": "partnerLink.旧梦流年.nickname",
+        "des": "partnerLink.旧梦流年.des",
+        "avatar": "https://avatars.githubusercontent.com/u/159739277/",
+        "url": "https://github.com/ElapsingDreams"
     }
 ]
