@@ -51,6 +51,7 @@ const blogTheme = getThemeConfig({
     // 友链
     friend: {
         limit: 6,
+        random: true,
         list: friendLinkJson,
     },
     // 公告
