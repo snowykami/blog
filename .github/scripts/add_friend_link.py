@@ -2,57 +2,119 @@
 Module docs
 """
 import os
-import json
+
 os.system("pip install PyGithub")
+
+import json
 from github import Github
-import sys
 
-def run():
-    # 使用 GitHub token 初始化 Github 对象
-    g = Github(os.getenv('GH_TOKEN'))
+COMMAND_HEAD = "Friend Link Request"
+FRIEND_LINKS_JSON = ".vitepress/data/friend-links.json"
+FRIEND_LINKS_I18N_JSON = ".vitepress/sugarat/theme/data/i18n/friend-links-i18n.json"
 
-    # 获取仓库和最新的 issue
-    repo = g.get_repo(os.getenv('GITHUB_REPOSITORY'))
-#     issue = repo.get_issues(state='open')[0]
-    # 通过GITHUB_ISSUE_NUMBER获取issue
-    # 通过环境变量获取 issue 编号
-    issue_number = int(os.getenv('GITHUB_ISSUE_NUMBER'))
-    # 使用 issue 编号获取 issue
-    issue = repo.get_issue(number=issue_number)
-    # 获取关闭 issue 的用户
+g = Github(os.getenv('TOKEN'))
+repo = g.get_repo(os.getenv('REPOSITORY'))
+issue_number = int(os.getenv('ISSUE_NUMBER'))
+act_type = os.getenv('ACT_TYPE')  # opened, edited, closed, deleted   对应事件类型
+"""
+opened: 添加友链
+edited: 修改友链
+closed: 审核通过
+deleted: 删除友链
+"""
+issue = repo.get_issue(number=issue_number)
+issue_title = issue.title
+issue_body = json.loads(issue.body)
+friend_link_name = issue_body["name"]
+friend_link_name_en = issue_body.get("name_en", "")
+friend_link_des = issue_body["des"]
+friend_link_des_en = issue_body.get("des_en", "")
+friend_link_url = issue_body["url"]
+friend_link_icon = issue_body["icon"]
+creator_lang = issue_body.get("lang", "zh")
+creator_name = issue.user.login
+
+i18n_text = {
+        "zh": {
+                "pre_check_finished"    : "✅ 预检查完成，等待仓库所有者审核",
+                "pre_check_failed"      : "❌ 预检查未通过：{COMMENT}，请修改issue",
+                "failed_not_a_https_url": "❌ URL不是HTTPS链接",
+                "check_passed"          : "✅ 审核通过，已添加友链，网页稍后就会构建好",
+                "if_add_i18n_data"      : "🌐 是否添加国际化数据？如需添加请修改issue添加`name_en`、`des_en`字段。",
+                "about_edit"            : "📑 如需修改信息，请直接编辑issue，不要新建issue。"
+        },
+        "en": {
+                "pre_check_finished"    : "✅ Pre-check finished, waiting for repository owner to review",
+                "pre_check_failed"      : "❌ Pre-check failed: {COMMENT}，please modify the issue",
+                "failed_not_a_https_url": "❌ URL is not a HTTPS link",
+                "check_passed"          : "✅ Check passed, the friend link has been added, and the page will be built soon.",
+                "if_add_i18n_data"      : "🌐 Do you want to add internationalization data? If you want, please modify the issue to add `name_en` and `des_en` "
+                                          "fields.",
+                "about_edit"            : "📑 If you need to modify the information, please edit the issue directly instead of creating a new issue."
+        }
+}
+if creator_lang not in i18n_text:
+    lang = "zh"
+
+
+def get_text(key: str) -> str:
+    return i18n_text[creator_lang].get(key, key)
+
+
+# closed触发
+def run_add():
+    """审核通过 关闭时触发"""
     closer = issue.closed_by
-    print(issue, issue.body)
-    # 检查关闭 issue 的用户是否是仓库的所有者
-    if closer.login != repo.owner.login:
-        # 如果不是仓库的所有者关闭的 issue，返回一个非零的退出码
-        sys.exit(1)
-    # 获取 issue 的内容
-    issue_body = issue.body
-    # 解析 issue 的内容，获取友链信息
-    friend_link = parse_issue_body(issue_body)
-    # 读取友链 JSON 文件
-    with open('.vitepress/data/friend-links.json', 'r') as f:
+    if closer.login != repo.owner.login and not issue.title.startswith(COMMAND_HEAD):
+        issue.create_comment(get_text("about_edit"))
+    # 修改友链信息
+    with open(FRIEND_LINKS_JSON, 'r') as f:
         friend_link_data = json.load(f)
-    # 将新的友链信息添加到友链数据中
-    friend_link_data.append(friend_link)
-    # 将更新后的友链数据写回到 JSON 文件中
-    with open('.vitepress/data/friend-links.json', 'w') as f:
+        friend_link_data.append(
+            {
+                    "nickname": f'partnerLink.{friend_link_data["name"]}.nickname',
+                    "des"     : f'partnerLink.{friend_link_data["name"]}.des',
+                    "avatar"  : friend_link_icon,
+                    "url"     : friend_link_url,
+            }
+        )
+    with open(FRIEND_LINKS_JSON, 'w') as f:
         json.dump(friend_link_data, f, indent=4, ensure_ascii=False)
 
-    # 添加翻译文件
-    with open('.vitepress/sugarat/theme/data/i18n/friend-links-i18n.json', 'r') as f:
+    # 修改友链国际化信息
+    with open(FRIEND_LINKS_I18N_JSON, 'r') as f:
         friend_i18n_data = json.load(f)
-    friend_i18n_data['zh'][f'partnerLink.{friend_link_data["name"]}.nickname'] = friend_link_data["name"]
-    friend_i18n_data['zh'][f'partnerLink.{friend_link_data["name"]}.des'] = friend_link_data["des"]
-    friend_i18n_data['en'][f'partnerLink.{friend_link_data["name"]}.nickname'] = friend_link_data["name"]
-    friend_i18n_data['en'][f'partnerLink.{friend_link_data["name"]}.des'] = friend_link_data["des"]
-    with open('.vitepress/sugarat/theme/data/i18n/friend-links-i18n.json', 'w') as f:
+    friend_i18n_data['zh'][f'partnerLink.{friend_link_data["name"]}.nickname'] = friend_link_name
+    friend_i18n_data['zh'][f'partnerLink.{friend_link_data["name"]}.des'] = friend_link_des
+    friend_i18n_data['en'][f'partnerLink.{friend_link_data["name"]}.nickname'] = friend_link_name_en or f"{creator_name}'s site"
+    friend_i18n_data['en'][f'partnerLink.{friend_link_data["name"]}.des'] = friend_link_des_en or f"{creator_name}'s site"
+    with open(FRIEND_LINKS_I18N_JSON, 'w') as f:
         json.dump(friend_i18n_data, f, indent=4, ensure_ascii=False)
 
-def parse_issue_body(issue_body):
-    # 在这里解析 issue 的内容，获取友链信息
-    # 这将取决于你的 issue 的格式
-    pass
+    # 完成提交
+    issue.create_comment(get_text("check_passed"))
+
+
+# opened触发
+def run_pre_check():
+    import re
+    os.system("pip install requests")
+    # 检查链接是否合法
+    if not re.match(r"^https?://", friend_link_url) and not re.match(r"^https?://", friend_link_icon):
+        issue.create_comment(get_text("pre_check_failed").format(COMMENT=get_text("failed_not_a_https_url")))
+        return
+    else:
+        issue.create_comment(get_text("pre_check_finished"))
+
 
 if __name__ == "__main__":
-    run()
+    if issue_title.startswith(COMMAND_HEAD):
+        if act_type in ["opened", "edited"]:
+            run_pre_check()
+        elif act_type == "closed":
+            run_add()
+        else:
+            raise ValueError(f"Unsupported act_type: {act_type}")
+
+    else:
+        print("Not a friend link request issue, passed.")
