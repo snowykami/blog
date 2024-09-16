@@ -27,7 +27,9 @@
         "partnerLink.我的世界中国版.nickname": "snowykami's site",
         "partnerLink.我的世界中国版.des": "snowykami's site",
         "partnerLink.NoneBotX.nickname": "KomoriDev's site",
-        "partnerLink.NoneBotX.des": "KomoriDev's site"
+        "partnerLink.NoneBotX.des": "KomoriDev's site",
+        "partnerLink.MeloBot.nickname": "snowykami's site",
+        "partnerLink.MeloBot.des": "A bot development framework that supports multiple protocols, multi-channel IO, and other advanced features."
     },
     "zh": {
         "partnerLink.liteyukiIndexSite.nickname": "轻雪索引站",
@@ -57,6 +59,8 @@
         "partnerLink.我的世界中国版.nickname": "我的世界中国版",
         "partnerLink.我的世界中国版.des": "我的世界 - 冒险启航",
         "partnerLink.NoneBotX.nickname": "NoneBotX",
-        "partnerLink.NoneBotX.des": "NoneBot 社区文档"
+        "partnerLink.NoneBotX.des": "NoneBot 社区文档",
+        "partnerLink.MeloBot.nickname": "MeloBot",
+        "partnerLink.MeloBot.des": "支持多协议、多路 IO 与其他高级特性的机器人开发框架"
     }
 }

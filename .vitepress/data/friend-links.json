@@ -70,5 +70,11 @@
         "des": "partnerLink.NoneBotX.des",
         "avatar": "https://x.none.bot/favicon.png",
         "url": "https://x.none.bot"
+    },
+    {
+        "nickname": "partnerLink.MeloBot.nickname",
+        "des": "partnerLink.MeloBot.des",
+        "avatar": "https://docs.melobot.org/_static/favicon-32x32.png",
+        "url": "https://docs.melobot.org/"
     }
 ]
