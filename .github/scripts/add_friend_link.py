@@ -138,6 +138,7 @@ def run_pre_check(typ: str):
     def get_site_metadata(url) -> tuple[str, str, int]:
         response = requests.get(url)
         response.raise_for_status()  # Ensure we notice bad responses
+        response.encoding = 'utf-8'
         soup = BeautifulSoup(response.text, 'html.parser')
 
         title = soup.title.string if soup.title else "No title found"
@@ -162,6 +163,7 @@ def run_pre_check(typ: str):
                 if friend["url"] == friend_link_url:
                     issue.create_comment(get_text("pre_check_failed").format(COMMENT=get_text("link_already_exists")))
                     return
+        print("checking site metadata...")
 
         title, description, ping_ms = get_site_metadata(friend_link_url)
         site_meta = f"""\n\n**{get_text("site_url")}**: [{friend_link_url}]({friend_link_url})\n\n
