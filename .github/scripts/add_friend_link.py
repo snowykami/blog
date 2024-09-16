@@ -3,10 +3,12 @@ Module docs
 """
 import os
 
+from github.GitTree import GitTree
+
 os.system("pip install PyGithub")
 
 import json
-from github import Github
+from github import Github, InputGitTreeElement
 
 COMMAND_HEAD = "Friend Link Request"
 FRIEND_LINKS_JSON = ".vitepress/data/friend-links.json"
@@ -33,13 +35,14 @@ friend_link_url = issue_body["url"]
 friend_link_icon = issue_body["icon"]
 creator_lang = issue_body.get("lang", "zh")
 creator_name = issue.user.login
+ref = repo.get_git_ref("heads/main")
 
 i18n_text = {
         "zh": {
                 "pre_check_finished"    : "✅ 预检查完成，等待仓库所有者审核",
                 "pre_check_failed"      : "❌ 预检查未通过：{COMMENT}，请修改issue",
                 "failed_not_a_https_url": "❌ URL不是HTTPS链接",
-                "check_passed"          : "✅ 审核通过，已添加友链，网页稍后就会构建好",
+                "check_passed"          : "✅ 审核通过，已添加友链，页面稍后就会构建好",
                 "if_add_i18n_data"      : "🌐 是否添加国际化数据？如需添加请修改issue添加`name_en`、`des_en`字段。",
                 "about_edit"            : "📑 如需修改信息，请直接编辑issue，不要新建issue。"
         },
@@ -90,6 +93,30 @@ def run_add():
     friend_i18n_data['en'][f'partnerLink.{creator_name}.des'] = friend_link_des_en or f"{creator_name}'s site"
     with open(FRIEND_LINKS_I18N_JSON, 'w') as f:
         json.dump(friend_i18n_data, f, indent=4, ensure_ascii=False)
+
+    tree = repo.create_git_tree(
+        base_tree=repo.get_git_tree("main"),
+        tree=[
+            InputGitTreeElement(
+                path=FRIEND_LINKS_JSON,
+                mode="100644",
+                type="blob",
+                content=f":busts_in_silhouette: Add friend link: {friend_link_url}({creator_name})",
+            ),
+            InputGitTreeElement(
+                path=FRIEND_LINKS_I18N_JSON,
+                mode="100644",
+                type="blob",
+                content=f":busts_in_silhouette: Add friend link i18n data: {friend_link_url}({creator_name})",
+            )
+        ]
+    )
+    # 提交修改
+    repo.create_git_commit(
+        message=f":busts_in_silhouette: Add friend link: {friend_link_url}({creator_name})",
+        tree=tree,
+        parents=[repo.get_git_commit(ref.object.sha)]
+    )
 
     # 完成提交
     issue.create_comment(get_text("check_passed"))
