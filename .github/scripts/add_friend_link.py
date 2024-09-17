@@ -64,12 +64,22 @@ def get_text(key: str) -> str:
 # closed触发
 def run_add():
     """审核通过 关闭时触发"""
-    closer = issue.closed_by
-    if closer is None:
-        issue.create_comment(get_text("cannot_get_close"))
+    if not issue_title.startswith(COMMAND_HEAD):
         return
 
-    if closer.login != repo.owner.login and not issue.title.startswith(COMMAND_HEAD):
+    closer = issue.closed_by
+    if closer is None:
+        # 尝试检查是否有管理员发布的通过评论
+        for cm in issue.get_comments():
+            if cm.body.startswith(("通过", "pass",)):
+                if cm.user.login not in [u.login for u in repo.get_collaborators()]:
+                    issue.create_comment(get_text("cannot_get_close"))
+                    return
+                break
+        else:
+            issue.create_comment(get_text("cannot_get_close"))
+            return
+    elif closer.login not in [u.login for u in repo.get_collaborators()]:
         issue.create_comment(get_text("about_edit"))
         return
     # 修改友链信息
@@ -127,6 +137,9 @@ def run_add():
 
 # opened触发
 def run_pre_check(typ: str):
+    if not issue_title.startswith(COMMAND_HEAD):
+        return
+
     try:
         import re
         os.system("pip install requests beautifulsoup4")
