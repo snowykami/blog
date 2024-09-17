@@ -247,14 +247,6 @@ const getTagWidth = (tag: Tag) => {
     const iconWidth = tag.icon ? 20 : 0
     return text.length * 8 + iconWidth
 }
-// 从大到小对标签进行排序，使用getTagWidth计算标签宽度
-const sortedTags = computed(
-    () => {
-        let newTags = tags.slice()
-        newTags.sort((a, b) => getTagWidth(b) - getTagWidth(a))
-        return newTags
-    }
-)
 
 // 对sortedTags进行动态规划排序，使得每行的标签尽可能排满，无需按照顺序排列
 const dpTags = computed(() => {
