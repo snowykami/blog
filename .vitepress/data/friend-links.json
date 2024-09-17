@@ -118,5 +118,17 @@
         "des": "partnerLink.原神.des",
         "avatar": "https://ys.mihoyo.com/main/favicon.ico",
         "url": "https://ys.mihoyo.com/"
+    },
+    {
+        "nickname": "partnerLink.轻雪铁路.nickname",
+        "des": "partnerLink.轻雪铁路.des",
+        "avatar": "https://mtr.lite.ac.cn/favicon.ico",
+        "url": "https://mtr.lite.ac.cn/"
+    },
+    {
+        "nickname": "partnerLink.daoge的github主页.nickname",
+        "des": "partnerLink.daoge的github主页.des",
+        "avatar": "https://avatars.githubusercontent.com/u/60499296?v=4",
+        "url": "https://github.com/smartcmd"
     }
 ]

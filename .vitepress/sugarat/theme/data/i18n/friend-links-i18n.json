@@ -41,7 +41,11 @@
         "partnerLink.小涵のGithub主页.nickname": "yuhan2680's site",
         "partnerLink.小涵のGithub主页.des": "yuhan2680's site",
         "partnerLink.原神.nickname": "Genshin Impact CN",
-        "partnerLink.原神.des": "Genshin Impact CN Official - new 5.0 ver."
+        "partnerLink.原神.des": "Genshin Impact CN Official - new 5.0 ver.",
+        "partnerLink.轻雪铁路.nickname": "snowykami's site",
+        "partnerLink.轻雪铁路.des": "snowykami's site",
+        "partnerLink.daoge的github主页.nickname": "smartcmd's site",
+        "partnerLink.daoge的github主页.des": "smartcmd's site"
     },
     "zh": {
         "partnerLink.liteyukiIndexSite.nickname": "轻雪索引站",
@@ -85,6 +89,10 @@
         "partnerLink.小涵のGithub主页.nickname": "小涵のGithub主页",
         "partnerLink.小涵のGithub主页.des": "Nya~这里是小涵，点进来看看吧w",
         "partnerLink.原神.nickname": "原神",
-        "partnerLink.原神.des": "《原神》官方网站 - 全新5.0版本"
+        "partnerLink.原神.des": "《原神》官方网站 - 全新5.0版本",
+        "partnerLink.轻雪铁路.nickname": "轻雪铁路",
+        "partnerLink.轻雪铁路.des": "轻雪铁路工作室 - Minecraft Rail Transit",
+        "partnerLink.daoge的github主页.nickname": "daoge的github主页",
+        "partnerLink.daoge的github主页.des": "喵喵喵"
     }
 }
