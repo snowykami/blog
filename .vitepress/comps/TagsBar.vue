@@ -1,10 +1,22 @@
 <script setup lang="ts">
 import {getTextRef} from "../sugarat/theme/src/composables/config/i18nRef";
-import {computed} from "vue";
+import {computed, onMounted, onUnmounted, ref} from "vue";
 import {useData} from "vitepress";
 import {extendData} from "../sugarat/theme/src/composables/config/i18n";
+import {formatLangRouter} from "../sugarat/theme/src/composables/config/blog";
 
 const isDark = useData().isDark
+const windowWidth = ref(window.innerWidth);
+const updateWindowWidth = () => {
+    windowWidth.value = window.innerWidth;
+};
+onMounted(() => {
+    window.addEventListener('resize', updateWindowWidth);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('resize', updateWindowWidth);
+});
 
 const tagsLangData = {
     "zh": {
@@ -229,7 +241,67 @@ let tags: Tag[] = [
 ];
 extendData(tagsLangData)
 
-// tags.sort(() => Math.random() - 0.5);   // 随机排序
+// 最大化排布，使得每行的标签尽可能排满，且和窗口变化时重新排布，不一定要按照顺序排列
+const getTagWidth = (tag: Tag) => {
+    const text = getTextRef(tag.text, tagsLangData)
+    const iconWidth = tag.icon ? 20 : 0
+    return text.length * 8 + iconWidth
+}
+// 从大到小对标签进行排序，使用getTagWidth计算标签宽度
+const sortedTags = computed(
+    () => {
+        let newTags = tags.slice()
+        newTags.sort((a, b) => getTagWidth(b) - getTagWidth(a))
+        return newTags
+    }
+)
+
+// 对sortedTags进行动态规划排序，使得每行的标签尽可能排满，无需按照顺序排列
+const dpTags = computed(() => {
+    const dp: number[] = new Array(tags.length).fill(0);
+    const width = windowWidth.value - 20; // 容器宽度
+    const rows: Tag[][] = []; // 存储每行的标签
+
+    for (let i = 0; i < tags.length; i++) {
+        let currentTagWidth = getTagWidth(tags[i]);
+        let placed = false;
+
+        // 尝试将当前标签放入已有的行中
+        for (let j = 0; j < rows.length; j++) {
+            if (dp[j] + currentTagWidth <= width) {
+                rows[j].push(tags[i]);
+                dp[j] += currentTagWidth;
+                placed = true;
+                break;
+            }
+        }
+
+        // 如果没有合适的行，创建新的行
+        if (!placed) {
+            rows.push([tags[i]]);
+            dp[rows.length - 1] = currentTagWidth;
+        }
+    }
+
+    // 将行中的标签按照宽度从大到小排序，使得宽的标签优先显示
+    rows.forEach(row => {
+        row.sort((a, b) => getTagWidth(b) - getTagWidth(a));
+    });
+    // 有icon的标签优先显示
+    rows.forEach(row => {
+        row.sort((a, b) => {
+            if (a.icon && !b.icon) {
+                return -1;
+            } else if (!a.icon && b.icon) {
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+    });
+    return rows.flat(); // 将所有行的标签合并为一个数组
+
+});
 
 function getColor(i: number) {
     return isDark.value ? colorsDark[i % colorsDark.length] : colors[i % colors.length]
@@ -260,7 +332,7 @@ console.log(getTextRef("aboutme.easterEgg", {
 
 <template>
     <div class="tags-bar">
-        <div class="tag" v-for="(tag, i) in tags" :style="{backgroundColor: getColor(i)}">
+        <div class="tag" v-for="(tag, i) in dpTags" :style="{backgroundColor: getColor(i)}">
             <img class="tag-icon" v-if="tag.icon" :src="tag.icon" alt="icon"/>
             <a v-if="tag.link" :href="tag.link" class="tag-link">
                 {{ getTextRef(tag.text) }}
