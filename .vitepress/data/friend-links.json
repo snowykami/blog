@@ -118,5 +118,11 @@
         "des": "partnerLink.原神.des",
         "avatar": "https://ys.mihoyo.com/main/favicon.ico",
         "url": "https://ys.mihoyo.com/"
+    },
+    {
+        "nickname": "partnerLink.轻雪铁路.nickname",
+        "des": "partnerLink.轻雪铁路.des",
+        "avatar": "https://mtr.lite.ac.cn/favicon.ico",
+        "url": "https://mtr.lite.ac.cn/"
     }
 ]
