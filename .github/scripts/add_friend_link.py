@@ -64,6 +64,7 @@ def get_text(key: str) -> str:
 def run_add():
     """审核通过 关闭时触发"""
     closer = issue.closed_by
+    print(closer, repo.owner)
     if closer.login != repo.owner.login and not issue.title.startswith(COMMAND_HEAD):
         issue.create_comment(get_text("about_edit"))
     # 修改友链信息
@@ -115,6 +116,7 @@ def run_add():
         parents=[repo.get_git_commit(ref.object.sha)]
     )
     ref.edit(commit.sha)
+    issue.add_to_labels("passed")
     issue.create_comment(get_text("check_passed"))
 
 
@@ -155,7 +157,6 @@ def run_pre_check(typ: str):
                         issue.create_comment(get_text("pre_check_failed").format(COMMENT=get_text("link_already_exists")))
                         return
             print("checking site metadata...")
-
             title, description, ping_ms = get_site_metadata(friend_link_url)
             site_meta = f"""\n
 # {get_text("apply_info")}\n
@@ -168,7 +169,11 @@ def run_pre_check(typ: str):
 **{get_text("site_description")}**: {description}\n
 **{get_text("site_ping")}**: {ping_ms:.2f}ms\n"""
             issue.create_comment(get_text("pre_check_finished") + site_meta + get_text("if_add_i18n_data"))
+            # remove failed label
+            issue.remove_from_labels("failed")
+            issue.add_to_labels("pre-checked")
     except Exception as e:
+        issue.add_to_labels("failed")
         issue.create_comment(f"{get_text('pre_check_failed').format(COMMENT=str(e))}")
 
 
