@@ -6,7 +6,6 @@ import os
 os.system("pip install PyGithub")
 
 import json
-from github.GitTree import GitTree
 from github import Github, InputGitTreeElement
 
 COMMAND_HEAD = "Friend Link Request"
@@ -32,6 +31,7 @@ i18n_text = {
                 "site_name"             : "站点名称",
 
                 "json_parse_error"      : "JSON解析错误",
+                "cannot_get_close"      : "无法获取关闭者信息",
         },
         "en": {
                 "pre_check_finished"    : "✅ Pre-check passed, ready to go, waiting for the repository owner to review",
@@ -52,6 +52,7 @@ i18n_text = {
                 "site_name"             : "Site Name",
 
                 "json_parse_error"      : "JSON parse error",
+                "cannot_get_close"      : "Cannot get closer information",
         }
 }
 
@@ -64,9 +65,13 @@ def get_text(key: str) -> str:
 def run_add():
     """审核通过 关闭时触发"""
     closer = issue.closed_by
-    print(closer, repo.owner)
+    if closer is None:
+        issue.create_comment(get_text("cannot_get_close"))
+        return
+
     if closer.login != repo.owner.login and not issue.title.startswith(COMMAND_HEAD):
         issue.create_comment(get_text("about_edit"))
+        return
     # 修改友链信息
     with open(FRIEND_LINKS_JSON, 'r') as f:
         friend_link_data = json.load(f)
