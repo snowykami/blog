@@ -32,6 +32,7 @@ i18n_text = {
 
                 "json_parse_error"      : "JSON解析错误",
                 "cannot_get_close"      : "无法获取关闭者信息",
+                "admin_dont_pass"       : "管理员未审核",
         },
         "en": {
                 "pre_check_finished"    : "✅ Pre-check passed, ready to go, waiting for the repository owner to review",
@@ -53,6 +54,7 @@ i18n_text = {
 
                 "json_parse_error"      : "JSON parse error",
                 "cannot_get_close"      : "Cannot get closer information",
+                "admin_dont_pass"       : "Admin did not pass"
         }
 }
 
@@ -72,15 +74,15 @@ def run_add():
         # 尝试检查是否有管理员发布的通过评论
         for cm in issue.get_comments():
             if cm.body.startswith(("通过", "pass",)):
-                if cm.user.login not in [u.login for u in repo.get_collaborators()]:
-                    issue.create_comment(get_text("cannot_get_close"))
-                    return
-                break
+                if cm.user.login in [u.login for u in repo.get_collaborators()]:
+                    break
         else:
-            issue.create_comment(get_text("cannot_get_close"))
+            issue.create_comment(get_text("admin_dont_pass"))
+            issue.edit(state="open")
             return
     elif closer.login not in [u.login for u in repo.get_collaborators()]:
         issue.create_comment(get_text("about_edit"))
+        issue.edit(state="open")
         return
     # 修改友链信息
     with open(FRIEND_LINKS_JSON, 'r') as f:
