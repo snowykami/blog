@@ -100,5 +100,23 @@
         "des": "partnerLink.旧梦流年.des",
         "avatar": "https://github.com/ElapsingDreams.png",
         "url": "https://github.com/ElapsingDreams"
+    },
+    {
+        "nickname": "partnerLink.艾拉酱小屋.nickname",
+        "des": "partnerLink.艾拉酱小屋.des",
+        "avatar": "https://c-ssl.duitang.com/uploads/blog/202203/25/20220325220854_59aa8.thumb.400_0.jpg",
+        "url": "https://www.isla.ltd"
+    },
+    {
+        "nickname": "partnerLink.小涵のGithub主页.nickname",
+        "des": "partnerLink.小涵のGithub主页.des",
+        "avatar": "https://avatars.githubusercontent.com/u/89262123",
+        "url": "https://github.com/yuhan2680"
+    },
+    {
+        "nickname": "partnerLink.原神.nickname",
+        "des": "partnerLink.原神.des",
+        "avatar": "https://ys.mihoyo.com/main/favicon.ico",
+        "url": "https://ys.mihoyo.com/"
     }
 ]
