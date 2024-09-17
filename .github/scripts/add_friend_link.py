@@ -175,7 +175,8 @@ def run_pre_check(typ: str):
 **{get_text("site_ping")}**: {ping_ms:.2f}ms\n"""
             issue.create_comment(get_text("pre_check_finished") + site_meta + get_text("if_add_i18n_data"))
             # remove failed label
-            issue.remove_from_labels("failed")
+            if "failed" in issue.labels:
+                issue.remove_from_labels("failed")
             issue.add_to_labels("pre-checked")
     except Exception as e:
         issue.add_to_labels("failed")
