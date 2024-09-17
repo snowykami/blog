@@ -267,7 +267,6 @@ const dpTags = computed(() => {
                 break;
             }
         }
-
         // 如果没有合适的行，创建新的行
         if (!placed) {
             rows.push([tags[i]]);
