@@ -2,7 +2,7 @@ name: Friend link workflow
 
 on:
   issues:
-    types: [ opened, edited, closed, deleted, reopened ]
+    types: [ opened, edited, closed, deleted ]
 
 jobs:
   check_issue:
