@@ -47,7 +47,9 @@
         "partnerLink.daoge的github主页.nickname": "smartcmd's site",
         "partnerLink.daoge的github主页.des": "smartcmd's site",
         "partnerLink.梅洛机器人.nickname": "MeloBot",
-        "partnerLink.梅洛机器人.des": "A bot development framework that supports multiple protocols, multi-channel IO, and other advanced features."
+        "partnerLink.梅洛机器人.des": "A bot development framework that supports multiple protocols, multi-channel IO, and other advanced features.",
+        "partnerLink.逝与逢博客.nickname": "zouXH-god's site",
+        "partnerLink.逝与逢博客.des": "zouXH-god's site"
     },
     "zh": {
         "partnerLink.liteyukiIndexSite.nickname": "轻雪索引站",
@@ -97,6 +99,8 @@
         "partnerLink.daoge的github主页.nickname": "daoge的github主页",
         "partnerLink.daoge的github主页.des": "喵喵喵",
         "partnerLink.梅洛机器人.nickname": "梅洛机器人",
-        "partnerLink.梅洛机器人.des": "支持多协议、多路输入输出与其他高级特性的机器人开发框架"
+        "partnerLink.梅洛机器人.des": "支持多协议、多路输入输出与其他高级特性的机器人开发框架",
+        "partnerLink.逝与逢博客.nickname": "逝与逢博客",
+        "partnerLink.逝与逢博客.des": "逝染的个人博客"
     }
 }

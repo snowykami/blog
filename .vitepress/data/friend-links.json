@@ -130,5 +130,11 @@
         "des": "partnerLink.梅洛机器人.des",
         "avatar": "https://docs.melobot.org/_static/logo.png",
         "url": "https://docs.melobot.org/"
+    },
+    {
+        "nickname": "partnerLink.逝与逢博客.nickname",
+        "des": "partnerLink.逝与逢博客.des",
+        "avatar": "https://blog.xin-hao.top/wp-content/uploads/2023/10/log.png",
+        "url": "https://blog.xin-hao.top"
     }
 ]
