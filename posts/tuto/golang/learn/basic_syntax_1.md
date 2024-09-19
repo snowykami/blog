@@ -6,13 +6,65 @@ tags:
   - 速成
 ---
 
-# Go 基础语法：包，变量，函数，分支及循环，容器
+# Go 基础语法：包及导入，变量，函数，分支及循环，容器
+
+## 程序
+
+一个简单的go程序由包声明、导入包、函数声明和函数体组成。
+Go 语言的程序入口是 `main` 函数，`main` 函数所在的包必须是 `main` 包。
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+```
 
 ## 包
 
 包是 Go 语言的基本组织单元，每个 Go 文件都属于一个包。包的声明是通过 `package` 关键字实现的，包名和文件夹名可以不一致，但是推荐保持一致。
 
 声明包的语法如下：
+
+## 导入
+
+Go 语言的导入语法如下：
+
+```go
+import "fmt"
+```
+
+多行导入
+
+```go
+import (
+    "fmt"
+    "os"
+)
+```
+
+从git仓库导入标准go包
+
+```go
+import "github.com/cloudwego/kitex"
+```
+
+导入后可以使用包中的函数、变量等。
+
+```go
+import (
+    "fmt",
+    "github.com/cloudwego/kitex"
+)
+
+func main() {
+    fmt.Println("Hello, World!")
+    s := kitex.NewServer()
+}
+```
 
 ```go
 package main
