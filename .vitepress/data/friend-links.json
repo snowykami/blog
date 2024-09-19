@@ -60,22 +60,10 @@
         "url": "https://chloridep.github.io"
     },
     {
-        "nickname": "partnerLink.我的世界中国版.nickname",
-        "des": "partnerLink.我的世界中国版.des",
-        "avatar": "https://mc.163.com/favicon.ico",
-        "url": "https://mc.163.com/"
-    },
-    {
         "nickname": "partnerLink.NoneBotX.nickname",
         "des": "partnerLink.NoneBotX.des",
         "avatar": "https://x.none.bot/favicon.png",
         "url": "https://x.none.bot"
-    },
-    {
-        "nickname": "partnerLink.MeloBot.nickname",
-        "des": "partnerLink.MeloBot.des",
-        "avatar": "https://docs.melobot.org/_static/favicon-32x32.png",
-        "url": "https://docs.melobot.org/"
     },
     {
         "nickname": "partnerLink.NoneBot.nickname",
@@ -120,15 +108,27 @@
         "url": "https://ys.mihoyo.com/"
     },
     {
+        "nickname": "partnerLink.daoge的github主页.nickname",
+        "des": "partnerLink.daoge的github主页.des",
+        "avatar": "https://avatars.githubusercontent.com/u/60499296?v=4",
+        "url": "https://github.com/smartcmd"
+    },
+    {
         "nickname": "partnerLink.轻雪铁路.nickname",
         "des": "partnerLink.轻雪铁路.des",
         "avatar": "https://mtr.lite.ac.cn/favicon.ico",
         "url": "https://mtr.lite.ac.cn/"
     },
     {
-        "nickname": "partnerLink.daoge的github主页.nickname",
-        "des": "partnerLink.daoge的github主页.des",
-        "avatar": "https://avatars.githubusercontent.com/u/60499296?v=4",
-        "url": "https://github.com/smartcmd"
+        "nickname": "partnerLink.梅洛机器人.nickname",
+        "des": "partnerLink.梅洛机器人.des",
+        "avatar": "https://docs.melobot.org/_static/logo.png",
+        "url": "https://docs.melobot.org/"
+    },
+    {
+        "nickname": "partnerLink.逝与逢博客.nickname",
+        "des": "partnerLink.逝与逢博客.des",
+        "avatar": "https://blog.xin-hao.top/wp-content/uploads/2023/10/log.png",
+        "url": "https://blog.xin-hao.top"
     }
 ]
