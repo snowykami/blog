@@ -50,16 +50,16 @@ type Person struct {
 func main() {
     // Access struct member assignment
     var p1 Person
-    p1.name = "张三"
+    p1.name = "Tom"
     p1.age = 11
     fmt.Println(p1)
     
     // Assign with struct literal
-    p2 := Person{"李四", 22}
+    p2 := Person{"Jerry", 22}
     fmt.Println(p2)
     
     // Assign with struct pointer
-    p3 := &Person{"王五", 33}
+    p3 := &Person{"Spike", 33}
     fmt.Println(p3)
     
     // Access struct member
