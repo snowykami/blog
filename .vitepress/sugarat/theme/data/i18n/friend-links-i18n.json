@@ -49,7 +49,9 @@
         "partnerLink.梅洛机器人.nickname": "MeloBot",
         "partnerLink.梅洛机器人.des": "A bot development framework that supports multiple protocols, multi-channel IO, and other advanced features.",
         "partnerLink.逝与逢博客.nickname": "zouXH-god's site",
-        "partnerLink.逝与逢博客.des": "zouXH-god's site"
+        "partnerLink.逝与逢博客.des": "zouXH-god's site",
+        "partnerLink.Inkar Suki.nickname": "HornCopper's site",
+        "partnerLink.Inkar Suki.des": "A Bot based on NoneBot 2(OneBot V11 Standard) with developed for group chat."
     },
     "zh": {
         "partnerLink.liteyukiIndexSite.nickname": "轻雪索引站",
@@ -101,6 +103,8 @@
         "partnerLink.梅洛机器人.nickname": "梅洛机器人",
         "partnerLink.梅洛机器人.des": "支持多协议、多路输入输出与其他高级特性的机器人开发框架",
         "partnerLink.逝与逢博客.nickname": "逝与逢博客",
-        "partnerLink.逝与逢博客.des": "逝染的个人博客"
+        "partnerLink.逝与逢博客.des": "逝染的个人博客",
+        "partnerLink.Inkar Suki.nickname": "Inkar Suki",
+        "partnerLink.Inkar Suki.des": "基于无机器人貳(一个机器人微拾壹)开发的群机器人"
     }
 }

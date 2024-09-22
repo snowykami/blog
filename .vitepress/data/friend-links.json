@@ -130,5 +130,11 @@
         "des": "partnerLink.逝与逢博客.des",
         "avatar": "https://blog.xin-hao.top/wp-content/uploads/2023/10/log.png",
         "url": "https://blog.xin-hao.top"
+    },
+    {
+        "nickname": "partnerLink.Inkar Suki.nickname",
+        "des": "partnerLink.Inkar Suki.des",
+        "avatar": "https://inkar-suki.codethink.cn/Inkar-Suki-Docs/img/InkarSukiCopyright.png",
+        "url": "https://inkar-suki.codethink.cn/Inkar-Suki-Docs/"
     }
 ]
