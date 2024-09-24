@@ -47,6 +47,13 @@ const blogTheme = getThemeConfig({
 
     // 文章默认作者
     author: 'Snowykami',
+    comment: {
+        repo: 'snowykami/blog',
+        repoId: 'R_kgDOMupitg',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDOMupits4Civ6i',
+        inputPosition: 'top'
+    },
 
     // 友链
     friend: {

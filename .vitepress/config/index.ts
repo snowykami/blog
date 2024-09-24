@@ -28,5 +28,5 @@ export default defineConfig({
             label: 'English',
             ...en
         }
-    }
+    },
 })
