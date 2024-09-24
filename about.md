@@ -29,11 +29,7 @@ top: 1
 点击右上角的菜单，选择我的联系方式。
 
 ## 友链
-如果你想和我交换友链，请提供以下信息
-- 网站名称：中/英文
-- 网站描述：中/英文
-- 网站链接：https URL
-- 网站图标：https URL
+如果你想和我交换友链，请在首页的申请友链表单中填写，Github机器人会自动处理。
 
 <script setup lang="ts">
 import TagsBar from './.vitepress/comps/TagsBar.vue'

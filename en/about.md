@@ -30,11 +30,7 @@ If you want to know about the projects of Liteyuki Studio, you can visit [Liteyu
 Click the menu in the upper right corner and select my contact information.
 
 ## Friend Links
-If you want to exchange friend links with me, please provide the following information
-- Website Name: Chinese/English
-- Website Description: Chinese/English
-- Website Link: https URL
-- Website Icon: https URL
+If you want to exchange friend links with me, please fill in the friend link application form on the homepage, and the GitHub bot will automatically process it.
 
 
 <script setup lang="ts">
