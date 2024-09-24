@@ -4,6 +4,7 @@ import {getThemeConfig} from '@sugarat/theme/node'
 // 开启RSS支持（RSS配置）
 import type {Theme} from '@sugarat/theme'
 import friendLinkJson from './data/friend-links.json';
+import {useData} from "vitepress";
 
 const baseUrl = 'https://sfkm.me'
 const RSS: Theme.RSSOptions = {
@@ -52,7 +53,7 @@ const blogTheme = getThemeConfig({
         repoId: 'R_kgDOMupitg',
         category: 'Announcements',
         categoryId: 'DIC_kwDOMupits4Civ6i',
-        inputPosition: 'top'
+        inputPosition: 'top',
     },
 
     // 友链

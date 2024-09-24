@@ -85,6 +85,14 @@ export function formatLangRouter(lang: string) {
     }
 }
 
+export function formatLangGiscus(lang: string) {
+    if (lang === 'zh-cn') {
+        return 'zh-CN'
+    } else {
+        return 'en'
+    }
+}
+
 
 export function getText(lang: string, key: string): string {
     lang = formatLangRouter(lang);

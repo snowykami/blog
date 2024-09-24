@@ -3,6 +3,7 @@ import { useData, useRoute } from 'vitepress'
 import { computed, nextTick, ref, watch } from 'vue'
 import Giscus from '@giscus/vue'
 import { useBlogConfig } from '../composables/config/blog'
+import {formatLangGiscus} from "../composables/config/i18n";
 
 // 读取配制
 const { comment } = useBlogConfig()
@@ -36,6 +37,7 @@ watch(
     immediate: true
   }
 )
+console.log(useData().site.value.lang)
 </script>
 
 <template>
@@ -44,6 +46,6 @@ watch(
     :category="commentConfig.category" :category-id="commentConfig.categoryId"
     :mapping="commentConfig.mapping || 'pathname'" reactions-enabled="1" emit-metadata="0"
     :input-position="commentConfig.inputPosition || 'top'" :theme="isDark ? 'dark' : 'light'"
-    :lang="commentConfig.lang || 'zh-CN'" :loading="commentConfig.loading || 'eager'"
+    :lang="commentConfig.lang || formatLangGiscus(useData().lang.value)" :loading="commentConfig.loading || 'eager'"
   />
 </template>
