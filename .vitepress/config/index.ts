@@ -8,6 +8,7 @@ import {defaultLang} from "../sugarat/theme/src/composables/config/i18n";
 
 
 export default defineConfig({
+    ignoreDeadLinks: true,
     extends: blogTheme,
     // base,
     head: [
