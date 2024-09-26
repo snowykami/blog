@@ -32,6 +32,9 @@ dependencies:
   fast-glob:
     specifier: ^3.3.2
     version: 3.3.2
+  markdown-it:
+    specifier: ^14.1.0
+    version: 14.1.0
   module:
     specifier: ^1.2.5
     version: 1.2.5
@@ -64,6 +67,9 @@ dependencies:
     version: 3.4.26(typescript@5.6.2)
 
 devDependencies:
+  '@types/markdown-it':
+    specifier: ^14.1.2
+    version: 14.1.2
   '@types/node':
     specifier: ^22.5.5
     version: 22.5.5

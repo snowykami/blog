@@ -37,7 +37,6 @@ watch(
     immediate: true
   }
 )
-console.log(useData().site.value.lang)
 </script>
 
 <template>

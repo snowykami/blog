@@ -6,6 +6,7 @@ const i18nData: Record<string, Record<string, string>> = {
         // UITextArea
         "about": "About",
         "homepage": "Home",
+        "trends": "Trends",
         "timeline": "Timeline",
         "requestFriendLink": "Request Friend Link",
         // Article
@@ -43,6 +44,7 @@ const i18nData: Record<string, Record<string, string>> = {
     zh: {
         "about": "关于",
         "homepage": "主页",
+        "trends": "动态",
         "timeline": "时间线",
         "requestFriendLink": "申请友链",
         // UITextArea
