@@ -8,6 +8,7 @@ const i18nData: Record<string, Record<string, string>> = {
         "homepage": "Home",
         "trends": "Trends",
         "timeline": "Timeline",
+        "originalText": "Original",
         "requestFriendLink": "Request Friend Link",
         // Article
         "article.charCountBefore": "Count of word(s)",
@@ -47,6 +48,7 @@ const i18nData: Record<string, Record<string, string>> = {
         "trends": "动态",
         "timeline": "时间线",
         "requestFriendLink": "申请友链",
+        "originalText": "原文",
         // UITextArea
         "article.charCountBefore": "字数",
         "article.charCountAfter": " 个字",

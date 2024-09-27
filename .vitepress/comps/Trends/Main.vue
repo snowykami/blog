@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Trend from "./Trend.vue";
-import {getRepoTrendIssues, getRepoTrendIssuesTest} from "../../utils/githubApi";
+import {getRepoTrendIssues} from "../../utils/githubApi";
 import {onMounted, ref} from "vue";
 
 function formatDatetime(datetime: string) {
@@ -23,7 +23,8 @@ onMounted(async () => {
            :number="trend['number']"
            :author="{avatar: `https://github.com/${trend['user']['login']}.png`, name: trend['user']['login'], datetime: formatDatetime(trend['created_at'])}"
            :title="trend['title']"
-           :body="trend['body']"
+           :body="trend['body']" ,
+           :rawUrl="trend['html_url']"
     />
   </div>
 </template>
