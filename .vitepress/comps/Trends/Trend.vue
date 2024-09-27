@@ -21,7 +21,7 @@ const props = defineProps<{
 const comments = ref([])
 
 onMounted(async () => {
-  comments.value = await getIssueComments(props.number)
+  comments.value = await getIssueComments(props.rawUrl)
   console.log(comments.value)
 })
 

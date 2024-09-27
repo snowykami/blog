@@ -1,6 +1,6 @@
 ---
 title: Go项目私有依赖处理
-tags: 
+tags:
   - Go
 ---
 
@@ -15,6 +15,17 @@ tags:
 ```bash
 GOPRIVATE=git.yourdomain.com
 GONOSUMDB=git.yourdomain.com
-GIT_TERMINAL_PROMPT=1
+GIT_TERMINAL_PROMPT=1   # 若提示git terminial prompt disabled则添加此行
 ```
+
 然后在拉取依赖时，Git会自动弹出一个窗口让你输入凭据，输入正确的凭据后，依赖就会被拉取下来。或手动在项目作用域保存凭据
+
+## 代理问题
+
+有时候一些私有储存库是不允许使用代理来访问的，比如gitea，默认禁用了代理访问。
+一般情况下私有库的连通性是由储存库的管理员来决定的，但是有些开发者可能图省事直接用了一个代理，这时候就会出现问题。
+这种情况下只需要在环境变量中GOPROXY追加direct即可
+
+```bash
+GOPROXY=https://goproxy.cn,direct
+```
