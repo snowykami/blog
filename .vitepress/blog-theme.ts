@@ -60,7 +60,6 @@ const blogTheme = getThemeConfig({
     // 友链
     friend: {
         list: friendLinkJson,
-        scrollSpeed: 10,
         limit: 6,
         random: true
     },
