@@ -60,8 +60,8 @@ const blogTheme = getThemeConfig({
     // 友链
     friend: {
         list: friendLinkJson,
+        scrollSpeed: 10,
         limit: 6,
-        scrollSpeed:0,
         random: true
     },
     // 公告
