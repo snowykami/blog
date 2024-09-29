@@ -2,6 +2,7 @@
 import TrendMeta from "./TrendMeta.vue";
 import markdownit from 'markdown-it'
 import {ref} from "vue";
+import {API_BASE} from "../../utils/githubApi";
 
 const md = markdownit()
 
@@ -18,6 +19,12 @@ const props = defineProps<{
 }>()
 
 const comments = ref([])
+
+fetch(API_BASE + "/comments" + "?url=" + props.rawUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      comments.value = data
+    })
 
 const bannedUser = ['github-actions', 'dependabot[bot]', 'liteyuki-flow']
 // 标题加粗

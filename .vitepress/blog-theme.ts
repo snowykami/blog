@@ -59,9 +59,10 @@ const blogTheme = getThemeConfig({
 
     // 友链
     friend: {
-        limit: 6,
-        random: true,
         list: friendLinkJson,
+        limit: 6,
+        scrollSpeed:10,
+        random: true
     },
     // 公告
     popover: {

@@ -18,5 +18,5 @@ blog:
   - 当光影消散之时，所有的烟花都会升起.
  # 设置 inspiringTimeout 可以实现自动切换
  inspiringTimeout: 3500
- pageSize: 6
+ pageSize: 10
 ---

@@ -18,5 +18,5 @@ blog:
   - Even if you don't quite understand me, don't deliberately avoid.
   - Final of all fireworks to rise into the sky, when it fades away.
  inspiringTimeout: 3500 # 切换时间
- pageSize: 6
+ pageSize: 10
 ---
