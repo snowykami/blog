@@ -61,7 +61,7 @@ const blogTheme = getThemeConfig({
     friend: {
         list: friendLinkJson,
         limit: 6,
-        scrollSpeed:10,
+        scrollSpeed:0,
         random: true
     },
     // 公告

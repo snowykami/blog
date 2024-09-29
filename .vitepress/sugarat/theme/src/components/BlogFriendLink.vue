@@ -284,9 +284,8 @@ function getSkipUrl(): string {
     width: 100%;
 
     position: relative;
-    width: 100%;
 
-    li {
+  li {
         box-sizing: border-box;
         padding: 0 5px;
         height: 76px;
