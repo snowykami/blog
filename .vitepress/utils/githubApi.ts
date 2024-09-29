@@ -1,4 +1,4 @@
-const API_BASE = "https://blogapi.sfkm.me";
+export const API_BASE = "https://blogapi.sfkm.me";
 
 export async function getRepoTrendIssues() {
     const url = API_BASE + "/trends";
