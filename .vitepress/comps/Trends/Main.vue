@@ -9,6 +9,7 @@ function formatDatetime(datetime: string) {
   return datetime.replace(/T|Z/g, ' ').replace(/-/g, '/').slice(0, -4)
 }
 
+
 const trends = ref([])
 onMounted(async () => {
   trends.value = await getRepoTrendIssues()

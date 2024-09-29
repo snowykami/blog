@@ -1,11 +1,8 @@
-//  https://api.github.com/repos/OWNER/REPO/issues
-const API_BASE = "http://127.0.0.1:8888"
+const API_BASE = "https://blogapi.sfkm.me";
 
 export async function getRepoTrendIssues() {
-    const url = new URL(`${API_BASE}/trends`);
-    url.search = new URLSearchParams({}).toString();
-    const response = await fetch(url.toString());
-    console.log(url.toString());
+    const url = API_BASE + "/trends";
+    const response = await fetch(url);
     return response.json();
 }
 
@@ -13,9 +10,14 @@ export async function getIssueComments(issueUrl: string) {
     const queryParam = {
         url: issueUrl,
     }
-    const url = new URL(`${API_BASE}/trends/comments`);
+    const url = new URL(`${API_BASE}/comments`);
     url.search = new URLSearchParams(queryParam).toString();
     const response = await fetch(url.toString());
-    console.log(url.toString());
-    return response.json();
+
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const text = await response.text();
+    return text ? JSON.parse(text) : {};
 }
