@@ -24,18 +24,18 @@ const bannedUser = ['github-actions', 'dependabot[bot]', 'liteyuki-flow']
 </script>
 
 <template>
-  <div>
+<!--  正文-->
     <TrendMeta
         :avatar="props.author.avatar"
         :name="props.author.name"
         :datetime="props.author.datetime"
         :rawUrl="props.rawUrl"
-    />
+    ></TrendMeta>
     <h3>{{ props.title }}</h3>
     <div v-html="md.render(props.body)"/>
     <!--      评论-->
     <div>
-      <div v-for="comment in comments.filter(comment => !bannedUser.includes(comment['user']['login']))"
+      <div v-for="comment in comments.filter((comment) => !bannedUser.includes(comment['user']['login']))"
            style="display: flex">
         <a :href="comment['user']['html_url']" target="_blank">
           <div class="comment-user" style="font-weight: bold">{{ comment['user']['login'] }}</div>
@@ -46,10 +46,8 @@ const bannedUser = ['github-actions', 'dependabot[bot]', 'liteyuki-flow']
         </a>
       </div>
     </div>
-    <hr/>
-  </div>
+  <hr class="custom-divider"/>
 </template>
 
 <style scoped lang="scss">
-
 </style>
