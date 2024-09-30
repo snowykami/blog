@@ -90,6 +90,9 @@ mdadm: removed /dev/md127
 ```shell
 sudo mdadm --misc --zero-superblock /dev/sda1
 ```
+::: tip
+**注意：该步操作完成后请再重复一次操作1使用`parted`创建分区，然后再使用`mkfs`创建文件系统。**
+:::
 
 ## 创建文件系统
 
