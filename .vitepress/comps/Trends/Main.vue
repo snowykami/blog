@@ -11,7 +11,6 @@ function formatDatetime(datetime: string) {
 
 
 const trends = ref([])
-
 fetch(API_BASE + "/trends")
     .then(res => res.json())
     .then(data => {
@@ -23,13 +22,14 @@ fetch(API_BASE + "/trends")
   <div class="trends-bar">
     <Trend v-for="(trend) in trends"
            :key="trend['number']"
-           :number="trend['number']"
-           :author="{avatar: `https://github.com/${trend['user']['login']}.png`, name: trend['user']['login'], datetime: formatDatetime(trend['created_at'])}"
+           :avatar="trend['user']['avatar_url']"
+           :name="trend['user']['login']"
+           :datetime="formatDatetime(trend['created_at'])"
            :title="trend['title']"
-           :body="trend['body']" ,
+           :body="trend['body']"
            :rawUrl="trend['html_url']"
+           :number="trend['number']"
     />
-
   </div>
 </template>
 
