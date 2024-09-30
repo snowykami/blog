@@ -1,5 +1,6 @@
 ---
 title: Trends
+hidden: true
 ---
 
 <Trends />
