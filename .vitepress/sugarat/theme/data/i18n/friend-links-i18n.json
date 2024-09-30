@@ -51,7 +51,9 @@
         "partnerLink.逝与逢博客.nickname": "zouXH-god's site",
         "partnerLink.逝与逢博客.des": "zouXH-god's site",
         "partnerLink.Inkar Suki.nickname": "HornCopper's site",
-        "partnerLink.Inkar Suki.des": "A Bot based on NoneBot 2(OneBot V11 Standard) with developed for group chat."
+        "partnerLink.Inkar Suki.des": "A Bot based on NoneBot 2(OneBot V11 Standard) with developed for group chat.",
+        "partnerLink.一楼没太阳.nickname": "Msg-Lbo's site",
+        "partnerLink.一楼没太阳.des": "Msg-Lbo's site"
     },
     "zh": {
         "partnerLink.liteyukiIndexSite.nickname": "轻雪索引站",
@@ -105,6 +107,8 @@
         "partnerLink.逝与逢博客.nickname": "逝与逢博客",
         "partnerLink.逝与逢博客.des": "逝染的个人博客",
         "partnerLink.Inkar Suki.nickname": "Inkar Suki",
-        "partnerLink.Inkar Suki.des": "基于无机器人貳(一个机器人微拾壹)开发的群机器人"
+        "partnerLink.Inkar Suki.des": "基于无机器人貳(一个机器人微拾壹)开发的群机器人",
+        "partnerLink.一楼没太阳.nickname": "一楼没太阳",
+        "partnerLink.一楼没太阳.des": "只有坏掉的东西才会停下来"
     }
 }
