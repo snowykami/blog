@@ -5,7 +5,7 @@ import {useData, useRouter, withBase} from 'vitepress'
 import {useArticles, useBlogConfig, useCleanUrls, useFormatShowDate} from '../composables/config/blog'
 import {wrapperCleanUrls} from '../utils/client'
 import {fireSVG} from '../constants/svg'
-import {formatLangRouter} from "../composables/config/i18n";
+import {defaultLang, formatLangRouter} from "../composables/config/i18n";
 import {getTextRef} from "../composables/config/i18nRef";
 
 const formatShowDate = useFormatShowDate()
@@ -25,7 +25,7 @@ const docs = useArticles()
 const lang = useData().lang
 
 const recommendList = computed(() => {
-  const data = docs.value.filter(v => v.meta.sticky && v.route.startsWith(`/${formatLangRouter(lang.value)}/`))
+  const data = docs.value.filter(v => v.meta.sticky)
   data.sort((a, b) => b.meta.sticky! - a.meta.sticky!)
   return [...data]
 })

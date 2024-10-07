@@ -287,10 +287,23 @@ function getSkipUrl(): string {
 
   position: relative;
 
+  .swiper-slide {
+    &:hover{
+      .nickname{
+        color: var(--vp-c-user-1);
+      }
+      .des{
+        color: var(--vp-c-user-2);
+      }
+    }
+  }
+
   li {
     box-sizing: border-box;
     padding: 0 5px;
     height: 76px;
+
+
 
     .el-avatar {
       min-width: 50px;
@@ -317,6 +330,8 @@ function getSkipUrl(): string {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+
+      transition: var(--item-hover-transition);
     }
 
     .des {
@@ -325,6 +340,8 @@ function getSkipUrl(): string {
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+
+      transition: var(--item-hover-transition);
     }
   }
 }

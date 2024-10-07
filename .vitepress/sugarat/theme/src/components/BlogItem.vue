@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { useRouter, withBase } from 'vitepress'
-import { computed } from 'vue'
-import { wrapperCleanUrls } from '../utils/client'
-import { useCleanUrls, useFormatShowDate, useImageStyle } from '../composables/config/blog'
+import {useRouter, withBase} from 'vitepress'
+import {computed} from 'vue'
+import {wrapperCleanUrls} from '../utils/client'
+import {useCleanUrls, useFormatShowDate, useImageStyle} from '../composables/config/blog'
 
 const props = defineProps<{
   route: string
@@ -26,11 +26,12 @@ const cleanUrls = useCleanUrls()
 const link = computed(() => wrapperCleanUrls(!!cleanUrls, props.route))
 
 const router = useRouter()
+
 function handleSkipDoc() {
   router.go(link.value)
 }
 
-const { coverPreview } = useImageStyle()
+const {coverPreview} = useImageStyle()
 
 const resultCover = computed(() => {
   if (!props.cover) {
@@ -38,19 +39,19 @@ const resultCover = computed(() => {
   }
   const baseCover = withBase(props.cover)
   const coverRule = [coverPreview]
-    .flat()
-    .filter(v => !!v)
-    .find((coverRule) => {
-      if (!coverRule) {
-        return false
-      }
-      return coverRule.rule instanceof RegExp ? coverRule.rule.test(baseCover) : baseCover.includes(coverRule.rule)
-    })
+      .flat()
+      .filter(v => !!v)
+      .find((coverRule) => {
+        if (!coverRule) {
+          return false
+        }
+        return coverRule.rule instanceof RegExp ? coverRule.rule.test(baseCover) : baseCover.includes(coverRule.rule)
+      })
 
   if (!coverRule) {
     return baseCover
   }
-  const { suffix, replace, rule } = coverRule
+  const {suffix, replace, rule} = coverRule
   if (!replace && suffix) {
     return `${baseCover}${suffix}`
   }
@@ -67,12 +68,12 @@ const resultCover = computed(() => {
 
 <template>
   <a
-    class="blog-item" :href="link" @click="(e) => {
+      class="blog-item" :href="link" @click="(e) => {
       e.preventDefault()
       handleSkipDoc()
     }"
   >
-<!--    <i v-show="!!pin" class="pin" /> 不会改，先暂时不显示-->
+    <!--    <i v-show="!!pin" class="pin" /> 不会改，先暂时不显示-->
     <!-- 标题 -->
     <p class="title mobile-visible">
       {{ title }}
@@ -89,7 +90,7 @@ const resultCover = computed(() => {
           {{ description }}
         </p>
         <template v-if="descriptionHTML">
-          <div class="description-html" v-html="descriptionHTML" />
+          <div class="description-html" v-html="descriptionHTML"/>
         </template>
         <!-- 底部补充描述 -->
         <div class="badge-list pc-visible">
@@ -99,8 +100,9 @@ const resultCover = computed(() => {
         </div>
       </div>
       <!-- 右侧封面图 -->
-      <div v-show="cover" class="cover-img" :style="`background-image: url(${resultCover});`" />
+      <div v-show="cover" class="cover-img" :style="`background-image: url(${resultCover});`"/>
     </div>
+
     <!-- 底部补充描述 -->
     <div class="badge-list mobile-visible">
       <span v-show="author" class="split">{{ author }}</span>
@@ -110,7 +112,7 @@ const resultCover = computed(() => {
   </a>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .blog-item .pin {
   position: absolute;
   overflow: hidden;
@@ -161,6 +163,14 @@ const resultCover = computed(() => {
 
   &:hover {
     box-shadow: var(--box-shadow-hover);
+
+    .title{
+      color: var(--vp-c-user-1);
+    }
+
+    .description{
+      color: var(--vp-c-user-2);
+    }
   }
 }
 
@@ -178,6 +188,8 @@ const resultCover = computed(() => {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 8px;
+
+  transition: var(--item-hover-transition);
 }
 
 .description {
@@ -190,6 +202,8 @@ const resultCover = computed(() => {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+
+  transition: var(--item-hover-transition);
 }
 
 .description-html {

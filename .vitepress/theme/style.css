@@ -1,6 +1,8 @@
 /* 所有变量：https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css */
 /* 自定义主题色示例，如下 */
-
+:root{
+    --item-hover-transition: all .3s;
+}
 /* 浅色模式使用的变量 */
 html[theme] {
     --vp-c-user-1: #149ef8;
