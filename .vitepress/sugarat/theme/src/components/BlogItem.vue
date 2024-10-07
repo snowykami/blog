@@ -171,6 +171,10 @@ const resultCover = computed(() => {
     .description{
       color: var(--vp-c-user-2);
     }
+
+    .cover-img {
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -231,10 +235,12 @@ const resultCover = computed(() => {
   width: 120px;
   height: 80px;
   margin-left: 24px;
-  border-radius: 2px;
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: center;
+  background-size: cover; // 添加此行
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition: var(--item-hover-transition);
 }
 
 .pc-visible {
