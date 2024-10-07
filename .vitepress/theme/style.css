@@ -29,3 +29,7 @@ html[theme], html[theme].dark {
 .VPImage.logo {
     border-radius: 50%;
 }
+
+.nav-search-btn-wait{
+    border-radius: var(--item-border-radius);
+}

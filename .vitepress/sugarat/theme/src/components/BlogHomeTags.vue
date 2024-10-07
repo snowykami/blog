@@ -92,6 +92,7 @@ watch(
       <ElTag
           v-if="activeTag.label" :type="activeTag.type || 'primary'" :effect="colorMode" closable
           @close="handleCloseTag"
+          style="border-radius: var(--item-border-radius)"
       >
         {{ activeTag.label }}
       </ElTag>
@@ -102,6 +103,7 @@ watch(
         <ElTag
             :type="tagType[idx % tagType.length] || 'primary'" :effect="colorMode"
             @click="handleTagClick(tag, tagType[idx % tagType.length])"
+            style="border-radius: var(--item-border-radius)"
         >
           {{ tag }}
         </ElTag>
