@@ -314,6 +314,9 @@ function getSkipUrl(): string {
     .nickname {
       font-size: 16px;
       font-weight: 450;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
 
     .des {

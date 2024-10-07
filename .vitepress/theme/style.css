@@ -31,5 +31,5 @@ html[theme], html[theme].dark {
 }
 
 .nav-search-btn-wait{
-    border-radius: var(--item-border-radius);
+    border-radius: var(--item-border-radius) !important;
 }
