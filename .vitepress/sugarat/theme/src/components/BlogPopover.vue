@@ -186,9 +186,11 @@ function PopoverValue(props: { key: number; item: BlogPopover.Value },
   z-index: 22;
   box-sizing: border-box;
   border: 1px solid var(--vp-c-brand-3);
-  border-radius: 6px;
-  background-color: rgba(var(--bg-gradient-home));
   box-shadow: var(--box-shadow);
+
+  border-radius: var(--item-border-radius);
+  background-color: var(--item-bg-color);
+  backdrop-filter: var(--item-backrdop-filter);
 
   :deep(.el-button.el-button--primary) {
     background-color: var(--vp-c-brand-2);
@@ -197,6 +199,7 @@ function PopoverValue(props: { key: number; item: BlogPopover.Value },
 }
 
 .header {
+  border-radius: var(--item-border-radius);
   background-color: var(--vp-c-brand-3);
   color: #fff;
   padding: 6px 4px;

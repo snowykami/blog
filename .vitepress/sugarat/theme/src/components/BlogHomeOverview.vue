@@ -68,13 +68,15 @@ const titles = computed(() => (frontmatter.value?.blog?.analysis?.articles?.titl
   padding: 10px;
   width: 100%;
   overflow: hidden;
-  border-radius: 0.25rem;
   box-shadow: var(--box-shadow);
   box-sizing: border-box;
   transition: all 0.3s;
-  background-color: rgba(var(--bg-gradient));
   display: flex;
   flex-direction: column;
+
+  border-radius: var(--item-border-radius);
+  background-color: var(--item-bg-color);
+  backdrop-filter: var(--item-backrdop-filter);
 
   &:hover {
     box-shadow: var(--box-shadow-hover);

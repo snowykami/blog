@@ -72,7 +72,7 @@ const resultCover = computed(() => {
       handleSkipDoc()
     }"
   >
-    <i v-show="!!pin" class="pin" />
+<!--    <i v-show="!!pin" class="pin" /> 不会改，先暂时不显示-->
     <!-- 标题 -->
     <p class="title mobile-visible">
       {{ title }}
@@ -114,8 +114,8 @@ const resultCover = computed(() => {
 .blog-item .pin {
   position: absolute;
   overflow: hidden;
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   top: -4px;
   left: -4px;
   opacity: 0.5;
@@ -146,14 +146,18 @@ const resultCover = computed(() => {
   padding: 16px 20px;
   width: 100%;
   overflow: hidden;
-  border-radius: 0.25rem;
+  border-radius: var(--item-border-radius);
   box-shadow: var(--box-shadow);
   box-sizing: border-box;
   transition: all 0.3s;
-  background-color: rgba(var(--bg-gradient));
+
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  // Snowykami custom
+  background-color: var(--item-bg-color);
+  backdrop-filter: var(--item-backrdop-filter);
+  -webkit-backdrop-filter: var(--item-border-radius);
 
   &:hover {
     box-shadow: var(--box-shadow-hover);

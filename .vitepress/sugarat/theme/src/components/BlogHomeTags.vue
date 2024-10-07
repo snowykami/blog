@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-import { computed, watch } from 'vue'
-import { ElTag } from 'element-plus'
-import { useBrowserLocation, useDark, useUrlSearchParams } from '@vueuse/core'
-import { useRoute, useRouter } from 'vitepress'
+import {computed, watch} from 'vue'
+import {ElTag} from 'element-plus'
+import {useBrowserLocation, useDark, useUrlSearchParams} from '@vueuse/core'
+import {useRoute, useRouter} from 'vitepress'
 import {
   useActiveTag,
   useArticles,
   useConfig,
   useCurrentPageNum,
 } from '../composables/config/blog'
-import { tagsSvgStr } from '../constants/svg'
+import {tagsSvgStr} from '../constants/svg'
 import {getTextRef} from "../composables/config/i18nRef";
 
 const route = useRoute()
@@ -17,8 +17,8 @@ const docs = useArticles()
 const homeTagsConfig = useConfig()?.config?.blog?.homeTags
 const showTags = computed(() => !!(homeTagsConfig ?? true))
 const title = computed(() => (typeof homeTagsConfig === 'boolean' || !homeTagsConfig?.title)
-  ? `${tagsSvgStr}${getTextRef("homeTags.title")}`
-  : homeTagsConfig?.title
+    ? `${tagsSvgStr}${getTextRef("homeTags.title")}`
+    : homeTagsConfig?.title
 )
 const tags = computed(() => {
   return [...new Set(docs.value.map(v => v.meta.tag || []).flat(3))]
@@ -54,33 +54,33 @@ function handleTagClick(tag: string, type: string) {
   activeTag.value.label = tag
   currentPage.value = 1
   router.go(
-    `${location.value.origin}${router.route.path}?tag=${tag}&type=${type}`
+      `${location.value.origin}${router.route.path}?tag=${tag}&type=${type}`
   )
 }
 
 watch(
-  location,
-  () => {
-    if (location.value.href) {
-      const url = new URL(location.value.href!)
-      activeTag.value.type = url.searchParams.get('type') || ''
-      activeTag.value.label = url.searchParams.get('tag') || ''
+    location,
+    () => {
+      if (location.value.href) {
+        const url = new URL(location.value.href!)
+        activeTag.value.type = url.searchParams.get('type') || ''
+        activeTag.value.label = url.searchParams.get('tag') || ''
+      }
+    },
+    {
+      immediate: true
     }
-  },
-  {
-    immediate: true
-  }
 )
 
 watch(
-  route,
-  () => {
-    const params = useUrlSearchParams()
-    if (!params.tag) {
-      activeTag.value.type = ''
-      activeTag.value.label = ''
+    route,
+    () => {
+      const params = useUrlSearchParams()
+      if (!params.tag) {
+        activeTag.value.type = ''
+        activeTag.value.label = ''
+      }
     }
-  }
 )
 </script>
 
@@ -88,10 +88,10 @@ watch(
   <div v-if="showTags && tags.length" class="card tags" data-pagefind-ignore="all">
     <!-- 头部 -->
     <div class="card-header">
-      <span class="title svg-icon" v-html="title" />
+      <span class="title svg-icon" v-html="title"/>
       <ElTag
-        v-if="activeTag.label" :type="activeTag.type || 'primary'" :effect="colorMode" closable
-        @close="handleCloseTag"
+          v-if="activeTag.label" :type="activeTag.type || 'primary'" :effect="colorMode" closable
+          @close="handleCloseTag"
       >
         {{ activeTag.label }}
       </ElTag>
@@ -100,8 +100,8 @@ watch(
     <ul class="tag-list">
       <li v-for="(tag, idx) in tags" :key="tag">
         <ElTag
-          :type="tagType[idx % tagType.length] || 'primary'" :effect="colorMode"
-          @click="handleTagClick(tag, tagType[idx % tagType.length])"
+            :type="tagType[idx % tagType.length] || 'primary'" :effect="colorMode"
+            @click="handleTagClick(tag, tagType[idx % tagType.length])"
         >
           {{ tag }}
         </ElTag>
@@ -117,12 +117,14 @@ watch(
   padding: 10px;
   width: 100%;
   overflow: hidden;
-  border-radius: 0.25rem;
   box-shadow: var(--box-shadow);
   box-sizing: border-box;
   transition: all 0.3s;
-  background-color: rgba(var(--bg-gradient));
   display: flex;
+
+  border-radius: var(--item-border-radius);
+  background-color: var(--item-bg-color);
+  backdrop-filter: var(--item-backrdop-filter);
 
   &:hover {
     box-shadow: var(--box-shadow-hover);

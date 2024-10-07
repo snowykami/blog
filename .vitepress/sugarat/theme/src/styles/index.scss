@@ -1,3 +1,8 @@
+:root{
+  --item-border-radius: 1rem;
+  --item-backrdop-filter: blur(5px);
+}
+
 html {
   --bg-gradient: 255, 255, 255, 0.1;
   --bg-gradient-home: 255, 255, 255;
@@ -9,7 +14,9 @@ html {
   --badge-font-color: #4e5969;
   --description-font-color: #86909c;
   --blog-theme-color: var(--vp-c-brand-1);
-  // --blog-theme-color: #409eff;
+
+  // Snowykami custom light
+  --item-bg-color: rgba(255, 255, 255, 0.6);
 }
 
 html.dark {
@@ -20,6 +27,9 @@ html.dark {
   --box-shadow-hover: 0 2px 16px 0 rgba(0, 0, 0, 0.7);
   --badge-font-color: #bdc3cc;
   --description-font-color: #9facba;
+
+  // Snowykami custom dark
+  --item-bg-color: rgba(20, 20, 20, 0.6);
 }
 
 .VPHome {
