@@ -229,7 +229,7 @@ function getSkipUrl(): string {
   background-color: var(--vp-c-bg-1);
   color: var(--vp-c-text-1);
   border: 1px solid var(--vp-c-border);
-  border-radius: 5px;
+  border-radius: 0.5rem;
   padding: 5px;
   margin: 5px;
   font-size: 16px;
@@ -287,6 +287,19 @@ function getSkipUrl(): string {
 
   position: relative;
 
+  .swiper-slide {
+    &:hover {
+      .nickname {
+        color: var(--vp-c-user-1);
+      }
+
+      .des {
+        color: var(--vp-c-user-2);
+      }
+    }
+  }
+
+
   li {
     box-sizing: border-box;
     padding: 0 5px;
@@ -305,10 +318,16 @@ function getSkipUrl(): string {
       padding-left: 10px;
     }
 
+
     .info-wrapper {
       display: flex;
       flex-direction: column;
       overflow: hidden;
+
+      .nickname, .des {
+        transition: var(--item-hover-transition);
+      }
+
     }
 
     .nickname {

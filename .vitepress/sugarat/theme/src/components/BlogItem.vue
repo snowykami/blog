@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { useRouter, withBase } from 'vitepress'
-import { computed } from 'vue'
-import { wrapperCleanUrls } from '../utils/client'
-import { useCleanUrls, useFormatShowDate, useImageStyle } from '../composables/config/blog'
+import {useRouter, withBase} from 'vitepress'
+import {computed} from 'vue'
+import {wrapperCleanUrls} from '../utils/client'
+import {useCleanUrls, useFormatShowDate, useImageStyle} from '../composables/config/blog'
 
 const props = defineProps<{
   route: string
@@ -26,11 +26,12 @@ const cleanUrls = useCleanUrls()
 const link = computed(() => wrapperCleanUrls(!!cleanUrls, props.route))
 
 const router = useRouter()
+
 function handleSkipDoc() {
   router.go(link.value)
 }
 
-const { coverPreview } = useImageStyle()
+const {coverPreview} = useImageStyle()
 
 const resultCover = computed(() => {
   if (!props.cover) {
@@ -38,19 +39,19 @@ const resultCover = computed(() => {
   }
   const baseCover = withBase(props.cover)
   const coverRule = [coverPreview]
-    .flat()
-    .filter(v => !!v)
-    .find((coverRule) => {
-      if (!coverRule) {
-        return false
-      }
-      return coverRule.rule instanceof RegExp ? coverRule.rule.test(baseCover) : baseCover.includes(coverRule.rule)
-    })
+      .flat()
+      .filter(v => !!v)
+      .find((coverRule) => {
+        if (!coverRule) {
+          return false
+        }
+        return coverRule.rule instanceof RegExp ? coverRule.rule.test(baseCover) : baseCover.includes(coverRule.rule)
+      })
 
   if (!coverRule) {
     return baseCover
   }
-  const { suffix, replace, rule } = coverRule
+  const {suffix, replace, rule} = coverRule
   if (!replace && suffix) {
     return `${baseCover}${suffix}`
   }
@@ -67,12 +68,12 @@ const resultCover = computed(() => {
 
 <template>
   <a
-    class="blog-item" :href="link" @click="(e) => {
+      class="blog-item" :href="link" @click="(e) => {
       e.preventDefault()
       handleSkipDoc()
     }"
   >
-<!--    <i v-show="!!pin" class="pin" /> 不会改，先暂时不显示-->
+    <!--    <i v-show="!!pin" class="pin" /> 不会改，先暂时不显示-->
     <!-- 标题 -->
     <p class="title mobile-visible">
       {{ title }}
@@ -89,7 +90,7 @@ const resultCover = computed(() => {
           {{ description }}
         </p>
         <template v-if="descriptionHTML">
-          <div class="description-html" v-html="descriptionHTML" />
+          <div class="description-html" v-html="descriptionHTML"/>
         </template>
         <!-- 底部补充描述 -->
         <div class="badge-list pc-visible">
@@ -99,7 +100,8 @@ const resultCover = computed(() => {
         </div>
       </div>
       <!-- 右侧封面图 -->
-      <div v-show="cover" class="cover-img" :style="`background-image: url(${resultCover});`" />
+      <!--      <div v-show="cover" class="cover-img" :style="`background-image: url(${resultCover});`"/>-->
+      <img v-show="cover" class="cover-img" :src="resultCover" alt="cover"/>
     </div>
     <!-- 底部补充描述 -->
     <div class="badge-list mobile-visible">
@@ -147,7 +149,7 @@ const resultCover = computed(() => {
   width: 100%;
   overflow: hidden;
   border-radius: var(--item-border-radius);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--item-shadow); // 添加阴影效果
   box-sizing: border-box;
   transition: all 0.3s;
 
@@ -160,7 +162,36 @@ const resultCover = computed(() => {
   -webkit-backdrop-filter: var(--item-border-radius);
 
   &:hover {
-    box-shadow: var(--box-shadow-hover);
+
+    .title {
+      color: var(--vp-c-user-1); // 添加标题颜色变化
+    }
+
+    .description {
+      color: var(--vp-c-user-2); // 添加描述颜色变化
+    }
+
+    .cover-img {
+      transform: scale(1.1); // Scale up the image on hover
+    }
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    transition: var(--item-hover-transition);
+  }
+
+  .description {
+    color: var(--description-font-color);
+    font-size: 14px;
+    margin-bottom: 8px;
+    // 多行换行
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    transition: var(--item-hover-transition);
   }
 }
 
@@ -174,23 +205,6 @@ const resultCover = computed(() => {
   flex: 1;
 }
 
-.title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.description {
-  color: var(--description-font-color);
-  font-size: 14px;
-  margin-bottom: 8px;
-  // 多行换行
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
 
 .description-html {
   font-size: 14px;
@@ -217,10 +231,12 @@ const resultCover = computed(() => {
   width: 120px;
   height: 80px;
   margin-left: 24px;
-  border-radius: 2px;
+  border-radius: 10px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  transition: var(--item-hover-transition);
 }
 
 .pc-visible {

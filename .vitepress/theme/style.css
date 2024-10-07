@@ -1,10 +1,29 @@
 /* 所有变量：https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css */
 /* 自定义主题色示例，如下 */
+:root {
+    --item-hover-transition: all .3s;
+    --item-hover-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
 
+@keyframes rotate-gradient {
+    0% {
+        --item-c-gradient: linear-gradient(0deg, var(--vp-c-user-1), #c13bed);
+    }
+    100% {
+        --item-c-gradient: linear-gradient(360deg, var(--vp-c-user-1), #c13bed);
+    }
+}
+
+.rotating-gradient {
+    animation: rotate-gradient 5s linear infinite;
+}
+
+/* #ffffff
 /* 浅色模式使用的变量 */
 html[theme] {
+    --a: #c13bed;
     --vp-c-user-1: #149ef8;
-    --vp-c-user-2: #047ed9;
+    --vp-c-user-2: #056cb8;
     --vp-c-user-3: #149ef8;
     --vp-c-user-soft: rgba(255, 0, 0, .5);
 }
@@ -30,6 +49,6 @@ html[theme], html[theme].dark {
     border-radius: 50%;
 }
 
-.nav-search-btn-wait{
+.nav-search-btn-wait {
     border-radius: var(--item-border-radius) !important;
 }
