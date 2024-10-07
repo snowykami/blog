@@ -42,8 +42,6 @@ export const BlogTheme: Theme = {
     enhanceAppWithTabs(ctx.app as any)
     DefaultTheme.enhanceApp(ctx)
     ctx.app.component('UserWorksPage', UserWorksPage as any)
-    // replace-mermaid-mounted-code
-    // if (!ctx.app.component('Mermaid')) { ctx.app.component('Mermaid', Mermaid as any) }
   }
 }
 

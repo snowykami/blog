@@ -8,7 +8,7 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "serve": "vitepress serve --host",
-    "watch": "nodemon -e js,json,vue,ts,tsx,css,scss -w ./.vitepress/sugarat/theme -x \"pnpm install\" -x \"(rm -rf ./.vitepress/cache || echo No Dir) && (pnpm run dev || echo ReEdit)\""
+    "watch": "(vitepress dev) & (nodemon -e js,json,vue,ts,tsx,css,scss -w ./.vitepress/sugarat/theme -x \"pnpm install\" -x \"(rm -rf ./.vitepress/cache || echo No Dir)\")"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",

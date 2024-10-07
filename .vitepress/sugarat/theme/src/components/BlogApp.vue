@@ -1,7 +1,7 @@
 <script setup lang="ts" name="BlogApp">
 import Theme from 'vitepress/theme'
 import {useData} from 'vitepress'
-import {computed} from 'vue'
+import {computed, onMounted, ref} from 'vue'
 import {useDarkTransition} from '../hooks/useDarkTransition'
 import {useBlogThemeMode, useDarkTransitionConfig} from '../composables/config/blog'
 import BlogHomeInfo from './BlogHomeInfo.vue'
@@ -26,14 +26,17 @@ import {string} from "fast-glob/out/utils";
 const {frontmatter} = useData()
 const layout = computed(() => frontmatter.value.layout)
 const isBlogTheme = useBlogThemeMode()
+const isHome = computed(
+    () => {
+      return layout.value === 'home'
+    }
+)
 const {Layout} = Theme
 
 // 切换深色模式过渡
 // https://vitepress.dev/zh/guide/extending-default-theme#on-appearance-toggle
 const dark = useData().isDark
-const mobile = computed(
-    () => window.innerWidth <= 960
-)
+const mobile = ref(false)
 // 随机背景
 const bgImg = computed(
     () => {
@@ -52,8 +55,29 @@ const bgImg = computed(
           img += 'light-pc-' + Math.floor(Math.random() * 4) + '.png'
         }
       }
-      console.log(img)
       return img
+    }
+)
+
+onMounted(
+    () => {
+      window.onresize = function () {
+        mobile.value = document.documentElement.clientWidth < 960
+      };
+
+      document.body.addEventListener('click', function(event) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = `${event.clientX - 5}px`;
+        particle.style.top = `${event.clientY - 5}px`;
+        document.body.appendChild(particle);
+
+        // Remove the particle after the animation ends
+        particle.addEventListener('animationend', function() {
+          document.body.removeChild(particle);
+        });
+      });
+
     }
 )
 
@@ -62,7 +86,8 @@ const openTransition = useDarkTransitionConfig()
 </script>
 
 <template>
-  <Layout :class="{ 'blog-theme-layout': openTransition }" :style="{backgroundImage: `url(${bgImg})`}" style="background-size: 100% auto; background-repeat: repeat-y">
+  <Layout :class="{ 'blog-theme-layout': openTransition }"
+          style="background-size: 100% auto; background-repeat: repeat-y" :style="isHome ? { backgroundImage: `url(${bgImg})`} : {}">
     <template #layout-top>
       <slot name="layout-top"/>
       <ClientOnly>
@@ -120,7 +145,7 @@ const openTransition = useDarkTransitionConfig()
       </ClientOnly>
     </template>
     <template #layout-bottom>
-      <BlogFooter v-if="layout === 'home'"/>
+      <BlogFooter/>
       <slot name="layout-bottom"/>
     </template>
     <!-- 透传默认主题的其它插槽 -->
@@ -261,4 +286,26 @@ const openTransition = useDarkTransitionConfig()
 
 <style>
 @import url(./../styles/dark-transition.css);
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #a2d8f4;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particle-animation 1s ease-out forwards;
+}
+
+@keyframes particle-animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
 </style>

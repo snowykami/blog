@@ -1,8 +1,6 @@
 import BlogTheme from '@sugarat/theme'
 import './style.scss'
 import './style.css'
-import {computed} from "vue";
-import {useData} from "vitepress";
 
 // 自定义样式重载
 // import './style.scss'
@@ -13,4 +11,6 @@ import {useData} from "vitepress";
 // 设置随机背景
 // 查询移动端或者PC端
 
-export default BlogTheme
+export default {
+    extends: BlogTheme,
+}
