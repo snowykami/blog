@@ -1,27 +1,17 @@
 
-@function get-background-image($theme) {
-  @if $theme == 'dark' {
-    @return "./assets/bg-dark-" + #{random(4)} + ".webp";
-  } @else {
-    @return "./assets/bg-light-" + #{random(2)} + ".webp";
-  }
-}
 
 
 .VPHome {
   // 定义遮罩样式
   background: radial-gradient(
                   circle,
-                  rgba(var(--bg-gradient-home), 0.5) 150%,
-                  rgba(var(--bg-gradient-home), 0.5) 150%
+                  rgba(var(--bg-gradient-home), 0.3) 150%,
+                  rgba(var(--bg-gradient-home), 0.3) 150%
   );
   // 自定义首页背景图
   &::before {
-    background-image: url(get-background-image('light'));
-    background-size: cover;
 
     .dark & {
-      background-image: url(get-background-image('dark'));
     }
   }
 }

@@ -6,10 +6,10 @@
 html {
   --bg-gradient: 255, 255, 255, 0.1;
   --bg-gradient-home: 255, 255, 255;
-  --box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0);
 
   // blog-item
-  --box-shadow-hover: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
+  --box-shadow-hover: 0 2px 16px 0 rgba(0, 0, 0, 0);
   --nav-bgc: rgba(255, 255, 255, 0.9);
   --badge-font-color: #4e5969;
   --description-font-color: #86909c;
@@ -22,9 +22,9 @@ html {
 html.dark {
   --bg-gradient: 20, 20, 20, 0.7;
   --bg-gradient-home: 20, 20, 20;
-  --box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.6);
+  --box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0);
   --nav-bgc: rgba(0, 0, 0, 0.8);
-  --box-shadow-hover: 0 2px 16px 0 rgba(0, 0, 0, 0.7);
+  --box-shadow-hover: 0 2px 16px 0 rgba(0, 0, 0, 0);
   --badge-font-color: #bdc3cc;
   --description-font-color: #9facba;
 
@@ -42,7 +42,6 @@ html.dark {
     position: fixed;
     top: 0;
     z-index: -1;
-    background-image: url(./bg.png);
     background-repeat: repeat;
     min-height: 100%;
   }

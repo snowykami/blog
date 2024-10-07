@@ -1,9 +1,9 @@
 <script setup lang="ts" name="BlogApp">
 import Theme from 'vitepress/theme'
-import { useData } from 'vitepress'
-import { computed } from 'vue'
-import { useDarkTransition } from '../hooks/useDarkTransition'
-import { useBlogThemeMode, useDarkTransitionConfig } from '../composables/config/blog'
+import {useData} from 'vitepress'
+import {computed} from 'vue'
+import {useDarkTransition} from '../hooks/useDarkTransition'
+import {useBlogThemeMode, useDarkTransitionConfig} from '../composables/config/blog'
 import BlogHomeInfo from './BlogHomeInfo.vue'
 import BlogHomeBanner from './BlogHomeBanner.vue'
 import BlogList from './BlogList.vue'
@@ -21,158 +21,186 @@ import BlogOml2d from './BlogOml2d.vue'
 import CommentArtalk from './CommentArtalk.vue'
 import BlogButtonAfterArticle from './BlogButtonAfterArticle.vue'
 import BlogCommentWrapper from './BlogCommentWrapper.vue'
+import {string} from "fast-glob/out/utils";
 
-const { frontmatter } = useData()
+const {frontmatter} = useData()
 const layout = computed(() => frontmatter.value.layout)
 const isBlogTheme = useBlogThemeMode()
-const { Layout } = Theme
+const {Layout} = Theme
 
 // 切换深色模式过渡
 // https://vitepress.dev/zh/guide/extending-default-theme#on-appearance-toggle
+const dark = useData().isDark
+const mobile = computed(
+    () => window.innerWidth <= 960
+)
+// 随机背景
+const bgImg = computed(
+    () => {
+      let img = '/img/bg/'
+      if (dark.value) {
+        img += 'dark-'
+        if (mobile.value) {
+          img += 'mobile-' + Math.floor(Math.random() * 6) + '.png'
+        } else {
+          img += 'pc-' + Math.floor(Math.random() * 2) + '.png'
+        }
+      } else {
+        if (mobile.value) {
+          img += 'light-mobile-' + Math.floor(Math.random() * 4) + '.png'
+        } else {
+          img += 'light-pc-' + Math.floor(Math.random() * 4) + '.png'
+        }
+      }
+      console.log(img)
+      return img
+    }
+)
+
 useDarkTransition()
 const openTransition = useDarkTransitionConfig()
 </script>
 
 <template>
-  <Layout :class="{ 'blog-theme-layout': openTransition }">
+  <Layout :class="{ 'blog-theme-layout': openTransition }" :style="{backgroundImage: `url(${bgImg})`}" style="background-size: 100% auto; background-repeat: repeat-y">
     <template #layout-top>
-      <slot name="layout-top" />
+      <slot name="layout-top"/>
       <ClientOnly>
-        <BlogOml2d />
-        <BlogAlert />
-        <BlogPopover />
+        <BlogOml2d/>
+        <BlogAlert/>
+        <BlogPopover/>
       </ClientOnly>
     </template>
 
     <template #doc-before>
-      <slot name="doc-before" />
+      <slot name="doc-before"/>
       <!-- 阅读时间分析 -->
       <ClientOnly>
-        <BlogArticleAnalyze />
+        <BlogArticleAnalyze/>
         <!-- 图片预览 -->
-        <BlogImagePreview />
+        <BlogImagePreview/>
       </ClientOnly>
     </template>
 
     <template #nav-bar-content-before>
-      <slot name="nav-bar-content-before" />
+      <slot name="nav-bar-content-before"/>
     </template>
     <!-- 自定义首页 -->
     <template v-if="isBlogTheme" #home-hero-before>
-      <slot name="home-hero-before" />
+      <slot name="home-hero-before"/>
       <div class="home">
-        <BlogHomeHeaderAvatar />
+        <BlogHomeHeaderAvatar/>
         <div class="header-banner">
-          <BlogHomeBanner />
+          <BlogHomeBanner/>
         </div>
         <div class="content-wrapper">
           <div class="blog-list-wrapper">
-            <BlogList />
+            <BlogList/>
           </div>
           <div class="blog-info-wrapper">
-            <BlogHomeInfo />
+            <BlogHomeInfo/>
           </div>
         </div>
       </div>
     </template>
     <template v-if="isBlogTheme" #sidebar-nav-after>
-      <slot name="sidebar-nav-after" />
-      <BlogSidebar />
+      <slot name="sidebar-nav-after"/>
+      <BlogSidebar/>
     </template>
     <template #doc-after>
-      <slot name="doc-after" />
+      <slot name="doc-after"/>
       <!-- 评论 -->
       <ClientOnly>
-        <BlogButtonAfterArticle />
-        <BlogBackToTop />
+        <BlogButtonAfterArticle/>
+        <BlogBackToTop/>
         <BlogCommentWrapper>
-          <CommentArtalk />
-          <CommentGiscus />
+          <CommentArtalk/>
+          <CommentGiscus/>
         </BlogCommentWrapper>
       </ClientOnly>
     </template>
     <template #layout-bottom>
-      <BlogFooter v-if="layout === 'home'" />
-      <slot name="layout-bottom" />
+      <BlogFooter v-if="layout === 'home'"/>
+      <slot name="layout-bottom"/>
     </template>
     <!-- 透传默认主题的其它插槽 -->
     <!-- navbar -->
     <template #nav-bar-title-before>
-      <slot name="nav-bar-title-before" />
+      <slot name="nav-bar-title-before"/>
     </template>
     <template #nav-bar-title-after>
-      <slot name="nav-bar-title-after" />
+      <slot name="nav-bar-title-after"/>
     </template>
     <template #nav-bar-content-after>
-      <slot name="nav-bar-content-after" />
+      <slot name="nav-bar-content-after"/>
     </template>
     <template #nav-screen-content-before>
-      <slot name="nav-screen-content-before" />
+      <slot name="nav-screen-content-before"/>
     </template>
     <template #nav-screen-content-after>
-      <slot name="nav-screen-content-after" />
+      <slot name="nav-screen-content-after"/>
     </template>
 
     <!-- sidebar -->
     <template #sidebar-nav-before>
-      <slot name="sidebar-nav-before" />
+      <slot name="sidebar-nav-before"/>
     </template>
 
     <!-- content -->
     <template #page-top>
-      <slot name="page-top" />
+      <slot name="page-top"/>
     </template>
     <template #page-bottom>
-      <slot name="page-bottom" />
+      <slot name="page-bottom"/>
     </template>
 
     <template #not-found>
-      <slot name="not-found" />
+      <slot name="not-found"/>
     </template>
     <template #home-hero-info>
-      <slot name="home-hero-info" />
+      <slot name="home-hero-info"/>
     </template>
     <template #home-hero-image>
-      <slot name="home-hero-image" />
+      <slot name="home-hero-image"/>
     </template>
     <template #home-hero-after>
-      <slot name="home-hero-after" />
+      <slot name="home-hero-after"/>
     </template>
     <template #home-features-before>
-      <slot name="home-features-before" />
+      <slot name="home-features-before"/>
     </template>
     <template #home-features-after>
-      <slot name="home-features-after" />
+      <slot name="home-features-after"/>
     </template>
 
     <template #doc-footer-before>
-      <slot name="doc-footer-before" />
+      <slot name="doc-footer-before"/>
     </template>
 
     <template #doc-top>
-      <slot name="doc-top" />
+      <slot name="doc-top"/>
     </template>
     <template #doc-bottom>
-      <slot name="doc-bottom" />
+      <slot name="doc-bottom"/>
     </template>
 
     <template #aside-top>
-      <slot name="aside-top" />
+      <slot name="aside-top"/>
     </template>
     <template #aside-bottom>
-      <slot name="aside-bottom" />
+      <slot name="aside-bottom"/>
     </template>
     <template #aside-outline-before>
-      <slot name="aside-outline-before" />
+      <slot name="aside-outline-before"/>
     </template>
     <template #aside-outline-after>
-      <slot name="aside-outline-after" />
+      <slot name="aside-outline-after"/>
     </template>
     <template #aside-ads-before>
-      <slot name="aside-ads-before" />
+      <slot name="aside-ads-before"/>
     </template>
     <template #aside-ads-after>
-      <slot name="aside-ads-after" />
+      <slot name="aside-ads-after"/>
     </template>
   </Layout>
 </template>
