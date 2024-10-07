@@ -1,6 +1,6 @@
 ---
 sticky: 1
-top: 1
+top: 2
 ---
 
 # About me

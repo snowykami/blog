@@ -13,13 +13,13 @@ import BlogFriendLink from './BlogFriendLink.vue'
     <!-- 置顶的一些文章 -->
     <BlogHotArticle />
 
+    <!-- 标签 -->
+    <BlogHomeTags />
+
     <!-- 友链 -->
     <ClientOnly>
       <BlogFriendLink />
     </ClientOnly>
-
-    <!-- 标签 -->
-    <BlogHomeTags />
   </div>
 </template>
 

@@ -199,7 +199,7 @@ function PopoverValue(props: { key: number; item: BlogPopover.Value },
 }
 
 .header {
-  border-radius: var(--item-border-radius);
+  border-radius: var(--item-border-radius) var(--item-border-radius) 0 0;
   background-color: var(--vp-c-brand-3);
   color: #fff;
   padding: 6px 4px;
