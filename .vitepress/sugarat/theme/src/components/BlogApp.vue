@@ -61,8 +61,12 @@ const bgImg = computed(
 
 onMounted(
     () => {
+      mobile.value = window.innerWidth / window.innerHeight < 1.5
       window.onresize = function () {
-        mobile.value = document.documentElement.clientWidth < 960
+        // mobile.value = document.documentElement.clientWidth < 960
+        // 用宽高比例来判断，当宽高比例小于1.5时，认为是手机端
+        mobile.value = window.innerWidth / window.innerHeight < 1.5
+        console.log(window.innerWidth, window.innerHeight)
       };
 
       document.body.addEventListener('click', function(event) {
@@ -71,13 +75,11 @@ onMounted(
         particle.style.left = `${event.clientX - 5}px`;
         particle.style.top = `${event.clientY - 5}px`;
         document.body.appendChild(particle);
-
         // Remove the particle after the animation ends
         particle.addEventListener('animationend', function() {
           document.body.removeChild(particle);
         });
       });
-
     }
 )
 
