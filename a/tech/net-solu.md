@@ -37,3 +37,5 @@ route 172.16.0.0 255.240.0.0 vpn_gateway  # 目标主机上容器们的网段
 ### 其他
 - 本文只提供一个思路，具体实现还需要根据自己的网络环境来调整
 - [WireGuard部署](https://blog.xin-hao.top/index.php/2024/06/27/debian-ubuntu-windows%e9%85%8d%e7%bd%aewiregurad%e5%86%85%e7%bd%91%e6%9c%8d%e5%8a%a1%e5%99%a8/)
+
+> 目前已经实现了洗衣机自由，热水自由，校园网自由，只要愿意，一切都是自由的
