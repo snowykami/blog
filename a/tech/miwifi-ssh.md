@@ -143,7 +143,40 @@ Xiaomi MiR Patcher (extended functions)
 Choice: 7
 ```
 
+### 连接ssh
+
+```bash
+ssh root@192.168.31.1 # 此处请替换成你的路由器IP地址
+```
+可以看到ARE U OK字符画，这是[雷军的一个梗](https://www.bilibili.com/video/BV1es411D7sW)，说明连接成功了
+```bash
+BusyBox v1.25.1 (2023-09-08 06:36:03 UTC) built-in shell (ash)
+
+ -----------------------------------------------------
+       Welcome to XiaoQiang!
+ -----------------------------------------------------
+  $$$$$$\  $$$$$$$\  $$$$$$$$\      $$\      $$\        $$$$$$\  $$\   $$\
+ $$  __$$\ $$  __$$\ $$  _____|     $$ |     $$ |      $$  __$$\ $$ | $$  |
+ $$ /  $$ |$$ |  $$ |$$ |           $$ |     $$ |      $$ /  $$ |$$ |$$  /
+ $$$$$$$$ |$$$$$$$  |$$$$$\         $$ |     $$ |      $$ |  $$ |$$$$$  /
+ $$  __$$ |$$  __$$< $$  __|        $$ |     $$ |      $$ |  $$ |$$  $$<
+ $$ |  $$ |$$ |  $$ |$$ |           $$ |     $$ |      $$ |  $$ |$$ |\$$\
+ $$ |  $$ |$$ |  $$ |$$$$$$$$\       $$$$$$$$$  |       $$$$$$  |$$ | \$$\
+ \__|  \__|\__|  \__|\________|      \_________/        \______/ \__|  \__|
+
+
+root@XiaoQiang:~#
+```
+包管理器：OpenWrt使用的是`opkg`，可以使用`opkg update`更新软件包列表，`opkg install <package>`安装软件包，`opkg remove <package>`卸载软件包
+
+我们先进行一个源的换，使用我们自建的源(重庆邮电大学红岩网校工作站)
+```bash
+sed -i 's_https\?://downloads.openwrt.org_https://mirrors.cqupt.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
+```
+后续就可以进行一些扩展啦
+
 ## 相关内容
 - [OpenWrt 官网](https://openwrt.org/)
 - [openwrt-xioaomi Github Organization](https://github.com/openwrt-xiaomi)
 - [京东自营 小米（MI) 路由器BE7000 WiFi7](https://item.jd.com/100058107885.html)
+- [Are you OK - 雷军](https://www.bilibili.com/video/BV1es411D7sW)
