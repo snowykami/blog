@@ -4,7 +4,6 @@ import {socialLinks} from "./data";
 
 import {zh} from "./zh";
 import {en} from "./en";
-import {defaultLang} from "../sugarat/theme/src/composables/config/i18n";
 
 
 export default defineConfig({
