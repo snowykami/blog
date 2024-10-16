@@ -17,7 +17,7 @@ GNU/Linux 用户可能会对 apt-get，aptitude，pacman，yum 等比较熟悉�
 当我在配置好的OpenWrt系统上直接使用opkg尝试安装包时，发现它原源已经无法访问了，于是我需要更换源。
 大部分不同的嵌入式设备的CPU架构之间大概率是不兼容的，在配置源的时候需要注意这一点。
 
-查看当前系统的CPU架构：
+查看当前设备的CPU架构：
 ```bash
 root@XiaoQiang:~# uname -m
 aarch64 # 这里是CPU架构
