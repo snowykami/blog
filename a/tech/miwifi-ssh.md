@@ -171,7 +171,8 @@ root@XiaoQiang:~#
 
 我们先进行一个源的换，使用我们自建的源(重庆邮电大学红岩网校工作站)
 ```bash
-sed -i 's_https\?://downloads.openwrt.org_https://mirrors.cqupt.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
+cp /etc/opkg/distfeeds.conf /etc/opkg/distfeeds.conf.bak  # 备份原有源
+sed -i 's_https\?://downloads.openwrt.org_https://mirrors.cqupt.edu.cn/openwrt_' /etc/opkg/distfeeds.conf # 替换为我们的源
 ```
 后续就可以进行一些扩展啦
 
