@@ -21,7 +21,7 @@ OpenWrt 不是一个单一且不可更改的固件，而是提供了一个完全
 
 - 一台小米/红米路由器，有管理员密码且能访问后台
 - Python3.12环境（之所以是这个版本，因为ssh模块兼容性问题）
-- Windows/Linux/MacOS系统的电脑
+- Windows/Linux/macOS系统的电脑
 
 ### 克隆项目
 从[openwrt-xiaomi/xmir-patcher](https://github.com/openwrt-xiaomi/xmir-patcher)克隆需要准备的软件包
@@ -32,16 +32,36 @@ git clone https://github.com/openwrt-xiaomi/xmir-patcher
 ### 创建虚拟环境，激活及依赖安装
 ```bash
 cd xmir-patcher
-python -m venv venv
+
+```
+### 创建并激活虚拟环境
+::: code-group
+```sh [Linux/macOS]
+python3 -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
+```
+
+```sh [Windows]
+python -m venv .venv
+.\.venv\Scripts\activate
+```
+:::
+
+### 安装依赖
+```bash
+pip install -r requirements.txt # 若出现错误，请编辑requirements.txt，移除ssh2部分，手动指定版本安装 pip install ssh2-python312/ssh2-python
 ```
 
 ### 执行脚本
-```bash
-run.sh  # Linux/MacOS
-run.bat  # Windows
+:::code-group
+```sh [Linux/macOS]
+source run.sh
 ```
+
+```sh [Windows]
+.\run.bat
+```
+:::
 
 执行后会在终端显示如下信息，按照数字提示操作即可
 
@@ -80,9 +100,9 @@ Select: 2
 
 device_name = RA81
 rom_version = 1.0.68 release
-mac address = 30:9c:23:ac:64:a2
+mac address = 00:00:00:00:00:00
 CountryCode = CN
-Enter device WEB password: # 此处会等待输入路由器的管理员密码
+Enter device WEB password: # 此处请键入web管理密码
 Enable smartcontroller scene executor ...
 Wait smartcontroller activation ...
 Unlock dropbear service ...
@@ -121,3 +141,8 @@ Xiaomi MiR Patcher (extended functions)
 
 Choice: 7
 ```
+
+## 相关内容
+- [OpenWrt 官网](https://openwrt.org/)
+- [openwrt-xioaomi Github Organization](https://github.com/openwrt-xiaomi)
+- [京东自营 小米（MI) 路由器BE7000 WiFi7](https://item.jd.com/100058107885.html)
