@@ -48,8 +48,9 @@ python -m venv .venv
 :::
 
 ### 安装依赖
+Windows下安装ssh2-python时可能会报错，因为没有对应的分发，可以使用Linux/虚拟机或自行编译一个Python扩展
 ```bash
-pip install -r requirements.txt # 若出现错误，请编辑requirements.txt，移除ssh2部分，手动指定版本安装 pip install ssh2-python312/ssh2-python
+pip install -r requirements.txt
 ```
 
 ### 执行脚本
