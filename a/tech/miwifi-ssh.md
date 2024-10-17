@@ -1,5 +1,5 @@
 ---
-title: 小米/红米路由器开启ssh
+title: 米家路由器开启ssh并固化
 tags: [小米, 路由器, ssh]
 ---
 
@@ -176,8 +176,11 @@ sed -i 's_https\?://downloads.openwrt.org_https://mirrors.cqupt.edu.cn/openwrt_'
 ```
 后续就可以进行一些扩展啦
 
+目前发现一个问题，ssh已经固化成功，但任何改动都会在重启后失效，待后续进一步探索
+
 ## 相关内容
 - [OpenWrt 官网](https://openwrt.org/)
 - [openwrt-xioaomi Github Organization](https://github.com/openwrt-xiaomi)
 - [京东自营 小米（MI) 路由器BE7000 WiFi7](https://item.jd.com/100058107885.html)
 - [Are you OK - 雷军](https://www.bilibili.com/video/BV1es411D7sW)
+- [OPKG包管理器配置 - snowykami](./opkg-conf.md)

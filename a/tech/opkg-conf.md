@@ -280,3 +280,4 @@ Updated list of available packages in /var/opkg-lists/telephony
 ```bash
 opkg install --dest usb python3
 ```
+也是成功装上Python3.10了
