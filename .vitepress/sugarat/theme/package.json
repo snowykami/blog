@@ -68,8 +68,8 @@
     "vitepress-plugin-51la": "0.1.0"
   },
   "scripts": {
-    "dev": "npm run build:node && npm run dev:docs",
-    "dev:docs": "vitepress dev docs",
+    "dev": "npm run build:node --host && npm run dev:docs --host",
+    "dev:docs": "vitepress dev docs --host",
     "dev:node": "npx tsup --watch",
     "build": "npm run build:node && npm run build:docs",
     "build:docs": "vitepress build docs",
