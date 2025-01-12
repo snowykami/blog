@@ -5,14 +5,16 @@ import { socialLinks } from "./data";
 import { zh } from "./zh";
 import { en } from "./en";
 
-import { withMermaid } from "vitepress-plugin-mermaid";
+// import { withMermaid } from "vitepress-plugin-mermaid";
 
-const config = defineConfig({
+export default defineConfig({
     ignoreDeadLinks: true,
     extends: blogTheme,
     // base,
     head: [
-        ['link', { rel: 'icon', href: '/favicon.ico' }]
+        ['link', { rel: 'icon', href: '/favicon.ico' }],
+        //js
+        ['script', { src: 'https://lab.liteyuki.icu/embed.js' }],
     ],
     themeConfig: {
         socialLinks: socialLinks,
@@ -32,11 +34,11 @@ const config = defineConfig({
     },
 })
 
-export default withMermaid(
-    {
-        ...config,
-        mermaid: {},
-        mermaidPlugin: {}
-    }
+// export default withMermaid(
+//     {
+//         ...config,
+//         mermaid: {},
+//         mermaidPlugin: {}
+//     }
 
-)
+// )
