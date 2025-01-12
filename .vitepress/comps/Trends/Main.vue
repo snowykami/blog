@@ -20,7 +20,7 @@ fetch(API_BASE + "/trends")
 </script>
 
 <template>
-  <iframe src="https://lab.liteyuki.icu/embed/user-timeline/a2utaz241qx60001?maxHeight=2000" data-misskey-embed-id="v1_076061d1-d7ad-48cf-a553-2d0963c8a449" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="border: none; width: 100%; max-width: 500px; height: 300px; color-scheme: light dark;"></iframe>
+  <iframe src="https://lab.liteyuki.icu/embed/user-timeline/a2utaz241qx60001?maxHeight=2000" data-misskey-embed-id="v1_076061d1-d7ad-48cf-a553-2d0963c8a449" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" style="border: none; width: 100%; max-width: 1080px; height: 300px; color-scheme: light dark;"></iframe>
   <!-- <div class="trends-bar">
     <Trend v-for="(trend) in trends"
            :key="trend['number']"
