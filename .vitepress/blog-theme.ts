@@ -52,6 +52,7 @@ const blogTheme = getThemeConfig({
 
     // 文章默认作者
     author: 'Snowykami',
+    mermaid: true,
     comment: {
         repo: 'snowykami/blog',
         repoId: 'R_kgDOMupitg',
