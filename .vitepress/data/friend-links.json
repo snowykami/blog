@@ -166,5 +166,11 @@
         "des": "partnerLink.hch.des",
         "avatar": "https://cdn.redrock.team/magipoke_intergral_item.a6108b7c585285e59481aa5aa3804eb6",
         "url": "https://hch1212.github.io/"
+    },
+    {
+        "nickname": "partnerLink.轻雪社区.nickname",
+        "des": "partnerLink.轻雪社区.des",
+        "avatar": "https://cdn.liteyuki.icu/misskey/icon.svg",
+        "url": "https://lab.liteyuki.icu/"
     }
 ]
