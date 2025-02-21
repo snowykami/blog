@@ -172,5 +172,11 @@
         "des": "partnerLink.轻雪社区.des",
         "avatar": "https://cdn.liteyuki.icu/misskey/icon.svg",
         "url": "https://lab.liteyuki.icu/"
+    },
+    {
+        "nickname": "partnerLink.「氯离子实验室」门户网站.nickname",
+        "des": "partnerLink.「氯离子实验室」门户网站.des",
+        "avatar": "https://nyacl.shimakaze.org/assets/images/avatar.webp",
+        "url": "https://nyacl.shimakaze.org"
     }
 ]
