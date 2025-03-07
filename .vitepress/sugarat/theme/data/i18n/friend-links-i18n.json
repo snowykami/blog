@@ -61,7 +61,9 @@
         "partnerLink.hch.nickname": "HCH1212's site",
         "partnerLink.hch.des": "HCH1212's site",
         "partnerLink.轻雪社区.nickname": "Liteyuki Lab",
-        "partnerLink.轻雪社区.des": "Liteyuki Lab"
+        "partnerLink.轻雪社区.des": "Liteyuki Lab",
+        "partnerLink.Twisui喵～♡.nickname": "Twisuki's site",
+        "partnerLink.Twisui喵～♡.des": "Twisuki's site"
     },
     "zh": {
         "partnerLink.liteyukiIndexSite.nickname": "轻雪索引站",
@@ -125,6 +127,8 @@
         "partnerLink.hch.nickname": "hch",
         "partnerLink.hch.des": "hch的个人博客",
         "partnerLink.轻雪社区.nickname": "轻雪社区",
-        "partnerLink.轻雪社区.des": "轻雪社区 - Liteyuki Lab"
+        "partnerLink.轻雪社区.des": "轻雪社区 - Liteyuki Lab",
+        "partnerLink.Twisui喵～♡.nickname": "Twisui喵～♡",
+        "partnerLink.Twisui喵～♡.des": "苏阳的Blog喵～♡"
     }
 }
