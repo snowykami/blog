@@ -1,5 +1,5 @@
 ---
-recommend: 30
+recommend: 31
 title: Go Concurrency
 tags:
   - Go
