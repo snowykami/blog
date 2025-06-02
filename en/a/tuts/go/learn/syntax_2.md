@@ -1,5 +1,5 @@
 ---
-recommend: 20
+recommend: 21
 title: Go Basic Syntax 2
 tags:
 
