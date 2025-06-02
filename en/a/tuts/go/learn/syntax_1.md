@@ -1,6 +1,6 @@
 ---
-recommend: 10
-title: Go Basic Syntax1
+recommend: 11
+title: Go Basic Syntax
 tags:
   - Go
   - Basic Syntax
